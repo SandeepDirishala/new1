@@ -1,0 +1,608 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Login to My Account</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+		<meta name="apple-mobile-web-app-capable" content="yes">
+
+	<!-- CSS files -->
+	<link rel="stylesheet" type="text/css" href="css/angular-material.min.css">
+	<link rel="shortcut icon" href='favicon.ico' type='image/x-icon' >
+
+	<!-- Application Specific CSS -->
+	<link rel="stylesheet" type="text/css" href="css/uhc_sr.css">
+	<link rel="stylesheet" type="text/css" href="css/tmp.css">
+</head>
+
+<!-- fade-in when page finishes loading -->
+<body ng-app= "srApp" onload="document.body.style.opacity='1'">
+	<header ng-include src="'include/header.html'"  ></header>
+
+	<!-- Page Content -->
+	<main>
+		<div id="contentAll">
+			<div class="innerContentWrapper" >
+
+			<!-- change id to select hero image for current page -->
+
+				<div class="marginTop4em displayMobileOnly">
+				</div>
+
+					<div ng-controller="loginModalCtrl" layout="column" ng-cloak="" class="md-inline-form inputLogin" ng-app="srApp">
+
+						<md-content layout-padding="" id="loginBackground">
+							<form name="accountForm">
+
+<!--     ACCOUNT PAGE 1     -->
+
+								<div id="accountPage1" class="centerThis">
+									<h3 class="centerText loginTitle">Login to My Account to access and manage your policy.</h3>
+
+									<div class="accountCardWrapper uhcWhiteBackground">
+										<h3 class="accountCardTitle uhcBlue uhcFontBold">Login to My Account</h3>
+										<div class="accountFormWrapper uhcWhiteBackground">
+
+											<p class="accountFormMessage">Enter your username and password to continue.</p>
+
+											<md-input-container class="md-block">
+												<label>Username</label>
+												<input required="" name="username" ng-model="account.username" md-no-asterisk="">
+												<div ng-messages="accountForm.username.$error">
+													<div ng-message="required">This is required.</div>
+												</div>
+											</md-input-container>
+
+											<md-input-container id="accountMenuLast" class="md-block">
+												<label>Password</label>
+												<input type="password" required="" name="password" ng-model="account.password" md-no-asterisk="">
+												<div ng-messages="accountForm.password.$error">
+													<div ng-message="required">This is required.</div>
+												</div>
+												<div class="accountMenuHelpIcon formText">
+													<a href="#" ng-click="accountHelpToggle('accountHelpPage2')" class="growBigOnHover"><span class= "uhcBlueCircle">?</span></a>
+												</div>
+											</md-input-container>
+
+											<div id="accountHelpPage2" class="accountHelpText hideInitially">
+											Passwords must contain eight to twelve characters.<br />
+												Passwords must meet three of the four rules below.<br />
+												<br /><br />
+												Must contain an uppercase character<br />
+												Must contain a lowercase character<br />
+												Must contain a numeric character (0-9)<br />
+												Must contain a special character (e.g. ?, %, *, $, etc.)<br />
+												<br /><br />
+												Passwords must not contain the Username.<br />
+												Passwords must be different from the last ten passwords used.<br />
+											</div>
+
+											<div class="accountForgotCredentials centerText">
+												<p class="uhcLightBlue">Did you forget your <a href="" ng-click="accountPage('accountPage8')" class="uhcLightBlue underlineThis"> Username </a> or <a href=""  ng-click="accountPage('accountPage10')" class="uhcLightBlue underlineThis">Password</a>?</p>
+											</div>
+
+										</div> <!-- .accountFormWrapper -->
+
+									<div>
+										<md-button class="accountBottomLinks uhcFontBold uhcLightBlue" ng-click="accountPage('accountPage2')">Create An Account</md-button>
+										<md-button class="accountBottomLinks uhcFontBold uhcLightBlue rightThis" ng-click="accountPage('accountPage7')">Login</md-button>
+									</div>
+
+									</div> <!-- .accountCardWrapper -->
+								</div> <!-- #accountPage1 -->
+
+<!--     ACCOUNT PAGE 2     -->
+
+								<div id="accountPage2" class="centerThis hideInitially">
+									<h3 class="centerText loginTitle">Create an online account to access the best parts of your plan.</h3>
+
+									<div class="accountCardWrapper uhcWhiteBackground">
+
+										<div class="progressWrapper">
+										<h3 class="accountCardTitle uhcBlue uhcFontBold" style="float:left;">First, Verify Your Credentials</h3>
+										 <span class="progressSymbol rightThis">
+											<div class="progressDot1 uhcBlueBackground"> </div>
+											<div class="progressDot2 uhcBlue"> </div>
+											<div class="progressDot3 uhcBlue"> </div>
+										 </span>
+										 	<br clear="all">
+										 </div>
+										<p class="accountFormMessage"></p>
+
+										<div id="accountPage2ABC">
+											<div class="accountPage2LoginState" >
+												<div id="barLoginState1" class="">
+													<img src="img/barLoginState1.png">
+												</div>
+												<div id="barLoginState2" class="hideInitially">
+													<img src="img/barLoginState2.png">
+												</div>
+												<div id="barLoginState3" class="hideInitially">
+													<img src="img/barLoginState3.png">
+												</div>
+											</div>
+											<div class="accountPage2FormWrapper uhcWhiteBackground">
+												<md-input-container class="md-block">
+													<label>First Name</label>
+													<input required="" name="firstName" ng-model="account.firstName" md-no-asterisk="">
+													<div ng-messages="accountForm.firstName.$error">
+														<div ng-message="required">This is required.</div>
+													</div>
+												</md-input-container>
+												<md-input-container class="md-block">
+													<label>Last Name</label>
+													<input required="" name="lastName" ng-model="account.lastName" md-no-asterisk="">
+													<div ng-messages="accountForm.lastName.$error">
+														<div ng-message="required">This is required.</div>
+													</div>
+												</md-input-container>
+
+												<md-input-container class="md-block">
+													<label>Date of Birth (MM/DD/YY)</label>
+													<input required="" name="dateOfBirth" ng-model="account.dateOfBirth" md-no-asterisk="">
+													<div ng-messages="accountForm.dateOfBirth.$error">
+														<div ng-message="required">This is required.</div>
+													</div>
+												</md-input-container>
+
+												<md-input-container class="md-block formNoMarginBottom" >
+													<label>Email, Student ID, SR ID</label>
+													<input id="accountPage2UserID" required="" name="userID" ng-model="account.userID" md-no-asterisk="">
+													<div class="accountMenuHelpIcon formText">
+															<a href="#" ng-click="accountHelpToggle('accountHelpPage2')" class="growBigOnHover"><span class= "uhcBlueCircle">?</span></a>
+													</div>
+													<div ng-messages="accountForm.userID.$error">
+														<div ng-message="required">This is required.</div>
+													</div>
+												</md-input-container>
+
+												<div id="additionalIDFieldDisabled" class="">
+													<md-input-container class="md-block" >
+														<label class="uhcDisabledGray">Email or Student ID</label>
+														<input required="" name="additionalID" ng-model="account.additionalID" md-no-asterisk="" disabled>
+														<div class="accountMenuHelpIcon formText">
+															<a href="#" ng-click="accountHelpToggle('accountHelpPage2')" class="growBigOnHover"><span class= "uhcBlueCircle">?</span></a>
+														</div>
+													</md-input-container>
+												</div>
+
+												<div id="additionalIDField" class="hideInitially" style="width:100%;">
+													<md-input-container class="md-block">
+														<label>Email or Student ID</label>
+														<input id="accountPageAdditionalID" required="" name="additionalID" ng-model="account.additionalID" md-no-asterisk="">
+														<div class="accountWarn uhcRed">
+															Your account requires verification. <img class="rightThis" src="img/iconWarn.png"><br>
+															Please enter your {verify} to continue.
+														</div>
+														<div ng-messages="accountForm.additionalID.$error">
+															<div ng-message="required">This is required.</div>
+														</div>
+														<div class="accountMenuHelpIcon formText">
+															<a href="#" ng-click="accountHelpToggle('accountHelpPage2')" class="growBigOnHover"><span class= "uhcBlueCircle">?</span></a>
+														</div>
+													</md-input-container>
+												</div>
+
+												<div id="accountHelpPage2" class="accountHelpText hideInitially">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse ornare vel nunc eget convallis. Curabitur a risus tristique lectus pellentesque ultrices quis sed diam.
+												</div>
+
+											</div> <!-- .accountPage2FormWrapper -->
+										</div> <!-- #accountPage2ABC -->
+									<div>
+										<md-button class="accountBottomLinks uhcFontBold uhcLightBlue" ng-click="accountPage('accountPage1')">BACK</md-button>
+										<div id="accountPage2NextDisabled" class="rightThis">
+											<md-button class="accountBottomLinks uhcFontBold uhcDisabledGray">NEXT</md-button>
+										</div>
+										<div id="accountPage2Next" class="rightThis hideInitially">
+											<md-button class="accountBottomLinks uhcFontBold uhcLightBlue" ng-click="accountPage('accountPage3')">NEXT</md-button>
+										</div>
+									</div>
+
+									</div> <!-- .accountCardWrapper -->
+								</div> <!-- #accountPage2 -->
+
+<!--     ACCOUNT PAGE 3     -->
+
+								<div id="accountPage3" class="centerThis hideInitially">
+									<h3 class="centerText loginTitle">Create an online account to access the best parts of your plan.</h3>
+
+									<div class="accountCardWrapper uhcWhiteBackground">
+
+										<div class="progressWrapper">
+										<h3 class="accountCardTitle uhcBlue uhcFontBold" style="float:left;" >Now let&rsquo;s create an account.</h3>
+										 <span class="progressSymbol rightThis">
+											<div class="progressDot1 uhcBlue"> </div>
+											<div class="progressDot2 uhcBlueBackground"> </div>
+											<div class="progressDot3 uhcBlue"> </div>
+										</span>
+										<br clear="all">
+										</div>
+
+											<!-- USERNAME TAKEN / ERROR HANDLING -->
+											<p class="accountFormWarn uhcRed hideInitially">That username has already been taken. <br>Please try again.</p>
+
+										<div class="accountNarrowFormWrapper uhcWhiteBackground">
+
+											<md-input-container class="md-block">
+												<label>Username</label>
+												<input required="" name="username" ng-model="account.username" md-no-asterisk="">
+												<div ng-messages="accountForm.username.$error">
+													<div ng-message="required">This is required.</div>
+												</div>
+											</md-input-container>
+
+											<md-input-container id="accountMenuLast" class="md-block">
+												<label>Password</label>
+												<input type="password" required="" name="password" ng-model="account.password" md-no-asterisk="">
+												<div ng-messages="accountForm.password.$error">
+													<div ng-message="required">This is required.</div>
+												</div>
+												<div class="accountMenuHelpIcon formText">
+													<a href="#" ng-click="accountHelpToggle('accountHelpPage2')" class="growBigOnHover"><span class= "uhcBlueCircle">?</span></a>
+												</div>
+											</md-input-container>
+
+											<div id="accountHelpPage2" class="accountHelpText hideInitially">
+												Passwords must contain eight to twelve characters.<br />
+												Passwords must meet three of the four rules below.<br />
+												<br /><br />
+												Must contain an uppercase character<br />
+												Must contain a lowercase character<br />
+												Must contain a numeric character (0-9)<br />
+												Must contain a special character (e.g. ?, %, *, $, etc.)<br />
+												<br /><br />
+												Passwords must not contain the Username.<br />
+												Passwords must be different from the last ten passwords used.<br />
+											</div>
+
+										</div> <!-- .accountFormWrapper -->
+
+									<div class="marginTop4em">
+										<md-button class="accountBottomLinks uhcFontBold uhcLightBlue" ng-click="accountPage('accountPage2')">BACK</md-button>
+										<md-button class="accountBottomLinks uhcFontBold uhcLightBlue rightThis" ng-click="accountPage('accountPage4')">NEXT</md-button>
+									</div>
+
+									</div> <!-- .accountCardWrapper -->
+								</div> <!-- #accountPage3 -->
+
+<!--     ACCOUNT PAGE 4     -->
+
+								<div id="accountPage4" class="centerThis hideInitially">
+									<h3 class="centerText loginTitle">Create an online account to access the best parts of your plan.</h3>
+
+									<div class="accountCardWrapper uhcWhiteBackground">
+										<div class="progressWrapper">
+										<h3 class="accountCardTitle uhcBlue uhcFontBold" style="float:left;">Secure your identity.</h3>
+										 <span class="progressSymbol rightThis">
+											<div class="progressDot1 uhcBlue"> </div>
+											<div class="progressDot2 uhcBlue"> </div>
+											<div class="progressDot3 uhcBlueBackground"> </div>
+										</span>
+										</div>
+											<p class="accountFormMessage">We sent you an email to <strong>jo*************@example.com</strong> with a special code.<br>Enter it below to activate your account.</p>
+
+										<div class="accountVeryNarrowFormWrapper uhcWhiteBackground">
+
+											<md-input-container class="md-block">
+												<label>5 Digit Verification</label>
+												<input required="" name="verification" ng-model="account.verification" md-no-asterisk="">
+												<div ng-messages="accountForm.verification.$error">
+													<div ng-message="required">The code you entered is invalid. <img class="rightThis" src="img/iconWarn.png"><br>Try again or request a new code below.</div>
+												</div>
+											</md-input-container>
+
+											<div class="centerText marginTop4em">
+												<md-button class="accountUnderlineLink uhcLightBlue" ng-click="accountPage('accountPage5')">Request New Verification Code</md-button>
+											</div>
+
+										</div> <!-- .accountFormWrapper -->
+
+									<div class="marginTop4em">
+										<md-button class="accountBottomLinks uhcFontBold uhcLightBlue" ng-click="accountPage('accountPage3')">BACK</md-button>
+										<md-button class="accountBottomLinks uhcFontBold uhcLightBlue rightThis" ng-click="accountPage('accountPage5')">ACTIVATE ACCOUNT</md-button>
+									</div>
+
+									</div> <!-- .accountCardWrapper -->
+								</div> <!-- #accountPage4 -->
+
+
+<!--     ACCOUNT PAGE 5     -->
+
+								<div id="accountPage5" class="centerThis hideInitially">
+									<h3 class="centerText loginTitle">Secure your identity.</h3>
+
+									<div class="accountCardWrapper uhcWhiteBackground">
+										<h3 class="accountCardTitle uhcBlue uhcFontBold">Verification Code Renewal</h3>
+											<p class="accountFormMessage">Your verification code has been sent!<br>Check your inbox and then enter it below.</p>
+
+										<div class="accountVeryNarrowFormWrapper uhcWhiteBackground">
+
+											<md-input-container class="md-block">
+												<label>5 Digit Verification</label>
+												<input required="" name="verification" ng-model="account.verification" md-no-asterisk="">
+												<div ng-messages="accountForm.verification.$error">
+													<div ng-message="required">The code you entered is invalid. <img class="rightThis" src="img/iconWarn.png"></div>
+												</div>
+											</md-input-container>
+
+										</div>
+
+									<div class="marginTop4em" style="text-align:right;">
+										<md-button class="accountBottomLinks accountSingleLargeBottomLink uhcFontBold uhcLightBlue" ng-click="accountPage('accountPage6')">ACTIVATE YOUR ACCOUNT</md-button>
+									</div>
+
+									</div>
+								</div>
+
+<!--     ACCOUNT PAGE 6     -->
+
+								<div id="accountPage6" class="centerThis hideInitially">
+									<h3 class="centerText loginTitle">Create an online account to access the best parts of your plan.</h3>
+
+									<div class="accountCardWrapper uhcWhiteBackground">
+										<h3 class="accountCardTitle uhcBlue uhcFontBold">Account creation complete</h3>
+										<p class="accountFormMessage">Congratulations!<br>Your account has been set up successfully.<br>Login to manage your policy.</p>
+
+										<div class="checkConfirm">
+											<img  src="img/iconCheckConfirm.svg">
+										</div>
+
+										<h3 class=" centerText uhcGreen">Account Activated!</h3>
+
+
+									<div class="marginTop4em" style="text-align:right;">
+										<md-button class="accountBottomLinks uhcFontBold uhcLightBlue accountSingleSmallBottomLink" ng-click="accountPage('accountPage1')">LOGIN</md-button>
+									</div>
+
+									</div> <!-- .accountCardWrapper -->
+								</div> <!-- #accountPage6 -->
+
+<!--     ACCOUNT PAGE 7     -->
+
+								<div id="accountPage7" class="centerThis hideInitially">
+									<h3 class="centerText loginTitle">Login to My Account to access and manage your policy.</h3>
+
+									<div class="accountCardWrapper uhcWhiteBackground">
+										<h3 class="accountCardTitle uhcBlue uhcFontBold">Login to My Account</h3>
+										<div class="accountFormWrapper uhcWhiteBackground">
+
+											<p class="accountFormMessage uhcRed">The email and password you entered don't match.
+</p>
+
+											<md-input-container class="md-block">
+												<label>Username</label>
+												<input required="" name="username" ng-model="account.username" md-no-asterisk="">
+												<div ng-messages="accountForm.username.$error">
+													<div ng-message="required">This is required.</div>
+												</div>
+											</md-input-container>
+
+											<md-input-container id="accountMenuLast" class="md-block">
+												<label>Password</label>
+												<input type="password" required="" name="password" ng-model="account.password" md-no-asterisk="">
+												<div ng-messages="accountForm.password.$error">
+													<div ng-message="required">This is required.</div>
+												</div>
+												<div class="accountMenuHelpIcon formText">
+													<a href="#" ng-click="accountHelpToggle('accountHelpPage2')" class="growBigOnHover"><span class= "uhcBlueCircle">?</span></a>
+												</div>
+											</md-input-container>
+
+											<div id="accountHelpPage2" class="accountHelpText hideInitially">												Passwords must contain eight to twelve characters.<br />
+												Passwords must meet three of the four rules below.<br />
+												<br /><br />
+												Must contain an uppercase character<br />
+												Must contain a lowercase character<br />
+												Must contain a numeric character (0-9)<br />
+												Must contain a special character (e.g. ?, %, *, $, etc.)<br />
+												<br /><br />
+												Passwords must not contain the Username.<br />
+												Passwords must be different from the last ten passwords used.<br />
+											</div>
+
+											<div class="accountForgotCredentials centerText">
+												<p class="uhcLightBlue">Did you forget your <a href="" ng-click="accountPage('accountPage8')" class="uhcLightBlue underlineThis"> Username </a> or <a href=""  ng-click="accountPage('accountPage10')" class="uhcLightBlue underlineThis">Password</a>?</p>
+											</div>
+
+										</div> <!-- .accountFormWrapper -->
+
+									<div>
+										<md-button class="accountBottomLinks uhcFontBold uhcLightBlue" ng-click="accountPage('accountPage2')">Create An Account</md-button>
+										<md-button class="accountBottomLinks uhcFontBold uhcLightBlue rightThis" ng-click="accountPage('accountPage12')">Login</md-button>
+									</div>
+
+									</div> <!-- .accountCardWrapper -->
+								</div> <!-- #accountPage7 -->
+
+<!--     ACCOUNT PAGE 8     -->
+
+								<div id="accountPage8" class="centerThis hideInitially">
+									<h3 class="centerText loginTitle">Login to My Account to access and manage your policy.</h3>
+
+									<div class="accountCardWrapper uhcWhiteBackground">
+										<h3 class="accountCardTitle uhcBlue uhcFontBold">Lost Username</h3>
+										<div class="accountFormWrapper uhcWhiteBackground">
+
+											<p class="accountFormMessage">Lost your Username? No problem.<br>Enter the email associated with your account<br>and we&rsquo;ll send it to you.</p>
+
+											<md-input-container class="md-block">
+												<label>First Name</label>
+												<input required="" name="firstName" ng-model="account.firstName" md-no-asterisk="">
+												<div ng-messages="accountForm.firstName.$error">
+													<div ng-message="required">This is required.</div>
+												</div>
+											</md-input-container>
+
+											<md-input-container class="md-block">
+												<label>Last Name</label>
+												<input required="" name="lastName" ng-model="account.lastName" md-no-asterisk="">
+												<div ng-messages="accountForm.lastName.$error">
+													<div ng-message="required">This is required.</div>
+												</div>
+											</md-input-container>
+
+											<md-input-container class="md-block">
+												<label>Email</label>
+												<input required="" name="email" ng-model="account.email" md-no-asterisk="">
+												<div ng-messages="accountForm.email.$error">
+													<div ng-message="required">This is required.</div>
+												</div>
+											</md-input-container>
+
+										</div> <!-- .accountFormWrapper -->
+
+									<div>
+										<md-button class="invisible accountBottomLinks uhcFontBold uhcLightBlue" ng-click="accountPage('accountPage1')">BACK</md-button>
+										<md-button class="accountBottomLinks uhcFontBold uhcLightBlue rightThis" ng-click="accountPage('accountPage9')">RETRIEVE USERNAME</md-button>
+									</div>
+
+									</div> <!-- .accountCardWrapper -->
+								</div> <!-- #accountPage8 -->
+
+<!--     ACCOUNT PAGE 9     -->
+
+								<div id="accountPage9" class="centerThis hideInitially">
+									<h3 class="centerText loginTitle">Login to My Account to access and manage your policy.</h3>
+
+									<div class="accountCardWrapper uhcWhiteBackground">
+										<h3 class="accountCardTitle uhcBlue uhcFontBold">Lost Username</h3>
+										<div class="accountFormWrapper uhcWhiteBackground">
+											<div class="marginTop8em"></div>
+											<p class="accountFormMessage">Your username has been sent to <br><strong>jo*************@example.com</strong></p>
+											<div class="marginTop8em"></div>
+
+										</div> <!-- .accountFormWrapper -->
+
+									<div>
+										<md-button class="accountBottomLinks uhcFontBold uhcLightBlue" ng-click="accountPage('accountPage10')">RETRIEVE PASSWORD</md-button>
+										<md-button class="accountBottomLinks uhcFontBold uhcLightBlue rightThis" ng-click="accountPage('accountPage1')">LOGIN</md-button>
+									</div>
+
+									</div> <!-- .accountCardWrapper -->
+								</div> <!-- #accountPage9 -->
+
+<!--     ACCOUNT PAGE 10     -->
+
+								<div id="accountPage10" class="centerThis hideInitially">
+									<h3 class="centerText loginTitle">Login to My Account to access and manage your policy.</h3>
+
+									<div class="accountCardWrapper uhcWhiteBackground">
+										<h3 class="accountCardTitle uhcBlue uhcFontBold">Lost Password</h3>
+										<div class="accountFormWrapper uhcWhiteBackground">
+
+											<p class="accountFormMessage">Lost your Password? No problem.<br>Enter the email associated with your account<br>and we&rsquo;ll reset it for you.</p>
+
+											<md-input-container class="md-block">
+												<label>First Name</label>
+												<input required="" name="firstName" ng-model="account.firstName" md-no-asterisk="">
+												<div ng-messages="accountForm.firstName.$error">
+													<div ng-message="required">This is required.</div>
+												</div>
+											</md-input-container>
+
+											<md-input-container class="md-block">
+												<label>Last Name</label>
+												<input required="" name="lastName" ng-model="account.lastName" md-no-asterisk="">
+												<div ng-messages="accountForm.lastName.$error">
+													<div ng-message="required">This is required.</div>
+												</div>
+											</md-input-container>
+
+											<md-input-container class="md-block">
+												<label>Username</label>
+												<input required="" name="username" ng-model="account.username" md-no-asterisk="">
+												<div ng-messages="accountForm.username.$error">
+													<div ng-message="required">This is required.</div>
+												</div>
+											</md-input-container>
+
+										</div> <!-- .accountFormWrapper -->
+
+									<div>
+										<md-button class="invisible accountBottomLinks uhcFontBold uhcLightBlue" ng-click="accountPage('accountPage1')">BACK</md-button>
+										<md-button class="accountBottomLinks uhcFontBold uhcLightBlue rightThis" ng-click="accountPage('accountPage11')">RESET PASSWORD</md-button>
+									</div>
+
+									</div> <!-- .accountCardWrapper -->
+								</div> <!-- #accountPage10 -->
+
+<!--     ACCOUNT PAGE 11     -->
+
+								<div id="accountPage11" class="centerThis hideInitially">
+									<h3 class="centerText loginTitle">Login to My Account to access and manage your policy.</h3>
+
+									<div class="accountCardWrapper uhcWhiteBackground">
+										<h3 class="accountCardTitle uhcBlue uhcFontBold">Lost Password</h3>
+										<div class="accountFormWrapper uhcWhiteBackground">
+											<div class="marginTop8em"></div>
+											<p class="accountFormMessage">Your new password has been sent to <br><strong>jo*************@example.com</strong></p>
+											<div class="marginTop8em"></div>
+
+										</div> <!-- .accountFormWrapper -->
+
+									<div style="text-align:right;">
+
+										<md-button class="accountBottomLinks uhcFontBold uhcLightBlue" ng-click="accountPage('accountPage1')">LOGIN</md-button>
+									</div>
+
+									</div> <!-- .accountCardWrapper -->
+								</div> <!-- #accountPage11 -->
+
+<div id="accountPage12" class="centerThis hideInitially">
+									<h3 class="centerText loginTitle">Verify your identity.</h3>
+
+									<div class="accountCardWrapper uhcWhiteBackground">
+										<h3 class="accountCardTitle uhcBlue uhcFontBold">We haven't seen a login from this machine before.</h3>
+
+
+											<p class="accountFormMessage">We sent you an email to <strong>jo*************@example.com</strong> with a special code.<br>Enter it below to activate your account.</p>
+
+										<div class="accountVeryNarrowFormWrapper uhcWhiteBackground">
+
+											<md-input-container class="md-block">
+												<label>5 Digit Verification</label>
+												<input required="" name="verification" ng-model="account.verification" md-no-asterisk="">
+												<div ng-messages="accountForm.verification.$error">
+													<div ng-message="required">The code you entered is invalid. <img class="rightThis" src="img/iconWarn.png"><br>Try again or request a new code below.</div>
+												</div>
+											</md-input-container>
+
+
+
+										</div> <!-- .accountFormWrapper -->
+
+									<div class="marginTop4em">
+										<md-button class="accountBottomLinks uhcFontBold uhcLightBlue " ng-click="accountPage('accountPage1')">BACK</md-button>
+
+
+										<md-button class="accountBottomLinks uhcFontBold uhcLightBlue rightThis" >LOGIN</md-button>
+									</div>
+
+									</div> <!-- .accountCardWrapper -->
+								</div> <!-- #accountPage4 -->
+
+
+
+						</form>
+					</md-content> <!-- #loginBackground -->
+				</div> <!-- loginModalCtrl -->
+			</div> <!-- .innerContentWrapper -->
+		</div> <!-- #contentAll -->
+	</main>
+	<footer ng-include src="'include/footer.html'"  ></footer>
+
+<!-- Javascript Libraries at bottom after DOM is loaded -->
+<script type="text/javascript" src="js/angular.min.js"></script>
+<script type="text/javascript" src="js/angular-animate.min.js"></script>
+<script type="text/javascript" src="js/angular-aria.min.js"></script>
+<script type="text/javascript" src="js/angular-material.min.js"></script>
+<script type="text/javascript" src="js/angular-messages.min.js"></script>
+<script type="text/javascript" src="js/jquery-2.0.3.min.js"></script>
+<script type="text/javascript" src="js/angular-pageslide-directive-modified.js"></script>
+
+
+<!-- Application Specific Javascript files at very bottom after DOM and libraries are loaded -->
+<script type="text/javascript" src="js/uhc_sr.js"></script>
+
+</body>
+</html>

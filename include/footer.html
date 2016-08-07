@@ -1,0 +1,80 @@
+
+<div id="footerFull">
+	<nav id="footerNav" class="uhcWhite uhcDarkBlueBackground">
+		<div class="footerWrapper sitePageWidth" >
+			<div class="col1 cols">
+				<ul>
+					<li class="uhcWhite bold">Quick Links</li>
+					<li><a id="createAccount" class="uhcWhiteLink" style="cursor:pointer;" onclick="location.replace('login.html#/create');">Create Online Account</a></li>
+					<li><a class="uhcWhiteLink" href="insurance-forms.html">Insurance Forms</a></li>
+					<li><a class="uhcWhiteLink" href="about-us.html">About Us</a></li>
+					<li><a class="uhcWhiteLink" href="sitemap.html">Sitemap</a></li>
+				</ul>
+			</div>
+			<div class="col2 cols">
+				<ul>
+					<li class="uhcWhite bold">Help Center</li>
+					<li><a class="uhcWhiteLink" href="insurance-101.html">Health Insurance 101</a></li>
+					<li><a class="uhcWhiteLink" href="glossary.html">Glossary</a></li>
+					<li><a class="uhcWhiteLink" href="faq.html">FAQ</a></li>
+					<li><a class="uhcWhiteLink" href="Video.html">Video</a></li>
+				</ul>
+			</div>
+			<div class="col3 cols">
+				<ul>
+					<li class="uhcWhite bold">Partners & Providers</li>
+					<li><a class="uhcWhiteLink" href="partner-tools.html">Online Partner Tools</a></li>
+					<li><a class="uhcWhiteLink" href="providers.html">Provider Resources</a></li>
+					<li><a class="uhcWhiteLink" href="admin-request-rfp.html">Request a Quote</a></li>
+				</ul>
+			</div>
+			<div class="col4 cols">
+				<ul>
+					<li class="bold">Legal</li>
+					<li><a class="uhcWhiteLink" href="regulatory-overview.html">Regulatory</a></li>
+					<li><a class="uhcWhiteLink" href="regulatory-privacy.html">Privacy Policies</a></li>
+					<li><a class="uhcWhiteLink" href="underwriters.html">Underwriters</a></li>
+				</ul>
+			</div>
+		</div>
+	</nav>
+	<div id="footerBottom " class="uhcDarkerBlueBackground"> 
+		<div id="footerFullLogoWrapper" class="sitePageWidth">
+			<img  id="footerLogo" src="img/logoMobileFooterUHC.svg" />
+			<div id="footerBottomRightWrapper" class="footerAlignRight">
+				<div>
+					<a class="uhcWhiteLink" href="contact.html">Contact Us</a>&nbsp;&nbsp;&nbsp; <a class="uhcWhiteLink" href="terms-of-use.html">Terms of Use</a>
+				</div>
+				<div>
+					<p class="uhcWhite"> Copyright &#64; 2016 <!-- UPDATE YEAR --> United HealthCare Services, Inc.</p>
+				</div>			
+			</div>
+		</div>	
+	</div>
+</div>
+
+<div id="footerMobile">
+	<nav id="footerNav" class="uhcWhite uhcDarkBlueBackground">
+		<div class="footerWrapper" >
+			<div id="footerLink1Wrapper"><a class="uhcWhiteLink" href="regulatory-privacy.html">Privacy Policies</a></div>
+			<div id="footerLink2Wrapper"><a class="uhcWhiteLink" href="contact.html">Contact Us</a></div>
+			<div id="footerLink3Wrapper"><a class="uhcWhiteLink" href="terms-of-use.html">Terms of Use</a></div>
+			<hr style="border-bottom:1px solid #fff;">
+			<div id="footerLogoWrapper">
+					<img id="footerLogo" src="img/logoFullUHC.svg" />
+			</div>
+
+			<div id="footerLink4Wrapper">Copyright &#64; 2016 <!-- UPDATE YEAR --> United HealthCare Services, Inc.</div>
+		</div>
+	</nav>
+</div>
+
+<script type="text/javascript-lazy">
+
+	// If you are on the login screen - Scroll up to the top when someone clicks 'Create My Account' in the footer.
+
+	$('#createAccount').click (function () {
+		$("html, body").animate({ scrollTop: 0 }, "slow");return false;
+	});
+
+</script>

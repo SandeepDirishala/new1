@@ -1,0 +1,97 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Help Center</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+		<meta name="apple-mobile-web-app-capable" content="yes">
+
+	<!-- CSS files -->
+	<link rel="stylesheet" type="text/css" href="css/angular-material.min.css">
+	<link rel="shortcut icon" href='favicon.ico' type='image/x-icon'>
+	
+	<!-- Application Specific CSS -->
+	<link rel="stylesheet" type="text/css" href="css/uhc_sr.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/3.3.1/css/swiper.min.css">
+
+
+<style>
+    .swiper-container {
+        height: 300px;
+        width: 100%;
+    }
+    .swiper-slide {
+        text-align: center;
+        font-size: 18px;
+      /*  background: #fff; */
+        /* Center slide text vertically */
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: -webkit-flex;
+        display: flex;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        -webkit-justify-content: center;
+        justify-content: center;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        -webkit-align-items: center;
+        align-items: center;
+    }
+    </style>
+
+
+</head>
+
+<!-- fade-in when page finishes loading -->
+<body ng-app= "srApp" onload="document.body.style.opacity='1'">
+	<header ng-include src="'include/header.html'"  ></header>
+
+	<!-- Page Content -->
+			<div class="innerContentWrapper" ng-controller="navCtrl">
+
+				<div id="helpCenterHero">
+					<span ng-include src="'include/helpCenterHero.html'"  ></span>
+				</div> <!-- helpCenterHero -->
+
+				<!-- Scroll and lock nav bar  -->
+				<div class="navBarWrapper unlocked">
+					<div id="helpMainNavWrapper">
+						<a  href="faq.html" class="uhcBlackLink"><div id="helpMainNavBox1" class="helpMainNavBox active">
+							<img src="img/faq.svg">
+							<p class="uhcGray">FAQ</p>
+						</div></a>
+						<a  href="glossary.html" class="uhcBlackLink"><div id="helpMainNavBox2" class="helpMainNavBox active">
+							<img src="img/glossary.svg">
+							<p class="uhcGray">Glossary</p>
+						</div></a>
+						<a  href="insurance-101.html" class="uhcBlackLink"><div id="helpMainNavBox3" class="helpMainNavBox active">
+							<img src="img/insurance.svg">
+							<p class="uhcGray displayFullOnly">Health Insurance 101</p>
+							<p class="uhcGray displayMobileOnly">Health 101</p>
+						</div></a>
+						<a  href="video.html" class="uhcBlackLink"><div id="helpMainNavBox4" class="helpMainNavBox active">
+							<img src="img/video.svg">
+							<p class="uhcGray">Video</p>
+						</div></a>
+					</div>
+				</div>
+			</div>
+
+	<footer ng-include src="'include/footer.html'"  ></footer>
+
+<!-- Javascript Libraries at bottom after DOM is loaded -->
+<script type="text/javascript" src="js/angular.min.js"></script>
+<script type="text/javascript" src="js/angular-animate.min.js"></script>
+<script type="text/javascript" src="js/angular-aria.min.js"></script>
+<script type="text/javascript" src="js/angular-material.min.js"></script>
+<script type="text/javascript" src="js/angular-messages.min.js"></script>
+<script type="text/javascript" src="js/jquery-2.0.3.min.js"></script>
+<script type="text/javascript" src="js/angular-pageslide-directive-modified.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/3.3.1/js/swiper.min.js"></script>
+
+<!-- Application Specific Javascript files at very bottom after DOM and libraries are loaded -->
+<script type="text/javascript" src="js/uhc_sr.js"></script>
+
+</body>
+</html>

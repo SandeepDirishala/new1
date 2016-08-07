@@ -1,0 +1,196 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>FAQ</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+		<meta name="apple-mobile-web-app-capable" content="yes">
+
+	<!-- CSS files -->
+	<link rel="stylesheet" type="text/css" href="css/angular-material.min.css">
+	<link rel="shortcut icon" href='favicon.ico' type='image/x-icon'>
+	
+	<!-- Application Specific CSS -->
+	<link rel="stylesheet" type="text/css" href="css/uhc_sr.css">
+
+
+
+
+	<!-- HELP CENTER OVERRIDES - DON'T DELETE!! -->
+<!-- \\\\\\\\\\\\\\\\\\\\\\\\ -->
+<style>
+    nav#headerNav {border-bottom:none !important;}
+    div.navBarWrapper.locked {border-bottom: 1px solid #CDD5D7; box-shadow:0px 5px 5px 0px #FAFAFA;}
+    html {background:#FAFAFA !important;}
+    div.contentAll, div.innerContentWrapper {background:#FAFAFA !important;}
+    main section {background:#FAFAFA !important;}
+    section#contentWithSideBar {margin: 200px auto 1em !important;}
+
+    @media only screen and (max-width: 568px) {
+
+            section#contentWithSideBar {margin-top:100px !important;}
+
+    }
+
+</style>
+<!-- //////////////////////// -->
+</head>
+
+<!-- fade-in when page finishes loading -->
+<body ng-app= "srApp" onload="document.body.style.opacity='1'">
+	<header ng-include src="'include/header.html'"  ></header>
+
+	<!-- Page Content -->
+	<main>
+		<div id="contentAll">
+			<div class="innerContentWrapper" ng-controller="navCtrl">
+
+	           <!-- Scroll and lock nav bar  -->
+				<!-- \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\ -->
+				<div class="navBarWrapper locked">
+                    <div id="helpMainNavWrapper">
+                        <a  href="faq.html" class="uhcBlackLink active"><div id="helpMainNavBox1" class="helpMainNavBox">
+                            <img src="img/faq.svg">
+                            <p class="uhcGray">FAQ</p>
+                        </div></a>
+                        <a  href="glossary.html" class="uhcBlackLink"><div id="helpMainNavBox2" class="helpMainNavBox">
+                            <img src="img/glossary.svg">
+                            <p class="uhcGray">Glossary</p>
+                        </div></a>
+                        <a  href="insurance-101.html" class="uhcBlackLink"><div id="helpMainNavBox3" class="helpMainNavBox active">
+                            <img src="img/insurance.svg">
+                            <p class=" uhcGray displayFullOnly">Health Insurance 101</p>
+                            <p class=" uhcGray displayMobileOnly">Health 101</p>
+                        </div></a>
+                        <a  href="video.html" class="uhcBlackLink"><div id="helpMainNavBox4" class="helpMainNavBox">
+                            <img src="img/video.svg">
+                            <p class="uhcGray">Video</p>
+                        </div></a>
+                    </div>
+				</div>
+				<!-- ///////////////////////////////////// -->
+
+
+				<section id="contentWithSideBar" class="sitePageWidth sectionFAQ">
+					<div id="marginUnderNavBar" class="hideInitially"></div>
+					<div id="navBar-single-column">
+						<div ng-cloak>
+							<div layout="row">
+								<div flex="30" id="sideNavLeft" class="displayFullOnly">
+									<div class="sideNavLeftBox">
+										<a class="uhcBlackLink " ng-href="faq.html">All Questions</a>
+									</div>
+								</div>
+
+								<div flex="100" flex-gt-sm="70" id="sideNavRight">
+									<div ng-controller="faqSearchCtrl">
+
+										<div id="FaqResultsSearchIcon">
+											<a ng-click="toggleFaqResultsSearch()">
+											<img class="growBigOnHover" id="iconSearch" src="img/iconSearch.svg" /></a><span class="searchTermResults uhcMediumGray">Found 12 answers about "insurance"</span><a ng-href="faq.html"><img class="growBigOnHover" id="iconCancel" src="img/iconCancel.png" /></a>
+
+										</div>
+
+										<div id="FaqResultsSearchWrapper" class="hideInitially">
+											<div>
+												<div class="faqSearch">
+												  <form action="faq-results.html" autocomplete="on">
+												  <input id="search_submit" type="submit" value=""><input id="search" name="search" type="text" placeholder="What is your question?">
+												  </form>
+												</div>
+											</div>
+
+			</div> <!-- .headerSearchWrapper -->
+
+										<div id="faqWrapper">
+
+											<!-- BEGIN FAQ CONTENT -->
+
+												<div>
+													<dl id="faqList1" class="faqToggle">
+														<dt class="faqQuestion">I'm young and healthy. Why do I need health <span class="searchTerm">insurance</span>?
+														</dt>
+														<dd class="faqAnswer">You may think now isn't the time to care about health <span class="searchTerm">insurance</span>. After all, you may have tuition, books, and rent to worry about. But since an unplanned illness or accident may happen any time, now's the perfect time to consider health <span class="searchTerm">insurance</span>. Your school-sponsored plan meets the requirements of the Affordable Care Act. Most of the plans offered by UnitedHealthcare <strong>Student</strong>Resources are Gold or Platinum-level plans, but at lower-than-average premiums. According to comparison data from the 2013 Employer Health Benefits Survey by the Kaiser Family Foundation, there's a good chance your student plan is more affordable than being added as a dependent on your parent's plan or purchasing individual <span class="searchTerm">insurance</span> through a Health <span class="searchTerm">insurance</span> Marketplace (also called an Exchange).
+														</dd>
+
+														<dt class="faqQuestion">What's available for me if I don't qualify for my school's student <span class="searchTerm">insurance</span> program?
+														</dt>
+														<dd class="faqAnswer">If you don't meet the qualifications set by your school for the plan, contact UnitedHealthOne<sup>SM</sup> at 800-980-7395 for other health <span class="searchTerm">insurance</span> options.</dd>
+
+														<dt class="faqQuestion">If I don't enroll in the student <span class="searchTerm">insurance</span> plan during the open enrollment period, can I enroll later?
+														</dt>
+														<dd class="faqAnswer">Typically, you can only enroll in the plan during the designated open enrollment period. The exception to this is if you have a Qualifying Life Event (QLE). To determine acceptable QLEs, contact the person at your school who oversees the student health <span class="searchTerm">insurance</span>, or call the Customer Service number found on the plan brochure.
+														</dd>
+
+														<dt class="faqQuestion">If I have the student health <span class="searchTerm">insurance</span>, but drop out of school, am I still covered? If not, will I get a refund?
+														</dt>
+														<dd class="faqAnswer">Insured students who withdraw from school after the first 31 days of the policy period remain enrolled in the plan for the full period for which the premium was paid. In most states, refunds are only made in the case of an insured student entering the U.S. Armed Forces, or if eligibility requirements are not met.
+														</dd>
+
+														<dt class="faqQuestion">Can I enroll my family members in the student <span class="searchTerm">insurance</span> plan?
+														</dt>
+														<dd class="faqAnswer">You may be able to enroll dependents. Refer to the plan brochure on this website to determine if this is an option at your school. If it is, the enrollment form will show you how dependents may be added as well as the costs associated for adding dependents.
+														</dd>
+
+														<dt class="faqQuestion">What's my coverage period or effective date?
+														</dt>
+														<dd class="faqAnswer">Upon submission of your online enrollment, you'll receive an email with the subject line of "<span class="searchTerm">insurance</span> Enrollment Completed". The effective dates of coverage are included in that email. If you didn't receive that email, or misplaced it, simply login to your <i><strong>My Account</strong></i> page. From there, click on the link "Current Coverage Information" in the <strong>View My Information</strong> box. The link will display all necessary coverage information. Please note that for most policies coverage is effective the date enrollment and premium is received by the company or its representative or the effective date of the coverage period purchased, whichever is later.
+														</dd>
+
+														<dt class="faqQuestion">How do I renew my <span class="searchTerm">insurance</span>?
+														</dt>
+														<dd class="faqAnswer">Due to changing policy and benefit schedules, a new enrollment must be completed each policy year. During a specific policy year you can extend coverage either through your school or online within your <i><strong>My Account</strong></i>.
+														</dd>
+
+														<dt class="faqQuestion">What will I receive to prove I have coverage?
+														</dt>
+														<dd class="faqAnswer">Within 48 hours of UHCSR receiving your enrollment information, you'll receive an email with a link to download your electronic <span class="searchTerm">insurance</span> ID card. You can then access your card from your computer, or with our free UHCSR app, from your mobile device. If you need to access covered services prior to that, have your health care provider call our Customer Service number (found in your plan brochure) to verify coverage.  Please note that an ID Card is not a guarantee of coverage.  All claims must be evaluated for benefits.
+														</dd>
+
+														<dt class="faqQuestion">What if I lost my <span class="searchTerm">insurance</span> card?
+														</dt>
+														<dd class="faqAnswer">Thanks to our electronic <span class="searchTerm">insurance</span> ID card, losing your ID card can be a thing of the past. It's always available via your <i><strong>My Account</strong></i> page or the mobile app. If you prefer a hard copy of your card, you can request one through <i><strong>My Account</strong></i>.
+														</dd>
+
+														<dt class="faqQuestion">Why do you need my Social Security Number (SSN)?
+														</dt>
+														<dd class="faqAnswer">The Affordable Care Act requires UHCSR to file a 1095-B for each insured. This form lets the IRS know you have acceptable health <span class="searchTerm">insurance</span> coverage so you won't be penalized. We need your SSN in order to file this on your behalf.
+														</dd>
+													</dl>
+											</div>
+												<div>
+													<dl id="faqList3" class="faqToggle">
+														<dt class="faqQuestion">When scheduling an appointment, should I tell the provider's office that I have <span class="searchTerm">insurance</span> from UnitedHealthcare <u>StudentResources?</u>
+														</dt>
+														<dd class="faqAnswer">Yes, when you schedule an appointment, let the office know who your coverage is with, as well as your policy number and group name (found on your ID card). With the UHCSR mobile app, you can also email or fax a copy of your ID card to the provider.
+														</dd>
+													</dl>
+											</div>
+
+											<!-- END OF FAQ CONTENT -->
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</section>
+			</div>
+		</div>
+	</main>
+	<footer ng-include src="'include/footer.html'"  ></footer>
+
+<!-- Javascript Libraries at bottom after DOM is loaded -->
+<script type="text/javascript" src="js/angular.min.js"></script>
+<script type="text/javascript" src="js/angular-animate.min.js"></script>
+<script type="text/javascript" src="js/angular-aria.min.js"></script>
+<script type="text/javascript" src="js/angular-material.min.js"></script>
+<script type="text/javascript" src="js/angular-messages.min.js"></script>
+<script type="text/javascript" src="js/jquery-2.0.3.min.js"></script>
+<script type="text/javascript" src="js/angular-pageslide-directive-modified.js"></script>
+
+<!-- Application Specific Javascript files at very bottom after DOM and libraries are loaded -->
+<script type="text/javascript" src="js/uhc_sr.js"></script>
+
+</body>
+</html>

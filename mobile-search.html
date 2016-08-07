@@ -1,0 +1,116 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Search Results</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+		<meta name="apple-mobile-web-app-capable" content="yes">
+
+
+
+	<!-- Application Specific CSS -->
+	<link rel="stylesheet" type="text/css" href="css/uhc_sr.css">
+</head>
+
+<!-- fade-in when page finishes loading -->
+<body ng-app= "srApp" onload="document.body.style.opacity='1'">
+
+	<!-- Page Content -->
+	<main>
+		<div id="contentAll">
+			<div class="innerContentWrapper" >
+
+			<!-- SEARCH HEADER -->
+			<!-- \\\\\\\\\\\\\\\\\\\\\\\\\\\\\ -->
+				<div id="searchHeader" class="heroLoginBackground searchBox" >
+					<div id="resultsSearchWrapper">
+
+							<!-- BACK TO MAIN MENU -->
+							<a class="mobileBack" href="">Back</a>
+
+							<!-- SEARCH FORM -->
+							<form action="search-results.html" autocomplete="on">
+								     <md-input-container class="md-block">
+								     	<md-icon md-svg-src="img/iconFaqSearchWhite.svg"></md-icon>
+		        						<label>Enter a phrase or school</label>
+		       							<input required name="clientName" ng-model="project.clientName">
+		       							<div ng-messages="projectForm.clientName.$error">
+		          							<div ng-message="required">This is required.</div>
+		          						</div>
+		      						</md-input-container>
+							</form>
+
+							<!-- DESKTOP SEARCH NAV -->
+							<ul class="desktopSearchNav">
+								<li><a href="" class="active" >All</a></li>
+								<li><a href="">Help Center</a></li>
+								<li><a href="">News</a></li>
+								<li><a href="">Regulatory</a></li>
+							</ul>
+
+							<!-- MOBILE SEARCH NAV -->
+							<div  class="mobileGlossaryWrapper extendsSearch displayMobileOnly">
+								<a class="uhcBlackLink active"  href="">All</a>
+								<a class="uhcBlackLink"  href="">Help Center</a>
+								<a class="uhcBlackLink"  href="">News</a>
+								<a class="uhcBlackLink"  href="">Regulatory</a>
+							</div>
+
+					</div>
+				</div>
+				<!-- ///////////////////////// -->
+				<!-- (END) SEARCH HEADER -->
+
+				<section  class="sitePageWidth">
+					<div class="searchResultsColumnWidth ">
+					<div class="searchResultSummary uhcBlue">4 results found for &ldquo;{Phrase Query Here}&rdquo;</div>
+
+							<div class="searchResultTitle uhcFontBold">Buy College Student Insurance - Student Health Insurance</div>
+							<div class="searchResultQuote uhcGray">You're young and healthy. Why should you care about health insurance when you have tuition, books and rent to worry about? The answer is that anything can</div>
+							<div class="searchResultLink uhcGreen">www.uhcsr.com > Self Service &amp; Support</div>
+
+							<div class="searchResultTitle uhcFontBold">UnitedHealthcare StudentResources > Student Health Insurance and &hellip;</div>
+							<div class="searchResultQuote uhcGray">Your needs are unique. So are our student health insurance plans and ancillary products like dental and vision coverage. To learn more about our products, use </div>
+							<div class="searchResultLink uhcGreen">https://www.uhcsr.com/SHIP/SHIPHome.aspx</div>
+
+							<div class="searchResultTitle uhcFontBold">UnitedHealthcare StudentResources > Find My School's Plan</div>
+							<div class="searchResultQuote uhcGray">Welcome to your student health insurance plan page. UnitedHealthcare StudentResources is committed to doing our part to reduce waste and its impact on the </div>
+							<div class="searchResultLink uhcGreen">www.uhcsr.com > Self Service &amp; Support > College Students</div>
+
+							<div class="searchResultTitle uhcFontBold">UnitedHealthcare StudentResources > FAQs - Student Health Insurance</div>
+							<div class="searchResultQuote uhcGray">Q: If I have the student health insurance, but drop out of school, am I still covered? &hellip;.. Q: Does the UHCSR student health insurance plan satisfy the "Individual</div>
+							<div class="searchResultLink uhcGreen">www.uhcsr.com > Self Service &amp; Support > College Students</div>
+					</div>
+				</section>
+			</div>
+		</div>
+	</main>
+	<footer ng-include src="'include/footer.html'"  ></footer>
+
+<!-- Javascript Libraries at bottom after DOM is loaded -->
+<script type="text/javascript" src="js/angular.min.js"></script>
+<script type="text/javascript" src="js/angular-animate.min.js"></script>
+<script type="text/javascript" src="js/angular-aria.min.js"></script>
+<script type="text/javascript" src="js/angular-material.min.js"></script>
+<script type="text/javascript" src="js/angular-messages.min.js"></script>
+<script type="text/javascript" src="js/angular-pageslide-directive-modified.js"></script>
+
+
+<!-- Application Specific Javascript files at very bottom after DOM and libraries are loaded -->
+<script type="text/javascript" src="js/uhc_sr.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/ScrollMagic.min.js"></script>
+
+<script>
+var controller = new ScrollMagic.Controller();
+
+// create a scene
+new ScrollMagic.Scene({
+        offset: 50        // start this scene after scrolling for 50px
+    }).setClassToggle("#searchHeader", "toggleSearch")
+
+.addTo(controller)
+
+
+</script>
+</body>
+</html>

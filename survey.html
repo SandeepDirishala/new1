@@ -1,0 +1,154 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Student Experience Survey</title>
+<!-- OLD -->
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- BEGIN NEW -->
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+	<meta name="apple-mobile-web-app-capable" content="yes">
+<!-- END NEW -->
+
+
+	<!-- CSS files -->
+	<link rel="stylesheet" type="text/css" href="css/angular-material.min.css">
+	<link rel="shortcut icon" href='favicon.ico' type='image/x-icon' >
+	
+	<!-- Application Specific CSS -->
+	<link rel="stylesheet" type="text/css" href="css/uhc_sr.css">
+	<link rel="stylesheet" type="text/css" href="css/tmp.css">
+</head>
+
+<!-- fade-in when page finishes loading -->
+<body ng-app= "srApp" onload="document.body.style.opacity='1'">
+	<header ng-include src="'include/header.html'"  ></header>
+
+	<!-- Page Content -->
+	<main>
+
+		<div id="contentAll" ng-controller="surveyPageCtrl" layout="column" ng-cloak="" class="md-inline-form inputLogin" ng-app="srApp">
+			<div class="innerContentWrapper" >
+				<section  class="sitePageWidth">
+				    <form name="surveyForm">
+						<div class="marginTop8em"></div>
+						<div class="single-column">
+							<h3>Student Experience Survey</h3>
+							<p>Donec efficitur auctor lorem at cursus. Praesent rhoncus, nisl nec eleifend vehicula, nisi tortor fringilla nulla, vitae lacinia enim erat ac tellus. Nullam consequat et sapien sed consequat. Integer lacinia odio orci. </p>
+							<div class="formFieldNarrow">
+								<div class="formFieldLabel uhcFontBold uhcGray">Please ender your SR ID number found on your ID card.</div>
+								<div class="inputField15em">
+									<md-input-container class="md-block">
+										<label>SR ID number</label>
+										<input required="" name="field1" ng-model="survery.field1" md-no-asterisk="" ng-maxlength="20">
+										<div ng-messages="surveyForm.field1.$error">
+											<div ng-message="required">This is required.</div>
+										</div>
+									</md-input-container>
+								</div>
+							</div>
+
+							<div class="surveyAll">
+								<div id="question1" class="surveyQuestion">
+									<div class="surveyAsk"><strong>1.</strong> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse ornare vel nunc eget convallis?
+									</div>
+									<div class="surveyAnswer">
+										<md-radio-group ng-model="radioSurvey1Model" class="uhcRadio" md-no-ink>
+											<md-radio-button value="yes" aria-label="Yes" ng-click="surveySays('question1Yes')">
+											  Yes
+											</md-radio-button><br>
+											<md-radio-button value="no" aria-label="No" ng-click="surveySays('question1No')">
+											  No
+											</md-radio-button>
+										</md-radio-group>
+									</div>
+								</div>	<!-- .surveyQuestion -->
+
+								<div id="question2" class="surveyQuestion hideInitially">
+									<div class="surveyAsk"><strong>2.</strong> Cras turpis lacus, vulputate commodo aliquam quis, interdum eget magna. Integer consectetur est et metus sagittis, non mollis ex auctor?
+									</div>
+									<div class="surveyAnswer">
+										<md-radio-group ng-model="radioSurvey2Model" class="uhcRadio" md-no-ink>
+											<md-radio-button value="option1" aria-label="Not at all">
+											  Not at all
+											</md-radio-button><br>
+											<md-radio-button value="option2" aria-label="A little">
+											  A little
+											</md-radio-button><br>
+											<md-radio-button value="option3" aria-label="Some">
+											  Some
+											</md-radio-button><br>
+											<md-radio-button value="option4" aria-label="A lot">
+											  A lot
+											</md-radio-button>
+										</md-radio-group>
+									</div>
+								</div>	<!-- .surveyQuestion -->
+
+								<div id="question3" class="surveyQuestion hideInitially">
+									<div class="surveyAsk"><strong>3.</strong> Vestibulum hendrerit egestas tempor. Phasellus tincidunt nulla enim, vel porttitor urna imperdiet at. Curabitur posuere faucibus mollis. Integer blandit leo dignissim tellus condimentum, nec tempus magna egestas. Sed at sem eros. Nunc nec lobortis neque. Nullam vel tortor vel purus posuere gravida. Ut tempor, erat nec rutrum viverra, ex enim viverra sapien, vehicula rutrum tellus tortor non ipsum?
+									</div>
+									<div class="surveyAnswer">
+										<md-radio-group ng-model="radioSurvey3Model" class="uhcRadio" md-no-ink>
+											<!-- DEV NOTE: if answer is longer than 100 characters, wrap the button in div.longLabel. Issue with Angular Material radio label. -->
+											<div class="longLabel">
+												<md-radio-button value="option1" aria-label="Nulla vitae ex auctor..." ng-click="surveySays('question3Option1')">
+												  Nulla vitae ex auctor, rutrum lacus id, volutpat leo. Vestibulum facilisis, metus id dignissim varius, eros erat condimentum massa, eget iaculis dui risus at arcu. Sed vehicula leo vel orci lacinia, nec efficitur neque tincidunt. Nam facilisis tellus vel magna pulvinar tristique. Curabitur dictum, urna at hendrerit volutpat, turpis orci tempor nisi, id sodales eros turpis eget ligula. 
+												</md-radio-button><br>
+											</div>
+											<div class="longLabel">
+												<md-radio-button value="option2" aria-label="Donec efficitur auctor lorem at cursus..." ng-click="surveySays('question3Option2')">
+												  Donec efficitur auctor lorem at cursus. Praesent rhoncus, nisl nec eleifend vehicula, nisi tortor fringilla nulla, vitae lacinia enim erat ac tellus. Nullam consequat et sapien sed consequat. Integer lacinia odio orci. Pellentesque id est eros. Donec quis elit sem. Nullam non elit lacus. Pellentesque tincidunt tempus sapien.  
+												</md-radio-button><br>
+											</div>											
+											<div class="longLabel">
+												<md-radio-button value="option3" aria-label="Praesent elementum nibh non..." ng-click="surveySays('question3Option3')">
+												 Praesent elementum nibh non arcu bibendum, sit amet rhoncus mi ultrices. Nullam dignissim nulla at augue malesuada molestie. Morbi rhoncus tellus non diam fermentum eleifend. Nulla vitae ex auctor, rutrum lacus id, volutpat leo. Vestibulum facilisis, metus id dignissim varius, eros erat condimentum massa, eget iaculis dui risus at arcu. Sed vehicula leo vel orci lacinia, nec efficitur neque tincidunt.   
+												</md-radio-button>
+											</div>
+										</md-radio-group>
+									</div>
+								</div>	<!-- .surveyQuestion -->
+
+ 								<div id="question4" class="surveyQuestion hideInitially">
+									<div class="surveyAsk"><strong>4.</strong> Use the slider below to choose how you feel on a scale from 1 to 10?
+									</div>
+									<div class="surveyAnswer">
+									  <md-slider flex md-discrete mdng-model="rating1" step="1" min="1" max="10" aria-label="rating">
+									  </md-slider>									</div>
+								</div>	<!-- .surveyQuestion -->
+
+
+							</div>	<!-- .surveyAll -->
+
+							<div id="finalSurvey" class="hideInitially">
+								<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse ornare vel nunc eget convallis. Curabitur a risus tristique lectus pellentesque ultrices quis sed diam. In ullamcorper nibh mi, sit amet ultricies neque laoreet quis. Aliquam erat volutpat. Ut quis facilisis lorem. Curabitur suscipit tempus nunc. Proin non vehicula mauris. Sed eu erat eget ligula varius ullamcorper. Ut dignissim neque a pellentesque faucibus. Vivamus ultrices volutpat pretium. Donec semper tempus mauris ut hendrerit. Aenean maximus turpis neque, sit amet lacinia ligula laoreet ut. Nunc viverra congue mauris et fringilla. Sed porttitor urna risus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.
+								</p>
+                                <div layout="row" flex="100" layout-align="end" class="submitButton" style="margin-top:40px;display:block;">
+                                    <md-button  id="btnSubmit" class="controlButton controlButtonActive md-raised" >Submit</md-button>
+                                </div>
+							</div>
+                            
+						</div>
+					</form>
+				</section>
+			</div>
+		</div>
+	</main>
+	<footer ng-include src="'include/footer.html'"  ></footer>
+
+<!-- Javascript Libraries at bottom after DOM is loaded -->
+<script type="text/javascript" src="js/angular.min.js"></script>
+<script type="text/javascript" src="js/angular-animate.min.js"></script>
+<script type="text/javascript" src="js/angular-aria.min.js"></script>
+<script type="text/javascript" src="js/angular-material.min.js"></script>
+<script type="text/javascript" src="js/angular-messages.min.js"></script>
+<script type="text/javascript" src="js/jquery-2.0.3.min.js"></script>
+<script type="text/javascript" src="js/angular-pageslide-directive-modified.js"></script>
+
+
+<!-- Application Specific Javascript files at very bottom after DOM and libraries are loaded -->
+<script type="text/javascript" src="js/uhc_sr.js"></script>
+
+</body>
+</html>

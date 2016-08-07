@@ -1,0 +1,160 @@
+[
+ 
+
+ { "h2":"Questions we hear a lot!" , "id":"hdr1"},
+
+ { "question":"How do I set up My Account?", 
+   "answer":"That couldn't be easier! <a href='login.html'>Start here<\/a> and fill in the blanks!" , "link":"#Q1-question" , "id":"Q1-question" },
+
+ { "question":"I lost my insurance card! How do I get another one?", 
+   "answer":"First: breathe! Then, log in to My Account and pick the ID card link to see a digital version. If you've got to have an actual card, you can request one from My Account too!"},
+
+ { "question":"I don't feel well! What should I do?", 
+   "answer": "If you feel this is a life threatening illness or accident, call 911 or go to the nearest emergency room immediately. If this is neither, and your school has a Student Health Center, go there first. In most cases, it's the most cost effective and easiest to access since they are typically on campus. If it is before or after hours, try calling the Student Health Center number. it may refer you to local resources. \r\n If you need to get care from another provider, your school may ask that you get a referral from the Student Health Center. Check your student insurance plan brochure to check for that requirement. \r\n Of course, if your school does not have a SHC and it's not an emergency, we suggest that you use the Provider Search tool on your school's student insurance page to find a provider close to you. If you've downloaded the UHCSR app, you can locate that provider even easier!" , "link":"#Q3-question" , "id":"Q3-question" },
+
+ { "question":"I've had an accident. What should I do?", 
+   "answer":" If you feel this is a life threatening illness or accident, call 911 or go to the nearest emergency room immediately. If this is neither, and your school has a Student Health Center, go there first. In most cases, it's the most cost effective and easiest to access since they are typically on campus. If it is before or after hours, try calling the Student Health Center number; it may refer you to local resources. \r\n If you need to get care from another provider, your school may ask that you get a referral from the Student Health Center. Check your student insurance plan brochure (link to search) to check for that requirement.\r\n Of course, if your school does not have a SHC and it&rsquo;s not an emergency, we suggest that you use the Provider Search tool on your school's student insurance page (link to search) to find a provider close to you. If you've downloaded the UHCSR app, you can locate that provider even easier!" },
+
+ { "question" : "What should I do if the SHC is closed or I'm away from school?", 
+   "answer"  : "If you can't go to the Student Health Center, don't worry. Our plans include access to a national network of health care providers. You can easily search the network from your school's student insurance page . The network search is also available from My Account and from the UHCSR app.\r\nPreferred providers are those doctors and facilities that have agreed to provide a negotiated discount to members of UnitedHealthcare insurance plans. This may lower your out of pocket costs for services received." },
+
+ { "question": "How do I find a preferred provider? And, why is that best?", 
+   "answer"  : "If you can't go to the Student Health Center, don't worry. Our plans include access to a national network of health care providers. You can easily search the network from your school's student insurance page . The network search is also available from My Account and from the UHCSR app.\r\nPreferred providers are those doctors and facilities that have agreed to provide a negotiated discount to members of UnitedHealthcare insurance plans. This may lower your out of pocket costs for services received." , "link":"#Q2-question" , "id":"Q2-question"},
+
+ { "question": "I need to check on the status of a claim. How can I do that?", 
+   "answer"  : "Log in to My Account and select the view claims link for the status of both completed and in progress claims. The most recent 120 days of claims status is also available from UHCSR app." },
+
+{ "question":"Where can I get a prescription filled?", 
+  "answer"  :"Find the most convenient participating pharmacy on your school's student insurance page, or from in My Account, either in the UHCSR app or on this site." },
+
+{ "question": "I need someone else to call in about my claims. Is that okay?", 
+   "answer" : "Actually, by law, only the insured can access their secured healthcare information in My Account. But, if you need someone else to act on your behalf, you can complete and submit a Personal Representative Appointment (link to PRA) within My Account or via the UHCSR app." },
+
+{ "question": "I don't remember my coverage period. How do I look it up?", 
+  "answer"  : "Log in to My Account and look at the information box under your Current Coverage Information. For most student insurance plans, coverage starts (or is effective) the later of: when we've gotten your premium and enrollment information or the effective date of the coverage period purchased." },
+
+{ "h2":"Learning about student insurance and your student insurance plan" , "id":"hdr2"},
+
+{ "question": "Where can I look at the student insurance plans offered by my school?", 
+  "answer"  : "Each school has its own student insurance page. Enter the name of your school in the searh above. Once on your school's page, you'll be able to review all the student insurance plans offered, or you'll be able to select tags that apply to you and see the student insurance plans intended for you and other students like you.", "link":"#Q4-question" , "id":"Q4-question" },
+
+{ "question": "I have a family that needs protection; can I enroll them in my student insurance plan?", 
+   "answer" : "Dependent coverage can vary from plan to plan; the student insurance plan brochures on your school's student insurance page will tell you if dependent coverage is available for your eligible family members. The student insurance enrollment form will have the costs for your dependents' coverage and will provide space for information about your dependents. If dependent coverage is available, you may also find a link to enroll your dependents within your My Account." },
+
+{ "question" : "I had this student insurance plan last year. Do I need to enroll again for the new school year or will it just roll over?", 
+   "answer"  : "Your student insurance plan is a one year plan and if you want coverage for a new school year or a portion of a year, you'll have to enroll again. Start on your school's student insurance plan page by searching for your school here. (link to search) Read the student insurance plan messages from your school, review the plan details and follow the provided instructions to enroll for a new coverage period.\r\nIf you want to extend your coverage within the same student insurance plan year (for instance, if you bought insurance for six months and you wanted to buy for another six months), you can do that through your school or through your My Account." },                 
+
+{ "question" : "How do I renew my student insurance plan?", 
+   "answer"  : "Your student insurance plan is a one year plan and if you want coverage for a new school year or a portion of a year, you'll have to enroll again. Start on your school's student insurance plan page by searching for your school here. (link to search) Read the student insurance plan messages from your school, review the plan details and follow the provided instructions to enroll for a new coverage period.\r\nIf you want to extend your coverage within the same student insurance plan year (for instance, if you bought insurance for six months and you wanted to buy for another six months), you can do that through your school or through your My Account." },
+
+{ "question" : "I missed the open enrollment period for my student insurance plan; can I still enroll?", 
+   "answer"  : "Similar to employer insurance, enrolling after the open enrollment period typically requires a Qualifying Life Event. Examples of Qualifying Life Events are marriage, divorce, birth. For specifics on the QLE accepted by your student insurance plan, contact the person at your school that oversees the student insurance program, or call the Customer Service number listed on your school's student insurance plan brochure." },
+
+{ "question":"Do I have to stay in school to keep my student insurance plan coverage?", 
+   "answer":"Actually, if you leave school, graduate or enroll in another plan after the first 31 days of your coverage period, your student insurance plan remains in effect for however many months you've paid the premium. Refunds are not usually necessary, but exceptions can be made for insured students that enter the U.S. Armed Forces." },   
+
+{ "question":"Will my coverage stop when I graduate?", 
+   "answer":"Actually, if you leave school, graduate or enroll in another plan after the first 31 days of your coverage period, your student insurance plan remains in effect for however many months you've paid the premium. Refunds are not usually necessary, but exceptions can be made for insured students that enter the U.S. Armed Forces." },   
+
+{ "question":"If I drop out in the middle of a policy year, will I get a refund?", 
+   "answer":"Actually, if you leave school, graduate or enroll in another plan after the first 31 days of your coverage period, your student insurance plan remains in effect for however many months you've paid the premium. Refunds are not usually necessary, but exceptions can be made for insured students that enter the U.S. Armed Forces." },   
+
+{ "question":"Do I have to stay in school to keep my student insurance plan coverage?", 
+   "answer":"If I enroll in a different insurance program after enrolling in the student insurance plan, will I get a refund?" },   
+
+{ "question":"Help! I don't qualify for my school's student insurance plan!", 
+   "answer" :"Don't worry, there may be other options! Call UnitedHealthOneSM at 800-980-7395 to ask about other options for getting health insurance." },
+
+{ "h2":"How to use your student insurance plan benefits" , "id":"hdr3"},
+
+{ "question": "Do I need to tell provider's that UnitedHealthcare StudentResources is my student insurance carrier?", 
+   "answer" : "Actually, yes! UnitedHealthcare is a large company. Some providers may be accustomed to UnitedHealthcare's employer plans but they are not familiar with student insurance plans and their specific covered benefits. So, when you schedule an appointment, let the office know who your coverage is with. Be sure to give them your policy number and group name (on your ID card). If you have the UHCSR app, (link to app store) you can email or fax a copy of your ID card to the provider." },   
+
+{ "question": "My provider said my coverage is terminated, but I know it's active. Why?", 
+   "answer" : "As we said, UnitedHealthcare is a big company. Make sure the provider is using the phone number, member number and group number on your UnitedHealthcare <strong>Student<\/strong>Resources ID card." },
+
+{ "question": "Why is using a Preferred Provider such a big deal?", 
+   "answer" : "These doctors and facilities have agreed to provide their services at a discounted rate. This usually means that you will save money on your out of pocket costs for those healthcare services. You can see any provider, in or out of network, but in network coinsurance and copayment rates favor using preferred providers." },   
+
+{ "question": "What happens if I need to be admitted to a hospital?", 
+   "answer" : "Your plan may provide benefits for hospital care, but double check your student insurance plan brochure (available on your school's student insurance page for benefits and for whether a pre-admission notification is required. Of course, if your admission is an emergency, this does not apply!" },
+
+{ "question": "How can I tell what is covered under my student insurance plan?", 
+   "answer" : "Your student insurance plan brochure (available on your school's student insurance plan page (link to search) has a list of eligible benefits. It also has a list of things that are not covered in the Exclusions and Definitions section of the brochure. If you would like to ask questions or need information not in the student insurance plan brochure, call the Customer Service number in your student insurance brochure or on your ID card." },   
+
+{ "question": "When I receive care, do I need to submit a claim form?", 
+   "answer" : "No claim form is required with most policies. But you can refer to the Claims Procedures in the policy itself for specific information on your particular student insurance plan (link to search). If you do need to submit a claim form, you'll find one in Insurance Forms." },
+
+{ "question": "I have a claim in process and I want to have it processed as quickly as possible. Is there anything I can do?", 
+   "answer" : "Go to My Account and double check your personal information (email, mailing address, date of birth, etc.). We also will need you to tell us if you have other health insurance in force. If you don't, and the student insurance plan is your only coverage, you'll go to the Add Other Insurance page and certify that you don't have other coverage in force. Being proactive with this information will really help us process your claim." },   
+
+{ "question": "What if I'm in an accident or I am injured? Is there a form to complete and submit then?", 
+   "answer":  "Yes, you'll have to submit a form, but it's online. Log in to My Account and choose Accident Details to complete and submit the form." },
+
+{ "question": "I'm covered under my parent's plan and under the student insurance plan and I'm not sure which should get the claim first.", 
+   "answer":  "Typically, you'll submit to your parent's plan first and then submit any outstanding balances to the student insurance plan. When you do submit an outstanding balance, please include a copy of the Explanation of Benefits (EOB) from your parent's health insurance plan and mail both to us at the claims address in the Policy Information section in My Account." },   
+
+{ "question": "If I do need to submit a claim, where do I send it?", 
+   "answer":  "We have several claims processing addresses. To find yours, log in to My Account and select Policy Information and View Claims Address. You can also submit a claim via fax and the number will be on that page as well." },
+
+{ "question": "My provider said my claim was denied for no coverage, but I know I'm covered. What happened?", 
+   "answer":  "UnitedHealthcare is a big company. It's possible that your provider sent the claim to the wrong address. Check with them and be sure that your claims goes to UnitedHealthcare StudentResources; P.O. Box 809025; Dallas, TX 75380-9025. If your provider files electronically, our payor ID through Emdeon is 74227." },   
+
+{ "question": "I've got a semester abroad coming up. Am I covered?", 
+   "answer":  "Most of our student insurance plans include Global Emergency Services from UnitedHealthcare Global. While abroad, you'll have medical assistance, evacuation, repatriation and travel assistance services. Your student insurance plan brochure has additional details. If available for your plan, information is also available within My Account." },
+
+{ "h2":"The Affordable Care Act" , "id":"hdr4"},
+
+{ "question": "What are the health insurance options for a college student these days?", 
+   "answer":  "<ul><li>Student insurance plans<\/li><li>Parents' employer plans (up to age 26 if dependent coverage is available)<\/li><li>Employer plans (for eligible employed students)<\/li><li>Individual plans through the State or Federal Exchange.<\/li><li>If you're under the age of 30 (or qualify for a hardship exemption), you can purchase a catastrophic health plan through an Exchange.</li><br \/><br \/>Depending on your state, you may qualify for Medicaid." },   
+
+{ "question": "Does my student plan count toward ACA's individual coverage mandate?", 
+   "answer":  "Yes, our student plans meet the requirements for Minimum Essential Coverage. We collect your social security number during enrollment so that we can file a 1095-B for each insured. This is the form that lets the IRS know you have coverage that meets the ACA requirements.\r\nThe penalty for 2015 is $325 per person or 2% of income; in 2016 it will be $695 per person or 2.5% of income. The penalty is paid on your federal tax return. You may qualify for an exemption from the penalty if: <br \/><br \/>You're uninsured for less than three months of the year.<ul><li>The lowest-priced coverage you can get would cost you more than 8% of your household income.<\/li><li>You don't have to file a tax return because your income is too low.<\/li><li>You're a member of a federally-recognized tribe or eligible for services through an Indian Health Services provider.<\/li><li>You're a member of a recognized health care sharing ministry.<\/li><li>You're a member of a recognized religious sect with religious objections to insurance, including Social Security and Medicare.<\/li><li>You're incarcerated and not being held pending disposition of charges.<\/li><li>You're not lawfully in the United States.<\/li><li>You qualify for a hardship exemption.<\/li><\/ul>" }, 
+
+{ "question":"I'm going to school out of state. Can I buy health insurance from that state's Exchange?", 
+   "answer":"No, you can only purchase plans from the Exchange that services your state of residence. Each state has its own residency requirements that must be met in order to purchase from their Exchange." },   
+
+{ "question":"Does my student plan count toward ACA's individual coverage mandate?", 
+   "answer":"Yes, our student plans meet the requirements for Minimum Essential Coverage. We collect your social security number during enrollment so that we can file a 1095-B for each insured. This is the form that lets the IRS know you have coverage that meets the ACA requirements.\r\nThe penalty for 2015 is $325 per person or 2% of income; in 2016 it will be $695 per person or 2.5% of income. The penalty is paid on your federal tax return. You may qualify for an exemption from the penalty if:<br />You're uninsured for less than three months of the year.<ul><li>The lowest-priced coverage you can get would cost you more than 8% of your household income.<\/li><li>You don't have to file a tax return because your income is too low.<\/li><li>You're a member of a federally-recognized tribe or eligible for services through an Indian Health Services provider.<\/li><li>You're a member of a recognized health care sharing ministry.<\/li><li>You're a member of a recognized religious sect with religious objections to insurance, including Social Security and Medicare.<\/li><li>You're incarcerated and not being held pending disposition of charges.<\/li><li>You're not lawfully in the United States.<\/li><li>You qualify for a hardship exemption.<\/li><\/ul>" },
+
+{ "question":"What is the penalty for not having minimum essential coverage? Is anyone exempt from that mandate?", 
+   "answer":"Yes, our student plans meet the requirements for Minimum Essential Coverage. We collect your social security number during enrollment so that we can file a 1095-B for each insured. This is the form that lets the IRS know you have coverage that meets the ACA requirements.\r\nThe penalty for 2015 is $325 per person or 2% of income; in 2016 it will be $695 per person or 2.5% of income. The penalty is paid on your federal tax return. You may qualify for an exemption from the penalty if:<br />You're uninsured for less than three months of the year.<ul><li>The lowest-priced coverage you can get would cost you more than 8% of your household income.<\/li><li>You don't have to file a tax return because your income is too low.<\/li><li>You're a member of a federally-recognized tribe or eligible for services through an Indian Health Services provider.<\/li><li>You're a member of a recognized health care sharing ministry.<\/li><li>You're a member of a recognized religious sect with religious objections to insurance, including Social Security and Medicare.<\/li><li>You're incarcerated and not being held pending disposition of charges.<\/li><li>You're not lawfully in the United States.<\/li><li>You qualify for a hardship exemption.<\/li><\/ul>" },
+
+
+{ "question": "I'm going to school out of state. Can I buy health insurance from that state's Exchange?", 
+   "answer":  "No, you can only purchase plans from the Exchange that services your state of residence. Each state has its own residency requirements that must be met in order to purchase from their Exchange." },   
+
+{ "question": "I'm an international student. Can I get health insurance from the Exchange and get a premium tax credit?", 
+   "answer":  "You can purchase a plan on the Exchanges, but you are not eligible for a premium tax credit to help pay for that plan." },
+
+{ "question": "Is the student insurance plan from my school really a good alternative to a State or Federal Exchange plan?", 
+   "answer":" Actually, your school's plan may suit your needs better. Some of that is based on underwriting rules and how premium rates are developed for a younger, healthier population of college students who need coverage for a limited time (while they are in school). Student insurance premium is usually lower than comparable Exchange plans as a result. And, because student insurance plans are built to serve the unique needs of schools and their students, UnitedHealthcare StudentResources student insurance plans can offer benefits not found in Exchange plans:\r\n<ul><li>If the school has a Student Health Center, we will likely treat it like a preferred provider in our network.<\/li><li>Our student plans have a national network of preferred providers backed by UnitedHealthcare. That means whether you're at school, at home, or enjoying spring break, we've got you covered.<\/li><li>Most of our student plans include global emergency services from UnitedHealthcare Global; great for when you're traveling or studying abroad.<\/li><li>Our plans typically offer lower deductibles, copayments, out-of-pocket maximums, and premiums than the lower cost options (Bronze, Silver, and Catastrophic) offered through the Marketplaces.<\/li><li>Your school-sponsored plan from UHCSR meets the Individual Mandate requirement of Minimum Essential Coverage.<\/li><li>With the school-sponsored student health insurance plan, the plan period is based on the school's academic year, not the calendar year like Marketplace plans. This means you can have coverage from the first day of school in the fall instead of waiting until a January 1 effective date.<\/li><li>Whether you're attending an in-state or an out-of-state school, you can purchase the school-sponsored plan. With the Marketplace, you can only purchase plans on your state's Marketplace.<\/li><li>For students attending an out-of-state school, those on a Marketplace plan may only be able to get non-emergency care within their Preferred Provider Network, which is often regional.<\/li><li>Depending on the school, you may be able to use financial aid to purchase the school-sponsored student health insurance plan<\/li><\/ul>" },   
+
+{ "question":"I need dental and vision services. Are they covered under my plan?", 
+   "answer": "ACA rules require us to include pediatric dental and vision coverage for insureds up to age 19. Some schools also offer a voluntary dental and/or vision plan. Check your school's student insurance page to see if dental and/or vision insurance is available through your school's student insurance program. These plans have only one 12 month coverage period. " },
+
+{ "question": "Can I get health insurance from a Marketplace even if my school offers a student insurance plan?", 
+   "answer" : "Yes, but make sure to do your homework (pun intended) before making a decision. From our experience, your school sponsored student insurance plan may be better. For Marketplace plans consider:\r\n<ul><li>Is the Student Health Center a preferred provider under the Marketplace plan?<\/li><li>Are services other than emergencies covered where you'll be attending school?<\/li><li>Are there in-network providers available across the nation (so you're covered at school, at home, and even when you're travelling)?<\/li><li>Does it offer Global Emergency Services when you're abroad?<\/li><li>Does the plan have pre-certification or pre-authorization requirements, or does it require a referral from your Primary Care Physician?<\/li><li>Don't forget to look at other costs like deductibles, copays, and total out-of-pocket cost, too.<\/li><\/ul>" },   
+
+{ "question": "Can my school require students to have health insurance?", 
+   "answer":  "Absolutely! Typically, this requirement can be met by enrolling in the school-sponsored student health insurance plan, or completing a waiver form showing proof of comparable coverage." },
+   
+{ "question":"Am I eligible for a premium tax credit, or subsidy, if I buy health insurance through the Marketplaces?", 
+   "answer":"Maybe; here are the requirements according to the IRS:<br /><ul><li>You are not eligible for coverage through an employer or a government plan.<\/li><li>You fall within certain income limits.<\/li><li>You cannot be claimed as a dependent by another person.<\/li><li>You don't file a Married Filing Separately tax return (unless you meet the criteria related to victims of domestic abuse and spousal abandonment).<\/li><li>To determine your eligibility for a premium tax credit, go to <a href='http:\/\/HealthCare.gov'>www.HealthCare.gov<\/a> or call <a href='tel:800-318-2596'> 800-318-2596<\/a> .<\/li><\/ul>" },   
+
+{ "h2":"State and Federal Exchanges" , "id":"hdr5"},
+
+{ "question":"Do the State or Federal plans have an open enrollment period like student insurance plans?", 
+   "answer":"Absolutely! The open enrollment period is based on a calendar year (January to December) versus an academic year (August - July). You can check for the next open enrollment period at <a target='_new' href='http:\/\/HealthCare.gov'>www.HealthCare.gov<\/a>.\r\n Just like most student insurance plans, State and Federal plans may allow for enrollment outside of the open enrollment period if you have a Qualifying Life Event. Call <a href='tel:800-318-2596'>800-318-2596<\/a> for assistance with the list of Qualifying Life Events." },
+
+{ "question":"If I'm eligible for a premium tax credit to help pay for coverage on the Exchange, how does that work?", 
+   "answer": "You can either have the credit used to lower your monthly premium cost, or you can pay the full premium cost and claim the credit on your tax return. Avoid an unexpected expense at tax time and report any changes in your financial situation after you enroll in the Exchange coverage. Changes in income or family size can change your premium tax credit throughout the year." },   
+
+{ "question": "Isn't there a catastrophic plan offered through the Exchange?", 
+   "answer":  "Yes, there is a catastrophic plan for individuals up to 30 years old or those who have qualified for a hardship exemption. You cannot get a premium tax credit with a catastrophic plan. You must pay the standard price. While this plan may have lower premiums with some included services, there is a typically high deductible that has to be met before the plan helps cover healthcare costs." },
+
+{ "question":"Maybe I can qualify for Medicaid?", 
+   "answer": "You may qualify, but eligibility varies by state. Go to <a href='http:\/\/medicaid.gov' >www.medicaid.gov<\/a> to determine if you may be eligible.<br \/><br \/>If you experience any changes in income or family size, report them to the Marketplace when they happen. This will help ensure you're getting the proper amount of financial assistance, and help avoid a surprise at the end of the year when you file your taxes. If the estimated amount of credit was too high, you'll have to pay the difference back to the IRS." }   
+
+
+]

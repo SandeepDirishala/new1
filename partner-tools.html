@@ -1,0 +1,203 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Online Partner Tools</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+		<meta name="apple-mobile-web-app-capable" content="yes">
+
+	<!-- CSS files -->
+	<link rel="stylesheet" type="text/css" href="css/angular-material.min.css">
+	<link rel="shortcut icon" href='favicon.ico' type='image/x-icon' >
+	
+	<!-- Application Specific CSS -->
+	<link rel="stylesheet" type="text/css" href="css/uhc_sr.css">
+</head>
+
+<!-- fade-in when page finishes loading -->
+<body ng-app= "srApp"   onload="document.body.style.opacity='1'"  ng-controller="stickyEnabled">
+	<header ng-include src="'include/header.html'"  ></header>
+
+	<!-- Page Content -->
+	<main>
+		<div id="contentAll">
+			<div class="innerContentWrapper" >
+
+			<!-- change id to select hero image for current page -->
+				<div id="heroAdminOverview" class="parallax">
+				
+					<div class="heroGradient">
+						<div class="heroOverlayText uhcWhite">
+							<h2 class="uhcWhite">Online Partner Tools</h2>
+
+						</div>
+					</div>
+				</div>	
+
+				<div  class="mobileGlossaryWrapper displayMobileOnly" style="box-shadow:none !important">
+						<a class="uhcBlackLink" href="admin-overview.html">Overview</a>
+						<a class="uhcBlackLink" href="admin-request-rfp.html">Request a Quote</a>
+						<a class="uhcBlackLink uhcFontBold" href="partner-tools.html">Online Partner Tools</a>
+						<a class="uhcBlackLink" href="https://partnercenter.uhcsr.com">Partner Center</a>
+				</div>
+
+				<section class="adminContentWithSideBar sitePageWidth">
+					<div id="">
+						<div ng-cloak>
+							<div layout="row">
+									<div class="tempMenuHolder" >
+										<div  id="sideNavLeft noMargin"   class="displayFullOnly">
+												<a class="uhcBlackLink" href="admin-overview.html"><div class="sideNavLeftBox">Overview</div></a>
+												<a class="uhcBlackLink" href="admin-request-rfp.html"><div class="sideNavLeftBox">Request a Quote</div></a>
+												<a class="uhcBlackLink" href="partner-tools.html"><div class="sideNavLeftBox uhcFontBold">Online Partner Tools</div></a>
+												<a class="uhcBlackLink" href="https://partnercenter.uhcsr.com"><div class="sideNavLeftBox">Partner Center</div></a>
+										</div>
+									</div>
+
+									<div  id="sideNavRight"  class="stickySetup">
+										<section  class="sitePageWidth">
+											<div class="adminSingleColumn">
+											<h2>Partner Center: Sets the bar high!</h2>
+<p>
+You may have noticed that we’ve been lighthearted and a little humorous in other parts of this site. That’s intentional and we hope it makes insurance more approachable and easier to understand for students. But, when it comes to Partner Center’s tools, we’re very serious about making your job easier. 
+Partner Center is a set of online tools designed specifically to support these student insurance processes:</p>
+
+<ul>
+<li> Waiver Management including:
+	<ul>
+		<li>
+		Early Enrollment: Student information is transmitted to our system immediately, and ID Cards are made available up to 30 days prior to the policy start date
+		</li>
+	</ul>
+	</li>
+	<li>Student Health Center Referrals</li>
+	<li>Student Health Center Ledger Billing</li>
+	<li>Student Insurance Management</li>
+</ul>
+
+<h3>Waiver Management</h3>
+<p>
+Totally online and in real time: Waiver Management handles it all: </p>
+<ul>
+	<li>Student list upload and ongoing maintenance</li> 
+	<li>Tailored online waiver election and enrollment forms</li>
+	<li>Send online waiver election and/or enrollment communications to students using preloaded templates</li>
+	<li>Automatic approval/denial of waiver requests based on your comparable coverage requirements</li>
+	<li>Automatic notification to students, both onscreen and via email, of the waiver decision and/or their enrollment/election status</li>
+	<li>Eligibility list creation</li>
+	<li>Robust reporting capability for all waiver data</li>
+</ul>
+
+
+
+<h3>Claims Management</h3>
+<p>
+Used by hard working Student Health Center staffers to submit Ledger Billing Claims and Student Health Center Referral information directly to UnitedHealthcare StudentResources. No paper, no faxes, no emails. Fast, accurate and at your fingertips!</p>
+<h3>Student Health Center Referral</h3>
+<p>
+Stop the madness; or, at least, stop the faxes! If your policy requires referrals of students to off-campus providers, Student Health Center Referral moves the process online and it reduces claim processing errors. Use Student Health Center Referral to:</p>
+
+<ul>
+	<li>Enter your student referrals quickly and easily</li>
+	<li>View all referrals by date range</li> 
+	<li>Export all your referrals to Excel for easy offline reference</li>
+</ul>
+
+<h3>Ledger Billing Claims Submission</h3>
+<p>Reduced reimbursement wait times? Yes! Please! Use Partner Center’s Ledger Billing Claims tool, submit ledger billing claims online and see an average turnaround time of seven days! This flexible tool supports:</p>
+<ul>
+	<li>Entering single claims</li> 
+	<li>Batch upload multiple claims from your Practice Management System</li> 
+	<li>Search and retrieve submitted claims</liBatch> 
+	<li>Verify student eligibility</li>
+	<li>Put claims on hold if your pending eligibility </li>
+	<li>Generate claims reports </li>
+</ul>
+<p>Partner Center’s ledger billing tool works with popular Practice Management Systems:</p> 
+<ul>
+	<li>AdvancedMD</li>
+	<li>Medicat Practice Management System</li>
+	<li>PyraMED by Media Highway</li>
+	<li>Point n Click</li>
+	<li>Pro Pharm</li>
+</ul>
+<h3>Insurance Management</h3>
+
+<p>You’re on the front lines, aren’t you? Students look to you for help with their student insurance account questions. You can look to Insurance Management to search for and review student insurance account information quickly and easily. Of course, only qualified (as defined by HIPAA) school representatives are permitted to access that information which includes:</p>
+<ul>
+<li>Verification of student’s coverage</li>
+<li>ID card printing </li>
+<li>Locating preferred providers</li>
+<li>Details about value-added benefits like HealthiestYou, UnitedHealth Allies, and UnitedHealthcare Global (global emergency medical services)</li>
+<li>Prescription plan information</li> 
+<li>Verification of Student Health Center claims status</li>
+</ul>
+											</div>
+										</section>
+									</div>
+							</div>
+						</div>
+					</div>
+				</section>
+				
+			</div>
+		</div>
+	</main>
+	       
+
+	<footer  ng-include src="'include/footer.html'"  >
+		
+
+	</footer>
+
+<!-- Javascript Libraries at bottom after DOM is loaded -->
+<script type="text/javascript" src="js/angular.min.js"></script>
+<script type="text/javascript" src="js/angular-animate.min.js"></script>
+<script type="text/javascript" src="js/angular-aria.min.js"></script>
+<script type="text/javascript" src="js/angular-material.min.js"></script>
+<script type="text/javascript" src="js/angular-messages.min.js"></script>
+<script type="text/javascript" src="js/jquery-2.0.3.min.js"></script>
+<script type="text/javascript" src="js/angular-pageslide-directive-modified.js"></script>
+
+
+<!-- Application Specific Javascript files at very bottom after DOM and libraries are loaded -->
+<script type="text/javascript" src="js/uhc_sr.js"></script>
+
+<script>
+
+//document.addEventListener('readystatechange', function() {
+  //  if (document.readyState === "complete") {
+     
+
+//$(window).scroll(function(){
+   
+
+//if  ( ($(document).height() - $(window).height()) - $(window).scrollTop() < 200 ){
+
+//	document.getElementById('sideNavLeft').setAttribute("disabled-sticky", "disableSticking");
+
+
+//	document.getElementById('stickyTricker').click();
+
+//$('#sideNavLeft').remove();
+//$('#sideNavLeft').attr('disabled-sticky','disabled');   
+
+//} else {
+
+//document.getElementById('stickyTricker').click();
+
+	//document.getElementById('sideNavLeft').setAttribute("disabled-sticky", "!disabled");
+
+//$('#sideNavLeft').attr('disabled-sticky','!disabled');
+
+//}
+
+
+//});
+
+  //  }
+  //});
+</script>
+
+</body>
+</html>

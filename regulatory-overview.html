@@ -1,0 +1,103 @@
+bl<!doctype html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Regulatory Overview</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+		<meta name="apple-mobile-web-app-capable" content="yes">
+
+	<!-- CSS files -->
+	<link rel="stylesheet" type="text/css" href="css/angular-material.min.css">
+	<link rel="shortcut icon" href='favicon.ico' type='image/x-icon' >
+	
+	<!-- Application Specific CSS -->
+	<link rel="stylesheet" type="text/css" href="css/uhc_sr.css">
+</head>
+
+<!-- fade-in when page finishes loading -->
+<body ng-app= "srApp"   onload="document.body.style.opacity='1'"  ng-controller="stickyEnabled">
+	<header ng-include src="'include/header.html'"  ></header>
+
+	<!-- Page Content -->
+	<main>
+		<div id="contentAll">
+			<div class="innerContentWrapper" >
+
+			<!-- change id to select hero image for current page -->
+				<div id="heroRegulatoryOverview" class="parallax">
+				
+					<div class="heroGradient">
+						<div class="heroOverlayText uhcWhite">
+							<h2 class="uhcWhite">Regulatory Overview</h2>
+
+						</div>
+					</div>
+				</div>	
+
+				<div  class="mobileGlossaryWrapper displayMobileOnly" style="box-shadow:none !important">
+						<a class="uhcBlackLink uhcFontBold"  href="regulatory-overview.html">Overview</a>
+						<a class="uhcBlackLink"  href="regulatory-privacy.html">Privacy Policies</a>
+						<a class="uhcBlackLink"  href="regulatory-global.html">Global Regulatory</a>
+						<a class="uhcBlackLink"  href="regulatory-state.html">State Regulatory</a>
+				</div>
+
+				<section class="adminContentWithSideBar sitePageWidth">
+					<div id="">
+						<div ng-cloak>
+
+
+							<div layout="row">
+
+				<div class="tempMenuHolder" >
+					<div   id="sideNavLeft noMargin"   class="displayFullOnly">
+									<a class="uhcBlackLink" href="regulatory-overview.html"><div class="sideNavLeftBox uhcFontBold">Overview</div></a>
+									<a class="uhcBlackLink" href="regulatory-privacy.html"><div class="sideNavLeftBox">Privacy Policies</div></a>
+									<a class="uhcBlackLink" href="regulatory-global.html"><div class="sideNavLeftBox">Global Regulatory</div></a>
+									<a class="uhcBlackLink" href="regulatory-state.html"><div class="sideNavLeftBox">State Regulatory</div></a>
+
+					</div>
+				</div>
+
+
+				<div  id="sideNavRight"  class="stickySetup">
+				<section  class="sitePageWidth">
+
+					<div class="adminSingleColumn">
+					<h3>It’s the law!</h3>
+					<p>
+			<br />
+This may be one of the least interesting sections of the site, but these rules and regulations apply to all insurance companies.  They help protect consumers and make sure that insurance companies are managed properly so that they can keep their promise to help you pay for covered benefits in return for your premium. <br /> <br />
+Pick a section at left to learn more about our Privacy Policies or state specific regulations. If you would like a hard copy of our Privacy Policies, or if you have any questions about health insurance regulations in your state, call the Customer Service number on your SR ID card and we’ll be happy to assist.
+					</p>
+					</div>
+				</section>
+				</div>
+			</div>
+		</div>
+		</div>
+		</section>
+
+		</div>
+		</div>
+	</main>
+	       
+
+	<footer  ng-include src="'include/footer.html'"  >
+		
+
+	</footer>
+
+<!-- Javascript Libraries at bottom after DOM is loaded -->
+<script type="text/javascript" src="js/angular.min.js"></script>
+<script type="text/javascript" src="js/angular-animate.min.js"></script>
+<script type="text/javascript" src="js/angular-aria.min.js"></script>
+<script type="text/javascript" src="js/angular-material.min.js"></script>
+<script type="text/javascript" src="js/angular-messages.min.js"></script>
+<script type="text/javascript" src="js/jquery-2.0.3.min.js"></script>
+<script type="text/javascript" src="js/angular-pageslide-directive-modified.js"></script>
+
+
+<!-- Application Specific Javascript files at very bottom after DOM and libraries are loaded -->
+<script type="text/javascript" src="js/uhc_sr.js"></script>
+</body>
+</html>

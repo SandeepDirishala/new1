@@ -1,0 +1,81 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Provider Resources</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+		<meta name="apple-mobile-web-app-capable" content="yes">
+
+	<!-- CSS files -->
+	<link rel="stylesheet" type="text/css" href="css/angular-material.min.css">
+	<link rel="shortcut icon" href='favicon.ico' type='image/x-icon' >
+	
+	<!-- Application Specific CSS -->
+	<link rel="stylesheet" type="text/css" href="css/uhc_sr.css">
+</head>
+
+<!-- fade-in when page finishes loading -->
+<body ng-app= "srApp" onload="document.body.style.opacity='1'">
+	<header ng-include src="'include/header.html'"  ></header>
+
+	<!-- Page Content -->
+	<main>
+		<div id="contentAll">
+			<div class="innerContentWrapper" >
+
+			<!-- change id to select hero image for current page -->
+				<div id="heroPartnerTools" class="parallax">
+				
+					<div class="heroGradient">
+						<div class="heroOverlayText uhcWhite">
+							<h2 class="uhcWhite">Provider Resources</h2>
+
+						</div>
+					</div>
+				</div>	
+
+				<section  class="sitePageWidth">
+					<div class="single-column">
+					<h3>Provider Referrals to UnitedHealthcare Networks</h3>
+					<p>
+If you are interested in referring a provider to a UnitedHealthcare Network or are a provider interested in joining a UnitedHealthcare Network, please print and follow the Referral Procedures.<br />
+Please note: In Hawaii, Idaho, Maine, Minnesota, North Dakota, South Dakota, Upper Michigan, and Western Wisconsin, UnitedHealth Networks leases an existing network of physicians, hospitals, and other health care professionals from a separate network company. The leased vendor is responsible for contracting with physicians, hospitals, and other health care professionals thus the nomination process is handled differently.
+</p>
+<h3>Participating UnitedHealthcare Network Providers: Update your demographic information
+</h3>
+<P>
+<br />
+If you are a participating provider in a UnitedHealthcare Network and you would like to update your demographic information, you may select from three options:<br />
+1) Fax your demographic changes to <a href="tel:1-877-265-4877" style="color:#4a90e2;">1-877-265-4877</a><br />
+2) Call your changes into <a href="tel:1-866-842-3278"  style="color:#4a90e2;">1-866-842-3278</a><br />
+3) Use the provider portal to submit your changes at <a href="www.unitedhealthcareonline.com"  style="color:#4a90e2;">United Healthcare Online</a><br />
+</P>
+<br />
+<h3>Harvard Pilgrim Health Care: Provider Claims Appeal</h3>
+<p>If you are participating provider in the Harvard Pilgrim Health Care network and would like to file a claims appeal, please open, complete, print and submit the Provider Appeal form. Guidance concerning the Harvard Pilgrim Health Care Appeal Process is provided on page 2 of this form.</p>
+<br />
+<p>
+Did you know that by enrolling in Emdeon ePayment you can switch from receiving paper based claim payments to electronic payments that are directly deposited into your bank account? Enrollment takes only three simple steps and is free! For more information please visit <a style="color:#4a90e2;" target="_new" href="http://www.emdeon.com/epayment/">Emdeon</a>.
+</p>
+					</div>
+				</section>
+			</div>
+		</div>
+	</main>
+	<footer ng-include src="'include/footer.html'"  ></footer>
+
+<!-- Javascript Libraries at bottom after DOM is loaded -->
+<script type="text/javascript" src="js/angular.min.js"></script>
+<script type="text/javascript" src="js/angular-animate.min.js"></script>
+<script type="text/javascript" src="js/angular-aria.min.js"></script>
+<script type="text/javascript" src="js/angular-material.min.js"></script>
+<script type="text/javascript" src="js/angular-messages.min.js"></script>
+<script type="text/javascript" src="js/jquery-2.0.3.min.js"></script>
+<script type="text/javascript" src="js/angular-pageslide-directive-modified.js"></script>
+
+
+<!-- Application Specific Javascript files at very bottom after DOM and libraries are loaded -->
+<script type="text/javascript" src="js/uhc_sr.js"></script>
+
+</body>
+</html>

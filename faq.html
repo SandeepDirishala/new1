@@ -1,0 +1,197 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>FAQ</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+		<meta name="apple-mobile-web-app-capable" content="yes">
+
+	<!-- CSS files -->
+	<link rel="stylesheet" type="text/css" href="css/angular-material.min.css">
+	<link rel="shortcut icon" href='favicon.ico' type='image/x-icon'>
+
+	<!-- Application Specific CSS -->
+	<link rel="stylesheet" type="text/css" href="css/uhc_sr.css">
+
+	<!-- HELP CENTER OVERRIDES - DON'T DELETE!! -->
+<!-- \\\\\\\\\\\\\\\\\\\\\\\\ -->
+<style>
+    nav#headerNav {border-bottom:none !important;}
+    div.navBarWrapper.locked {border-bottom: 1px solid #CDD5D7; box-shadow:0px 5px 5px 0px #FAFAFA;}
+    html {background:#FAFAFA !important;}
+    div.contentAll, div.innerContentWrapper {background:#FAFAFA !important;}
+    main section {background:#FAFAFA !important;}
+    section#contentWithSideBar {margin: 200px auto 1em !important;}
+      .highlighted { background: yellow; }
+
+@media only screen and (max-width: 960px) { section#contentWithSideBar { margin: 70px auto 1em !important;}
+
+div.faqSearch input[type="submit"] {
+
+    top: 25px;
+}
+
+}
+
+    @media only screen and (max-width: 568px) {
+
+            section#contentWithSideBar {margin-top:100px !important;}
+
+    }
+
+</style>
+<!-- //////////////////////// -->
+
+
+</head>
+
+<!-- fade-in when page finishes loading -->
+<body ng-app= "srApp" onload="document.body.style.opacity='1'">
+
+	<header ng-include src="'include/header.html'"  ></header>
+
+
+
+	<!-- Page Content -->
+
+	    <main>
+        <div id="contentAll">
+            <div class="innerContentWrapper" ng-controller="navCtrl" style="min-height: 700px;">
+
+
+	           <!-- Scroll and lock nav bar  -->
+				<!-- \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\ -->
+				<div class="navBarWrapper locked">
+                    <div id="helpMainNavWrapper">
+                        <a  href="faq.html" class="uhcBlackLink active"><div id="helpMainNavBox1" class="helpMainNavBox">
+                            <img src="img/faq.svg">
+                            <p class="uhcGray">FAQ</p>
+                        </div></a>
+                        <a  href="glossary.html" class="uhcBlackLink"><div id="helpMainNavBox2" class="helpMainNavBox">
+                            <img src="img/glossary.svg">
+                            <p class="uhcGray">Glossary</p>
+                        </div></a>
+                        <a  href="insurance-101.html" class="uhcBlackLink"><div id="helpMainNavBox3" class="helpMainNavBox active">
+                            <img src="img/insurance.svg">
+                            <p class=" uhcGray displayFullOnly">Health Insurance 101</p>
+                            <p class=" uhcGray displayMobileOnly">Health 101</p>
+                        </div></a>
+                        <a  href="video.html" class="uhcBlackLink"><div id="helpMainNavBox4" class="helpMainNavBox">
+                            <img src="img/video.svg">
+                            <p class="uhcGray">Video</p>
+                        </div></a>
+                    </div>
+				</div>
+				<!-- ///////////////////////////////////// -->
+
+
+                <section id="contentWithSideBar" class="sitePageWidth sectionFAQ">
+                    <div id="marginUnderNavBar" class="hideInitially"></div>
+                    <div id="navBar-single-column">
+                        <div ng-cloak>
+                            <div layout="row">
+
+                            	 <div flex="30" id="faqNavFixed" class="displayFullOnly faq" ng-controller="faqScroll" ng-include='"include/faqNav.html"'>
+
+                            	 </div>
+
+
+                                <div flex="100" flex-gt-sm="70" id="faqParent">
+                                    <div id="content1">
+
+                                        <div id="faqSearchWrapper"  >
+                                            <div>
+                                                <div class="faqSearch">
+                                                  <form >
+                                                  <input id="search_submit" type="submit" value="" >
+                                                  <md-input-container class="md-block">
+                                                      <input type="text" placeholder="Enter a topic" ng-model="search">
+                                                    </md-input-container>
+                                                  </form>
+                                                </div>
+                                            </div>
+            							</div> <!-- .headerSearchWrapper -->
+
+                                        <!-- <div id="faqWrapper" ng-include='"include/faqContent.html"' data-onload="scrollToLink()"></div> -->
+
+                                        <div id="faqWrapper" ng-controller="faqGenerate"  >
+
+                                                  <!--  <h2 id='hdr1'>Questions we hear a lot!</h2> -->
+
+                                                    <!-- BUILD FAQ LIST FROM FAQ.JSON -->
+                                                    <!-- \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\ -->
+
+                                                        <FAQ ng-repeat="faq in faqs | filter: search" ng-animate="animate" on-finish-faq="lastFAQ">
+
+                                                           <h2 ng-if="faq.h2" id="{{faq.id}}">{{faq.h2}}</h2>
+
+                                                            <d-expand-collapse ng-if="faq.question">
+                                                                <div><span href="{{faq.link}}" class='uhcLightBlue question' style="cursor:pointer;line-height:2em;"ng-bind-html="faq.question | highlight:search">{{faq.question}}</span></div>
+                                                                <div class='answer' id='{{faq.id}}' ng-bind-html="faq.answer | highlight:search">
+                                                                    {{faq.answer}}
+                                                                </div>
+                                                            </d-expand-collapse>
+
+                                                        </FAQ>
+                                                    <!-- ////////////////////////////////////// -->
+                                                    <!-- (END) BUILD FAQ LIST -->
+
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </div>
+    </main>
+
+	<footer ng-include src="'include/footer.html'"></footer>
+
+<!-- Javascript Libraries at bottom after DOM is loaded -->
+<script type="text/javascript" src="js/angular.min.js"></script>
+<script type="text/javascript" src="js/angular-animate.min.js"></script>
+<script type="text/javascript" src="js/angular-aria.min.js"></script>
+<script type="text/javascript" src="js/angular-material.min.js"></script>
+<script type="text/javascript" src="js/angular-messages.min.js"></script>
+<script type="text/javascript" src="js/jquery-2.0.3.min.js"></script>
+<script type="text/javascript" src="js/angular-pageslide-directive-modified.js"></script>
+
+<!-- Application Specific Javascript files at very bottom after DOM and libraries are loaded -->
+<script type="text/javascript" src="js/uhc_sr.js"></script>
+
+<script type="text/javascript-lazy">
+
+$.fn.isVisible = function() {
+    // Current distance from the top of the page
+    var windowScrollTopView = $(window).scrollTop();
+
+    // Current distance from the top of the page, plus the height of the window
+    var windowBottomView = windowScrollTopView + $(window).height();
+
+    // Element distance from top
+    var elemTop = $(this).offset().top;
+
+    // Element distance from top, plus the height of the element
+    var elemBottom = elemTop + $(this).height();
+
+    return ((elemBottom <= windowBottomView) && (elemTop >= windowScrollTopView));
+}
+
+
+$(document).ready(function() {
+    $(window).scroll(function() {
+        if($("#footerNav").isVisible()) {
+            $("#faqNavFixed").addClass('hideFAQMenu');
+        } else {
+            $("#faqNavFixed").removeClass('hideFAQMenu');
+        }
+    });
+});
+
+</script>
+
+</body>
+</html>

@@ -1,0 +1,418 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Request for Information</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+	<meta name="apple-mobile-web-app-capable" content="yes">
+
+
+	<!-- CSS files -->
+	<link rel="stylesheet" type="text/css" href="css/angular-material.min.css">
+	<link rel="shortcut icon" href='favicon.ico' type='image/x-icon' >
+	
+	<!-- Application Specific CSS -->
+	<link rel="stylesheet" type="text/css" href="css/uhc_sr.css">
+	<link rel="stylesheet" type="text/css" href="css/tmp.css">
+</head>
+
+<!-- fade-in when page finishes loading -->
+<body ng-app= "srApp" onload="document.body.style.opacity='1'">
+	<header ng-include src="'include/header.html'"  ></header>
+
+	<!-- Page Content -->
+	<main>
+		<div id="contentAll" ng-controller="controlPageCtrl" layout="column" ng-cloak="" class="md-inline-form inputLogin" ng-app="srApp">
+			<div class="innerContentWrapper" >
+
+			<!-- change id to select hero image for current page -->
+				<div id="heroControl" class="parallax">
+				
+					<div class="heroGradient">
+						<div class="heroOverlayText uhcWhite">
+							<h2 class="uhcWhite">Request for Information</h2>
+						</div>
+					</div>
+				</div>	
+
+				<form name="requestForm">
+
+					<!-- control page 1 -->
+
+					<div class="centerThis ">
+						<section class="sitePageWidth">
+							<div class="single-column">
+                                <p class="righPush">Use the find My School's plan search feature to determine if we provide a student insurance plan for your school. If you cannot find your school, please complete and submit this form for information on alternative sources of student insurance.</p>
+                                <p>Please complete the following contact information.</p>
+                                <div layout-gt-sm="row">
+                                    <md-input-container class="md-block" flex-gt-sm="45">
+                                        <label>First Name</label>
+                                        <input name="txtFirstName" required md-no-asterisk>
+                                        <div ng-messages="requestForm.txtFirstName.$error">
+								            <div ng-message="required">This is required.</div>
+								        </div>
+                                    </md-input-container>
+                                    <div flex="5" hide-xs hide-sm><!-- Spacer //--></div>
+                                    <md-input-container class="md-block" flex-gt-sm="45">
+                                        <label>Last Name</label>
+                                        <input name="txtLastName" required md-no-asterisk>
+                                        <div ng-messages="requestForm.txtLastName.$error">
+								            <div ng-message="required">This is required.</div>
+								        </div>
+                                    </md-input-container>
+                                </div>
+
+                                <div layout-gt-sm="row">
+                                    <md-input-container class="md-block" flex-gt-sm="45">
+                                        <label>Email Address</label>
+                                        <input name="txtEmail" required md-no-asterisk>
+                                        <div ng-messages="requestForm.txtEmail.$error">
+								            <div ng-message="required">This is required.</div>
+								        </div>
+                                    </md-input-container>
+                                    <div flex="5" hide-xs hide-sm><!-- Spacer //--></div>
+                                   <md-input-container class="md-block" flex-gt-sm="45">
+                                        <label>Phone Number</label>
+                                        <input name="txtPhone" required md-no-asterisk>
+                                        <div ng-messages="requestForm.txtPhone.$error">
+								            <div ng-message="required">This is required.</div>
+								        </div>
+                                    </md-input-container>
+                                </div>
+
+                                <div layout-gt-sm="row">
+                                    <md-input-container class="md-block" flex-gt-sm="45">
+                                        <label>School Name</label>
+                                        <input name="txtSchool" required md-no-asterisk>
+                                        <div ng-messages="requestForm.txtSchool.$error">
+								            <div ng-message="required">This is required.</div>
+								        </div>
+                                    </md-input-container>
+                                    <div flex="5" hide-xs hide-sm><!-- Spacer //--></div>                               
+                                     <md-input-container class="md-block" flex-gt-sm="45">
+                                        <label>Address</label>
+                                        <input name="txtAddress1" required md-no-asterisk>
+                                        <div ng-messages="requestForm.txtAddress1.$error">
+								            <div ng-message="required">This is required.</div>
+								        </div>
+                                    </md-input-container>  
+                                </div>
+  
+                                <div layout-gt-sm="row">
+                                    <md-input-container class="md-block" flex-gt-sm="45">
+                                        <label>City</label>
+                                        <input name="txtCity" required md-no-asterisk>
+                                        <div ng-messages="requestForm.txtCity.$error">
+								            <div ng-message="required">This is required.</div>
+								        </div>
+                                    </md-input-container>
+                                    <div flex="5" hide-xs hide-sm><!-- Spacer //--></div>
+                                    <div layout="row" flex-gt-sm="45">
+                                        <md-input-container class="md-block" flex-gt-sm="45">
+                                            <label>State</label>
+                                            <input name="txtState" required md-no-asterisk>
+                                            <div ng-messages="requestForm.txtState.$error">
+								                <div ng-message="required">This is required.</div>
+								            </div>
+                                        </md-input-container>
+                                        <div flex="10" hide-xs hide-sm><!-- Spacer //--></div>
+                                        <md-input-container class="md-block" flex-gt-sm="45">
+                                            <label>Zip Code</label>
+                                            <input name="txtZip" required md-no-asterisk>
+                                            <div ng-messages="requestForm.txtZip.$error">
+								                <div ng-message="required">This is required.</div>
+								            </div>
+                                        </md-input-container>
+                                    </div>
+                                </div>
+
+
+                                <div layout-gt-sm="row">
+                                    <div flex-gt-sm="100" class="centerQuestion">
+                                        Is this regarding an International Student?
+                                    </div>
+                                </div>
+                                 <div flex-gt-sm="100">
+                                        <md-radio-group  layout="row" class="radioRow">
+                                            <md-radio-button value="yes" class="md-primary" >Yes</md-radio-button>
+                                            <md-radio-button value="no"  class="md-primary righPush" >No</md-radio-button>
+                                        </md-radio-group>
+                                </div>  
+                                <div layout-gt-sm="row">
+                                    <div flex-gt-sm="100" class="centerQuestion">
+                                        Is this regarding a graduate student?
+                                    </div>
+                                </div>
+                                <div layout-gt-sm="row" >
+                                    <div flex-gt-sm="100" >
+                                        <md-radio-group layout="row" class="radioRow">
+                                            <md-radio-button value="yes" class="md-primary">Yes</md-radio-button>
+                                            <md-radio-button value="no"  class="md-primary righPush">No</md-radio-button>
+                                        </md-radio-group>
+                                    </div>
+                                </div>
+
+                                <div layout="row" flex="100" layout-align="end" class="submitButton" style="margin-top:40px;display:block;">
+                                    <md-button  id="btnSubmit" class="controlButton controlButtonActive md-raised" >Submit</md-button>
+                                </div>
+                                
+                            </div>
+						</section>
+					</div> <!-- control page 1 -->
+
+					<!-- control page 2 -->
+
+					<div id="controlPage2" class="centerThis  hideInitially">
+						<section  class="sitePageWidth">
+							<div class="single-column">
+								<h3>Is This You?</h3>
+								<p>Here is the request we have associated to the REquest Control Number entered. Please verify that this is your request information.</p>
+								<p>If the information is incorrect, please contact Customer Service at 1-800-996-4698 (7:00 AM - 7:00 PM CST, Monday through Friday) or email us at customerservice@uhcsr.com</p>
+	
+								<div class="marginTop1em">
+									<span class="controlCircle">1</span><h3>Request Information</h3>
+									<p>Re-Enroll these individuals (select and continue): </p>
+								</div>
+
+								<div id="controlPage2Options">
+									<div class="leftThis">
+										<md-checkbox id="controlPage2Checkbox1" ng-disabled="false" aria-label="Checkbox" ng-click="controlPage2CheckboxChanged()" md-no-ink ng-model="controlPage2CheckboxModel" class="uhcCheckbox">
+												<div class="uhcBlack uhcFontBold">Student with date of birth (5/5/2015)</div>
+										</md-checkbox>
+										<div class="controlPage2OptionMargin">
+											<span class="uhcFontBold">School Name:</span> University of Florida
+										</div>
+										<div class="controlPage2OptionMargin">
+											<span class="uhcFontBold">Plan Info:</span> (2015/2016) - Student Plan - Domestic
+										</div>
+										<div class="controlPage2OptionMargin">
+											<span class="uhcFontBold">Insured Category:</span> GRA
+										</div>
+										<div class="controlPage2OptionMargin">
+											<span class="uhcFontBold">Period:</span> Summer - (5/9/2016 - 8/15/2016)
+										</div>
+									</div>
+									<div class="rightThis rightText">
+										<span class="uhcFontBold">Cost:</span><br>$517.00
+									</div>
+								</div>
+
+								<div class="clear">
+								</div>
+
+								<div class="marginTop2em">
+									<p><span class="uhcFontBold">Note:</span> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse ornare vel nunc eget convallis. Curabitur a risus tristique lectus pellentesque ultrices quis sed diam. In ullamcorper nibh mi, sit amet ultricies neque laoreet quis. Aliquam erat volutpat. Ut quis facilisis lorem. Curabitur suscipit tempus nunc. Proin non vehicula mauris. </p>
+								</div>
+								<div id="controlNavLinksPage2" class="controlNavLinks">
+									<div>									
+										<md-button  id="controlPage2Next" class="controlButton controlButtonDisabled md-raised rightThis " ng-click="controlPage2NextClicked()">Continue</md-button>
+									</div>
+								</div>
+							</div>	<!-- .controlNavLinks -->
+
+						</section>
+					</div> <!-- control page 2 -->					<!-- control page 2 -->
+
+					<div id="controlPage3" class="centerThis hideInitially">
+						<section  class="sitePageWidth">
+							<div class="single-column">
+								<h3>Enter Payment Information</h3>
+								<p>Please verify that your information is correct. When you are satisfied, complete the payment and signature fields below.</p>
+								<p>Click Continue only once and do not press your "Back" button. This process may take a few moments.</p>
+								<h3> Request Information</h3>
+								<p>Re-Enroll these individuals:</p>
+								<div class="controlPage3PlanItem">
+									<span class="uhcFontBold">Student with date of birth (5/5/2015)</span>
+								</div>
+								<div class="controlPage3PlanItem">
+									<span class="uhcFontBold">School Name:</span> University of Florida
+								</div>
+								<div class="controlPage3PlanItem">
+									<span class="uhcFontBold">Plan Info:</span> (2015/2016) - Student Plan - Domestic
+								</div>
+								<div class="controlPage3PlanItem">
+									<span class="uhcFontBold">Insured Category:</span> GRA
+								</div>
+								<div class="controlPage3PlanItem">
+									<span class="uhcFontBold">Period:</span> Summer - (5/9/2016 - 8/15/2016)
+								</div>
+
+								<div class="leftThis">
+									<p>Your Cost:</p>
+								</div>
+								<div class="rightThis rightText">
+									<p>$517.00</p>
+								</div>
+
+								<div class="clear">
+								</div>
+
+								<div class="marginTop1em">
+									<span class="controlCircle">2</span><h3>Payment Information</h3>
+								</div>
+
+								<div class="controlFormLabelPadding uhcFontBold uhcGray">Payment Information</div>	
+								<div id="controlStep5Payment">
+									<md-radio-group ng-model="selectRadioPaymentModel" class="uhcRadio" md-no-ink>
+										<md-content layout-gt-sm="row" layout-padding>
+											<md-radio-button value="optionPayByEcheck" aria-label="Pay By Electronic Check"  ng-click="showPayment('on')">
+											  Pay By Electronic Check
+											</md-radio-button>
+											<div id="echeckFields" class="hideInitially controlECheckFields">
+												<md-content layout-gt-sm="row" layout-padding>
+													<md-input-container class="md-block inputField12em">
+														<label>Routing Number</label>
+														<input type="password" required="" name="echeckRoutingNumber" ng-model="control.echeckRoutingNumber" md-no-asterisk="" md-maxlength="9">
+														<div ng-messages="controlForm.echeckRoutingNumber.$error">
+															<div ng-message="required"></div>
+														</div>
+													</md-input-container>
+													<md-input-container class="md-block inputField12em">
+														<label>Account Number</label>
+														<input type="password" required="" name="echeckAccountNumber" ng-model="control.echeckAccountNumber" md-no-asterisk="">
+														<div ng-messages="controlForm.echeckAccountNumber.$error">
+															<div ng-message="required"></div>
+														</div>
+													</md-input-container>
+												</md-content>
+											</div>
+										</md-content>
+
+										<md-content layout-gt-sm="row" layout-padding>
+											<md-radio-button value="optionPayByCreditCard" aria-label="Pay By Credit Card"  ng-click="showPayment('off')">
+											  Pay By Credit Card
+											</md-radio-button>
+										</md-content>
+									</md-radio-group>
+								</div>
+
+								<div class="marginTop1em">
+									<span class="controlCircle">3</span><h3>Verify Email Address</h3>
+									<p>Please verify your email address. If no email address is displayed here, please provide one that can be used to send you confirmation of today's transaction as well as future account correspondence.
+								</div>
+
+								<div>
+									<md-input-container class="md-block inputField12em">
+										<label>Email Address</label>
+										<input required="" name="emailAddress" ng-model="control.emailAddress" md-no-asterisk="" ng-maxlength="20">
+										<div ng-messages="controlForm.emailAddress.$error">
+											<div ng-message="required">This is required.</div>
+										</div>
+									</md-input-container>
+								</div>
+
+								<div class="marginTop1em">
+									<span class="controlCircle">4</span><h3>Payer Signature</h3>
+								</div>
+
+								<div>
+									<md-input-container class="md-block inputField12em">
+										<label>Payer Signature</label>
+										<input required="" name="signature" ng-model="control.signature" md-no-asterisk="" ng-maxlength="20">
+										<div ng-messages="controlForm.signature.$error">
+											<div ng-message="required">This is required.</div>
+										</div>
+									</md-input-container>
+								</div>
+
+								<div id="controlNavLinksPage2" class="controlNavLinks">
+									<div>									
+										<md-button  id="controlPage3Next" class="controlButton controlButtonActive md-raised rightThis" ng-click="controlPage('controlPage4')">Continue</md-button>
+									</div>
+								</div>
+							</div>	<!-- .controlNavLinks -->
+
+						</section>
+					</div> <!-- control page 3 -->
+
+
+					<!-- control page 4 -->
+
+					<div id="controlPage4" class="centerThis hideInitially">
+						<section  class="sitePageWidth">
+							<div class="single-column">
+								<div class="checkConfirm">
+									<img  src="img/iconCheckConfirm.svg">
+								</div>
+								<h3>Confirmation</h3>
+								<p>Thank you for choosing us for your student insurance needs. Your enrollment and payment information has been received and will be processed within two business day.</p> 
+
+								<h3>Request Information</h3>
+								<p>Re-Enroll these individuals:</p>
+								<div class="controlPage3PlanItem">
+									<span class="uhcFontBold">Student with date of birth (5/5/2015)</span>
+								</div>
+								<div class="controlPage3PlanItem">
+									<span class="uhcFontBold">School Name:</span> University of Florida
+								</div>
+								<div class="controlPage3PlanItem">
+									<span class="uhcFontBold">Plan Info:</span> (2015/2016) - Student Plan - Domestic
+								</div>
+								<div class="controlPage3PlanItem">
+									<span class="uhcFontBold">Insured Category:</span> GRA
+								</div>
+								<div class="controlPage3PlanItem">
+									<span class="uhcFontBold">Period:</span> Summer - (5/9/2016 - 8/15/2016)
+								</div>
+
+								<h3 id="controlPage4PaymentInfo">Payment Information</h3>
+								<div class="leftThis">
+									<p>Payment Amount:</p>
+									<p>Payment Type:</p>
+								</div>
+								<div class="rightThis rightText">
+									<p>$517.00</p>
+									<p>Credit Card</p>
+								</div>
+								<div class="clear"></div>
+
+								<div class="leftThis">
+									<p class="uhcFontBold">Total:</p>
+								</div>
+								<div class="rightThis rightText">
+									<p class="uhcFontBold">$517.00</p>
+								</div>
+								<div class="clear">
+								</div>
+
+								<div>
+									<div class="marginTop1em">
+										<a href="javascript:window.print()" class="uhcBlackLink uhcFontBold underlineThis">Print this Page.</a>
+									</div>
+									<div class="marginTop1em">
+										<a href="index.html" class="uhcBlackLink uhcFontBold underlineThis">Return to the Home Page.</a>
+									</div>
+									<div class="marginTop1em">
+										<a href="login.html" class="uhcBlackLink uhcFontBold underlineThis">Log in to My Account.</a>
+									</div>
+									
+								</div>
+							</div>
+						</section>
+					</div> <!-- control page 4 -->
+
+				</form>
+			</div>
+		</div>
+	</main>
+	<footer ng-include src="'include/footer.html'"  ></footer>
+
+<!-- Javascript Libraries at bottom after DOM is loaded -->
+<script type="text/javascript" src="js/angular.min.js"></script>
+<script type="text/javascript" src="js/angular-animate.min.js"></script>
+<script type="text/javascript" src="js/angular-aria.min.js"></script>
+<script type="text/javascript" src="js/angular-material.min.js"></script>
+<script type="text/javascript" src="js/angular-messages.min.js"></script>
+<script type="text/javascript" src="js/jquery-2.0.3.min.js"></script>
+<script type="text/javascript" src="js/angular-pageslide-directive-modified.js"></script>
+
+
+<!-- Application Specific Javascript files at very bottom after DOM and libraries are loaded -->
+<script type="text/javascript" src="js/uhc_sr.js"></script>
+
+<!-- Page Specific Javascript (only used on this page) --> 
+<script type="text/javascript" src="js/control.js"></script>
+
+
+</body>
+</html>

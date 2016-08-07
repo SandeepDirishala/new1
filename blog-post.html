@@ -1,0 +1,106 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>(post title goes here)</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<!-- CSS files -->
+	<link rel="stylesheet" type="text/css" href="css/angular-material.min.css">
+	<link rel="shortcut icon" href='favicon.ico' type='image/x-icon' >
+	
+	<!-- Application Specific CSS -->
+	<link rel="stylesheet" type="text/css" href="css/uhc_sr.css">
+</head>
+
+<!-- fade-in when page finishes loading -->
+<body ng-app= "srApp" onload="document.body.style.opacity='1'">
+	<header ng-include src="'include/header.html'"  ></header>
+
+	<!-- Page Content -->
+	<main>
+		<div id="contentAll">
+			<div class="innerContentWrapper" >
+
+			<!-- change id to select hero image for current page -->
+				<div id="heroBlogHome" class="parallax">
+				
+					<div class="heroGradient">
+						<div class="heroOverlayText uhcWhite">
+							<h2 class="uhcWhite">(post title goes here)</h2>
+
+						</div>
+					</div>
+				</div>	
+
+				<section  class="sitePageWidth">
+					<div class="blogArchive">
+					   <div layout="row" layout-xs="column">
+                           <div flex-gt-sm="70" flex="80" class="newsDetails">
+                               <a href="blog-home.html">Back to News</a>
+                               <article>
+                                   <h4>Important Tax Return Documents </h4>
+                                   <h5>News / NOV 5 2015</h5>
+                                   <p>Within the coming weeks, UHCSR members will recieve communication that their 2015 Form 1095-b is ready for policies that meets the definitions under the Affordable care act (ACA). this is the IRS form that is needed to show minimum essential coverage for 2015.</p>
+                                   <p>International students on F,J,Q and M visas have a "nonresident alien" tax status and likely did not have to purchase and insurance plan that is compliant with ACA and will not recieve a 1095-B form</p>
+                                   <p>Within the coming weeks, UHCSR members will recieve communication that their 2015 Form 1095-b is ready for policies that meets the definitions under the Affordable care act (ACA). this is the IRS form that is needed to show minimum essential coverage for 2015.</p>
+                                   <p>International students on F,J,Q and M visas have a "nonresident alien" tax status and likely did not have to purchase and insurance plan that is compliant with ACA and will not recieve a 1095-B form</p>
+                              
+                               </article>
+
+                               <div class="navDesk" >
+                                    <a href="#" class="prev">Previous Article</a>
+                                   <a href="#" class="next">Next Article</a>
+                               </div>
+                             
+                           </div>
+                           <div flex-gt-sm="10" flex="0" hide-sm hide-xs></div>
+                           <div flex-gt-sm="20" flex="75" class="blue box" hide-sm hide-xs>
+                               <div class="sideNavBox">
+                                   <h4>Archives</h4>
+                                   <ul>
+                                       <li><a href="#">All Archives</a></li>
+                                       <li><a href="#">2016</a></li>
+                                       <li><a href="#">2015</a></li>
+                                       <li><a href="#">2014</a></li>
+                                       <li><a href="#">2013</a></li>
+                                       <li><a href="#">2012 and Older</a></li>
+                                   </ul>
+                               </div>
+                               <div class="sideNavBox">
+                                   <h4>Helpful Links</h4>
+                                   <ul>
+                                       <li><a href="#">HealthCare Explained</a></li>
+                                       <li><a href="#">Glossary</a></li>
+                                       <li><a href="#">FAQs</a></li>
+                                       <li><a href="#">Videos</a></li>
+                                   </ul>
+                               </div>
+                           </div>
+                        </div>
+
+					</div>
+
+				</section>
+			</div>
+		</div>
+
+	</main>
+
+	<footer ng-include src="'include/footer.html'"  ></footer>
+
+<!-- Javascript Libraries at bottom after DOM is loaded -->
+<script type="text/javascript" src="js/angular.min.js"></script>
+<script type="text/javascript" src="js/angular-animate.min.js"></script>
+<script type="text/javascript" src="js/angular-aria.min.js"></script>
+<script type="text/javascript" src="js/angular-material.min.js"></script>
+<script type="text/javascript" src="js/angular-messages.min.js"></script>
+<script type="text/javascript" src="js/jquery-2.0.3.min.js"></script>
+<script type="text/javascript" src="js/angular-pageslide-directive-modified.js"></script>
+
+
+<!-- Application Specific Javascript files at very bottom after DOM and libraries are loaded -->
+<script type="text/javascript" src="js/uhc_sr.js"></script>
+
+</body>
+</html>

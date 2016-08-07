@@ -1,0 +1,39 @@
+@charset "utf-8";
+
+/* Parallax Doodle */
+
+/* Hop Animation */
+
+/* full screen */
+@-webkit-keyframes doodle-hop{0%{-webkit-transform:translateY(3px);transform:translateY(3px)}100%{-webkit-transform:translateY(-3px);transform:translateY(-3px)}}@keyframes doodle-hop{0%{-webkit-transform:translateY(3px);transform:translateY(3px)}100%{-webkit-transform:translateY(-3px);transform:translateY(-3px)}}
+#doodleWrap					  {position: absolute;bottom:120px;z-index: 10;right:-400px; margin-right:50%;}
+#doodle, #doodle *, #doodle li:after {width:800px;height:142px;display:block;}
+#doodle li:after              {content:'';position: absolute; background-size:cover;background-image: url('../img/doodleMap.png');-webkit-animation:doodle-hop linear infinite alternate;animation:doodle-hop linear infinite alternate;-webkit-animation-duration: 3s; animation-duration: 3s;}
+#doodle li:nth-child(2):after {background-position:0px -142px;-webkit-animation-duration: 1s; animation-duration: 1s;}
+#doodle li:nth-child(3):after {background-position:0px -284px;-webkit-animation-duration: 1.5s; animation-duration: 1.5s;}
+#doodle li:nth-child(4):after {background-position:0px -425px;-webkit-animation-duration: 2s; animation-duration: 2s;}
+#doodle li:nth-child(5):after {background-position:0px -567px;}
+#doodle li:nth-child(6):after {background-position:0px -709px;}
+
+/* mobile */
+@media only screen and (max-width: 959px) {
+    
+		@-webkit-keyframes doodle-hop{0%{-webkit-transform:translateY(3px);transform:translateY(3px)}100%{-webkit-transform:translateY(-3px);transform:translateY(-3px)}}@keyframes doodle-hop{0%{-webkit-transform:translateY(3px);transform:translateY(3px)}100%{-webkit-transform:translateY(-3px);transform:translateY(-3px)}}
+	#doodleWrap					  {position: absolute;bottom:120px;z-index: 10;right:-350px; margin-right:50%;}
+	#doodle, #doodle *, #doodle li:after {width:600px;height:106px;display:block;}
+	#doodle li:after              {content:'';position: absolute; background-size:cover;background-image: url('../img/doodleMap.png');-webkit-animation:doodle-hop linear infinite alternate;animation:doodle-hop linear infinite alternate;-webkit-animation-duration: 3s; animation-duration: 3s;}
+	#doodle li:nth-child(2):after {background-position:0px -106px;-webkit-animation-duration: 1s; animation-duration: 1s;}
+	#doodle li:nth-child(3):after {background-position:0px -213px;-webkit-animation-duration: 1.5s; animation-duration: 1.5s;}
+	#doodle li:nth-child(4):after {background-position:0px -319px;-webkit-animation-duration: 2s; animation-duration: 2s;}
+	#doodle li:nth-child(5):after {background-position:0px -425px;}
+	#doodle li:nth-child(6):after {background-position:0px -532px;}
+
+}	/* end mobile */
+
+
+@media only screen and (max-width: 778px) {
+
+
+ #doodleWrap		{bottom:120px;right:-300px;} 
+
+}

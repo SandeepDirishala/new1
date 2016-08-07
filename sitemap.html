@@ -1,0 +1,154 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Sitemap</title>
+    <meta name="viewport" sitemapContent="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <meta name="apple-mobile-web-app-capable" sitemapContent="yes">
+
+    <!-- CSS files -->
+    <link rel="stylesheet" type="text/css" href="css/angular-material.min.css">
+    <link rel="shortcut icon" href='favicon.ico' type='image/x-icon'>
+
+    <!-- Application Specific CSS -->
+    <link rel="stylesheet" type="text/css" href="css/uhc_sr.css">
+
+    <style>
+        
+
+        .sitemapRow              {margin: 30px 0px;}
+        .sitemapSections         {width: 24%; display:inline-table;}
+        .sitemapHeading          {font-family: 'UHCSans-Bold';font-size: 24px !important;line-height: 1.5em;font-weight: bold;color: #003da1;}
+        .sitemapSections ul      {padding-left: 0px;}
+        .sitemapSections ul li   {list-style-type: none;}
+        .sitemapSections ul li a {color:#323232;}
+        .sitemapContent          {font-family: 'UHCSans-Regular';font-size: 18px !important;line-height: 1.5em;color: #4169E1;}
+        
+        @media only screen and (max-width: 959px) {.sitemapSections { width: 100%;}}
+
+
+    </style>
+
+</head>
+
+<!-- fade-in when page finishes loading -->
+
+<body ng-app="srApp" onload="document.body.style.opacity='1'">
+    <header ng-include src="'include/header.html'"></header>
+
+    <!-- Page Content -->
+    <main>
+        <div id="sitemapContentAll" style="background:#eee;">
+            <div class="innerContentWrapper">
+
+                <!-- change id to select hero image for current page -->
+                <div id="heroUhcBlue" class="heroLoginBackground displayFullOnly">
+                
+                    <div class="heroLoginNoGradient">
+                        <div class="heroOverlayText uhcWhite">
+                            <h2 class="uhcWhite">Sitemap</h2>
+                        </div>
+                    </div>
+                </div>
+
+                <section class="sitePageWidth" style="background:none;">
+                    <div class="single-column">
+
+                        <div class="sitemapRow">
+
+                            <div class="sitemapSections">
+                                <div class="sitemapHeading">Quick Links</div>
+                                <div class="sitemapContent">
+                                    <ul>
+                                        <li><a href="about-us.html">About Us</a></li>
+                                        <li><a href="contact.html">Contact Us</a></li>
+                                        <li><a href="underwriters.html">Underwriters</a></li>
+                                        <li><a href="providers.html">Provider Resources</a></li>
+                                        <li><a href="login.html#/create">Create Account</a></li>
+                                        <li><a href="login.html">Login to MyAccount</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <div class="sitemapSections">
+                                <div class="sitemapHeading">Help Center</div>
+                                <div class="sitemapContent">
+                                        <ul >
+                                            <li><a href="help-center.html">Help Center Home</a></li>
+                                            <li><a href="faq.html">FAQ</a></li>
+                                            <li><a href="glossary.html">Glossary</a></li>
+                                            <li><a href="insurance-101.html">Health Insurance 101</a></li>
+                                            <li><a href="video.html">Video</a></li>
+                                        </ul>
+                                </div>
+                            </div>
+
+         
+
+                            <div class="sitemapSections">
+                                <div class="sitemapHeading">Regulatory</div>
+                                <div class="sitemapContent">
+                                    <ul>
+                                        <li><a href="regulatory-overview.html">Overview</a></li>
+                                        <li><a href="regulatory-privacy.html">Privacy Policies</a></li>
+                                        <li><a href="regulatory-global.html">Global Regulatory</a></li>
+                                        <li><a href="regulatory-state.html">State Regulatory</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <div class="sitemapSections">
+                                <div class="sitemapHeading">Administrators</div>
+                                <div class="sitemapContent">
+                                        <ul >
+                                            <li><a href="admin-overview.html">Overview</a></li>
+                                            <li><a href="admin-request-rfp.html">Request a Quote</a></li>
+                                            <li><a href="partner-tools.html">Online Partner Tools</a></li>
+                                        </ul>
+                                </div>
+                            </div>
+
+                        </div>
+
+
+                        <div class="sitemapRow">
+
+                  
+
+                            <div class="sitemapSections">
+                                <div class="sitemapHeading">News</div>
+                                <div class="sitemapContent">
+                                        <ul >
+                                            <li><a href="blog-home.html">News Home</a></li>
+                                            <li><a href="blog-archive.html">News Archive</a></li>
+                                        </ul>
+                                </div>
+                            </div>
+                
+
+                        </div>
+</div>
+</section>
+</div>
+</div>
+</main>
+<footer ng-include src="'include/footer.html'"></footer>
+
+
+                        <!-- Javascript Libraries at bottom after DOM is loaded -->
+                        <script type="text/javascript" src="js/angular.min.js"></script>
+                        <script type="text/javascript" src="js/angular-animate.min.js"></script>
+                        <script type="text/javascript" src="js/angular-aria.min.js"></script>
+                        <script type="text/javascript" src="js/angular-material.min.js"></script>
+                        <script type="text/javascript" src="js/angular-messages.min.js"></script>
+                        <script type="text/javascript" src="js/jquery-2.0.3.min.js"></script>
+                        <script type="text/javascript" src="js/angular-pageslide-directive-modified.js"></script>
+
+
+                        <!-- Application Specific Javascript files at very bottom after DOM and libraries are loaded -->
+                        <script type="text/javascript" src="js/uhc_sr.js"></script>
+
+</body>
+
+</html>

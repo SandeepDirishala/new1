@@ -1,0 +1,123 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Video</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+		<meta name="apple-mobile-web-app-capable" content="yes">
+
+	<!-- CSS files -->
+	<link rel="stylesheet" type="text/css" href="css/angular-material.min.css">
+	<link rel="shortcut icon" href='favicon.ico' type='image/x-icon'>
+	
+	<!-- Application Specific CSS -->
+	<link rel="stylesheet" type="text/css" href="css/uhc_sr.css">
+
+
+<!-- HELP CENTER OVERRIDES - DON'T DELETE!! -->
+<!-- \\\\\\\\\\\\\\\\\\\\\\\\ -->
+<style>
+    nav#headerNav {border-bottom:none !important;}
+    div.navBarWrapper.locked {border-bottom: 1px solid #CDD5D7; box-shadow:0px 5px 5px 0px #FAFAFA;}
+    html {background:#FAFAFA !important;}
+    div.contentAll, div.innerContentWrapper {background:#FAFAFA !important;}
+    main section {background:#FAFAFA !important;}
+    section#contentWithSideBar {margin: 200px auto 1em !important;}
+
+    @media only screen and (max-width: 568px) {
+
+            section#contentWithSideBar {margin-top:100px !important;}
+
+    }
+
+</style>
+<!-- //////////////////////// -->
+
+
+</head>
+
+<!-- fade-in when page finishes loading -->
+<body ng-app= "srApp" onload="document.body.style.opacity='1'">
+	<header ng-include src="'include/header.html'"  ></header>
+
+	<!-- Page Content -->
+	<main>
+		<div id="contentAll">
+			<div class="innerContentWrapper" ng-controller="navCtrl">
+
+					<!-- Scroll and lock nav bar  -->
+				<!-- \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\ -->
+				<div class="navBarWrapper locked">
+                    <div id="helpMainNavWrapper">
+                        <a  href="faq.html" class="uhcBlackLink"><div id="helpMainNavBox1" class="helpMainNavBox">
+                            <img src="img/faq.svg">
+                            <p class="uhcGray">FAQ</p>
+                        </div></a>
+                        <a  href="glossary.html" class="uhcBlackLink"><div id="helpMainNavBox2" class="helpMainNavBox">
+                            <img src="img/glossary.svg">
+                            <p class="uhcGray">Glossary</p>
+                        </div></a>
+                        <a  href="insurance-101.html" class="uhcBlackLink"><div id="helpMainNavBox3" class="helpMainNavBox active">
+                            <img src="img/insurance.svg">
+                            <p class=" uhcGray displayFullOnly">Health Insurance 101</p>
+                            <p class=" uhcGray displayMobileOnly">Health 101</p>
+                        </div></a>
+                        <a  href="video.html" class="uhcBlackLink active"><div id="helpMainNavBox4" class="helpMainNavBox">
+                            <img src="img/video.svg">
+                            <p class="uhcGray">Video</p>
+                        </div></a>
+                    </div>
+				</div>
+				<!-- ///////////////////////////////////// -->
+
+				
+
+				<section>
+					<div id="marginUnderNavBar" class="hideInitially"></div>
+					<div id="marginForVideo">
+						
+						<div class="leftColumn">
+							<div class="video" >
+								<iframe width="100%" height="200px" src="https://www.youtube.com/embed/h8iD5WCn45w" frameborder="0" allowfullscreen></iframe>
+								<p>International Students Welcome</p>
+							</div>
+					
+							<div class="video" >
+								<iframe  width="100%" height="200px" src="https://www.youtube.com/embed/cQq9uIYzfj8" frameborder="0" allowfullscreen></iframe>
+								<p>What is an EOB?</p>
+							</div>
+						</div>  <!-- left-column -->
+
+						<div class="rightColumn">
+							<div class="video" >
+								<iframe  width="100%" height="200px" src="https://www.youtube.com/embed/6cFf6Ua7C24" frameborder="0" allowfullscreen></iframe>
+								<p>What are Deductibles, Coinsurance, and Copays?</p>
+							</div>
+							<div class="video" >
+								<iframe width="100%" height="200px" src="https://www.youtube.com/embed/y5kemPTa7Fg" frameborder="0" allowfullscreen></iframe>
+								<p>How to Download & Use the Mobile App</p>
+							</div>
+						</div> <!-- right-column -->
+					</div>
+					<br clear="all" >
+				</section>
+			</div>
+		</div>
+	</main>
+	<footer ng-include src="'include/footer.html'"  ></footer>
+
+<!-- Javascript Libraries at bottom after DOM is loaded -->
+<script type="text/javascript" src="js/angular.min.js"></script>
+<script type="text/javascript" src="js/angular-animate.min.js"></script>
+<script type="text/javascript" src="js/angular-aria.min.js"></script>
+<script type="text/javascript" src="js/angular-material.min.js"></script>
+<script type="text/javascript" src="js/angular-messages.min.js"></script>
+<script type="text/javascript" src="js/jquery-2.0.3.min.js"></script>
+<script type="text/javascript" src="js/angular-pageslide-directive-modified.js"></script>
+
+
+<!-- Application Specific Javascript files at very bottom after DOM and libraries are loaded -->
+<script type="text/javascript" src="js/uhc_sr.js"></script>
+
+</body>
+</html>

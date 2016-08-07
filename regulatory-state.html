@@ -1,0 +1,126 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>State Regulatory</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+		<meta name="apple-mobile-web-app-capable" content="yes">
+
+	<!-- CSS files -->
+	<link rel="stylesheet" type="text/css" href="css/angular-material.min.css">
+	<link rel="shortcut icon" href='favicon.ico' type='image/x-icon' >
+	
+	<!-- Application Specific CSS -->
+	<link rel="stylesheet" type="text/css" href="css/uhc_sr.css">
+</head>
+
+<!-- fade-in when page finishes loading -->
+<body ng-app= "srApp"   onload="document.body.style.opacity='1'"  ng-controller="stickyEnabled">
+	<header ng-include src="'include/header.html'"  ></header>
+
+	<!-- Page Content -->
+	<main>
+		<div id="contentAll">
+			<div class="innerContentWrapper" >
+
+			<!-- change id to select hero image for current page -->
+				<div id="heroRegulatoryOverview" class="parallax">
+				
+					<div class="heroGradient">
+						<div class="heroOverlayText uhcWhite">
+							<h2 class="uhcWhite">State Regulatory</h2>
+
+						</div>
+					</div>
+				</div>	
+
+				<div  class="mobileGlossaryWrapper displayMobileOnly" style="box-shadow:none !important">
+						<a class="uhcBlackLink"  href="regulatory-overview.html">Overview</a>
+						<a class="uhcBlackLink"  href="regulatory-privacy.html">Privacy Policies</a>
+						<a class="uhcBlackLink"  href="regulatory-global.html">Global Regulatory</a>
+						<a class="uhcBlackLink uhcFontBold"  href="regulatory-state.html">State Regulatory</a>
+				</div>
+
+				<section class="adminContentWithSideBar sitePageWidth">
+					
+                <div layout="row">
+				<div id="stickNav" class="tempMenuHolder" >
+					<div  id="sideNavLeft noMargin"   class="displayFullOnly">
+									<a class="uhcBlackLink" href="regulatory-overview.html"><div class="sideNavLeftBox">Overview</div></a>
+									<a class="uhcBlackLink" href="regulatory-privacy.html"><div class="sideNavLeftBox">Privacy Policies</div></a>
+									<a class="uhcBlackLink" href="regulatory-global.html"><div class="sideNavLeftBox">Global Regulatory</div></a>
+									<a class="uhcBlackLink uhcFontBold" href="regulatory-state.html "><div class="sideNavLeftBox">State Regulatory</div></a>
+
+					</div>
+				</div>
+
+
+				<div  id="sideNavRight"  class="stickySetup">
+				<section  class="sitePageWidth">
+					<div class="adminSingleColumn newsItems" style="width:auto !important;">
+						<ul layout="row" layout-wrap>
+                                   <li flex-gt-sm="45" flex="100">
+                                       <a href="#"><h4>Information for New York residents</h4></a>
+                                       <span class="date">MAR 16 2016</span>
+                                       <p>Within the coming weeks,UHCSR members will recieve communication that their 2015 Form 1095-B is ready for</p>
+                                   </li>
+                                   <li flex-gt-sm="45" flex="100">
+                                       <a href="#"><h4>Information for New York residents</h4></a>
+                                       <span class="date">MAR 16 2016</span>
+                                       <p>Within the coming weeks,UHCSR members will recieve communication that their 2015 Form 1095-B is ready for</p>
+                                   </li>
+                                   <li flex-gt-sm="45" flex="100">
+                                       <a href="#"><h4>Information for New York residents</h4></a>
+                                       <span class="date">MAR 16 2016</span>
+                                       <p>Within the coming weeks,UHCSR members will recieve communication that their 2015 Form 1095-B is ready for</p>
+                                   </li>
+                                   <li flex-gt-sm="45" flex="100">
+                                       <a href="#"><h4>Information for New York residents</h4></a>
+                                       <span class="date">MAR 16 2016</span>
+                                       <p>Within the coming weeks,UHCSR members will recieve communication that their 2015 Form 1095-B is ready for</p>
+                                   </li>
+                                   <li flex-gt-sm="45" flex="100">
+                                       <a href="#"><h4>Information for New York residents</h4></a>
+                                       <span class="date">MAR 16 2016</span>
+                                       <p>Within the coming weeks,UHCSR members will recieve communication that their 2015 Form 1095-B is ready for</p>
+                                   </li>
+                                   <li flex-gt-sm="45" flex="100">
+                                       <a href="#"><h4>Information for New York residents</h4></a>
+                                       <span class="date">MAR 16 2016</span>
+                                       <p>Within the coming weeks,UHCSR members will recieve communication that their 2015 Form 1095-B is ready for</p>
+                                   </li>
+                              
+                               </ul>
+                        <div layout="row" layout-align="center center"><a class="blue-link" href="#">Show More</a></div>
+
+					</div>
+				</section>
+				</div>
+                </div>
+				</section>
+
+			</div>
+		</div>
+	</main>
+	
+	<br clear="all" />	       
+
+	<footer  ng-include src="'include/footer.html'"  >
+		
+
+	</footer>
+
+<!-- Javascript Libraries at bottom after DOM is loaded -->
+<script type="text/javascript" src="js/angular.min.js"></script>
+<script type="text/javascript" src="js/angular-animate.min.js"></script>
+<script type="text/javascript" src="js/angular-aria.min.js"></script>
+<script type="text/javascript" src="js/angular-material.min.js"></script>
+<script type="text/javascript" src="js/angular-messages.min.js"></script>
+<script type="text/javascript" src="js/jquery-2.0.3.min.js"></script>
+<script type="text/javascript" src="js/angular-pageslide-directive-modified.js"></script>
+
+
+<!-- Application Specific Javascript files at very bottom after DOM and libraries are loaded -->
+<script type="text/javascript" src="js/uhc_sr.js"></script>
+</body>
+</html>

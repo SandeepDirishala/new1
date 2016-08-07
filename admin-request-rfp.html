@@ -1,0 +1,422 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Request a Quote</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+		<meta name="apple-mobile-web-app-capable" content="yes">
+
+	<!-- CSS files -->
+	<link rel="stylesheet" type="text/css" href="css/angular-material.min.css">
+	<link rel="shortcut icon" href='favicon.ico' type='image/x-icon' >
+	
+	<!-- Application Specific CSS -->
+	<link rel="stylesheet" type="text/css" href="css/uhc_sr.css">
+	<style>
+	md-checkbox.md-default-theme.md-checked ._md-icon::after, md-checkbox.md-checked ._md-icon::after {
+    border-color: #fff !important;
+}
+	</style>
+</head>
+
+<!-- fade-in when page finishes loading -->
+<body ng-app= "srApp"   onload="document.body.style.opacity='1'"  ng-controller="rfpstickyEnabled">
+	<header ng-include src="'include/header.html'"  ></header>
+
+	<!-- Page Content -->
+	<main>
+		<div id="contentAll">
+			<div class="innerContentWrapper" >
+
+				<!-- change id to select hero image for current page -->
+				<div id="heroAdminOverview" class="parallax">
+					<div class="heroGradient">
+						<div class="heroOverlayText uhcWhite">
+							<h2 class="uhcWhite">Request a Quote</h2>
+						</div>
+					</div>
+				</div>	
+
+				<div  class="mobileGlossaryWrapper displayMobileOnly" style="box-shadow:none !important">
+						<a class="uhcBlackLink" href="admin-overview.html">Overview</a>
+						<a class="uhcBlackLink uhcFontBold" href="admin-request-rfp.html">Request a Quote</a>
+						<a class="uhcBlackLink" href="partner-tools.html">Online Partner Tools</a>
+						<a class="uhcBlackLink" href="https://partnercenter.uhcsr.com">Partner Center</a>
+
+				</div>
+
+				<section class="adminContentWithSideBar sitePageWidth">
+			
+
+
+				<div layout="row">
+
+                    <div id="stickNav" class="tempMenuHolder" >
+                        <div   class="displayFullOnly">
+                                <a class="uhcBlackLink" href="admin-overview.html"><div class="sideNavLeftBox">Overview</div></a>
+                                <a class="uhcBlackLink" href="admin-request-rfp.html"><div class="sideNavLeftBox uhcFontBold">Request a Quote</div></a>
+                                <a class="uhcBlackLink" href="partner-tools.html"><div class="sideNavLeftBox">Online Partner Tools</div></a>
+                                <a class="uhcBlackLink" href="https://partnercenter.uhcsr.com"><div class="sideNavLeftBox">Partner Center</div></a>
+                        </div>
+                    </div>
+
+
+				    <div  id="sideNavRight"  class="stickySetup">
+                    <section  class="sitePageWidth">
+                        <div class="adminSingleColumn">
+                                    <form name="requestQuoteForm">
+                                    <section id="requestQuote"  class="sitePageWidth">
+                                        <div class="adminSingleColumn">
+                                            <div class="marginTop1em">
+                                                <span class="controlCircle">1</span>
+                                                <h1>Contact Information</h1>
+                                                <p>Please complete your contact/school information:</p>
+                                            </div>
+
+                                            <md-content layout-gt-sm="row" layout-padding>
+												<md-input-container class="md-block ">
+													<label>First Name</label>
+													<input required="" name="selfFirstName" ng-model="requestQuote.selfFirstName" md-no-asterisk="">
+													<div ng-messages="requestQuoteForm.selfFirstName.$error">
+														<div ng-message="required">REQUIRED</div>
+													</div>
+												</md-input-container>
+												<md-input-container class="md-block ">
+													<label>Last Name</label>
+													<input required="" name="selfLastName" ng-model="requestQuote.selfLastName" md-no-asterisk="">
+													<div ng-messages="requestQuoteForm.selfLastName.$error">
+														<div ng-message="required"></div>
+													</div>
+												</md-input-container>
+											</md-content>
+
+											<md-content layout-gt-sm="row" layout-padding>
+												<md-input-container class="md-block ">
+													<label>Title</label>
+													<input required="" name="selfTitle" ng-model="requestQuote.selfTitle" md-no-asterisk="">
+													<div ng-messages="requestQuoteForm.selfTitle.$error">
+														<div ng-message="required"></div>
+													</div>
+												</md-input-container>
+												<md-input-container class="md-block ">
+													<label>Email</label>
+													<input required="" name="selfEmail" ng-model="requestQuote.selfEmail" md-no-asterisk="">
+													<div ng-messages="requestQuoteForm.selfEmail.$error">
+														<div ng-message="required"></div>
+													</div>
+												</md-input-container>
+											</md-content>
+											
+											<md-content layout-gt-sm="row" layout-padding>
+												<md-input-container class="md-block ">
+													<label>Phone Number</label>
+													<input required="" name="selfPhone" ng-model="requestQuote.selfPhone" md-no-asterisk="">
+													<div ng-messages="requestQuoteForm.selfPhone.$error">
+														<div ng-message="required"></div>
+													</div>
+												</md-input-container>
+												<md-input-container class="md-block ">
+													<label>School Name</label>
+													<input required="" name="schoolName" ng-model="requestQuote.schoolName" md-no-asterisk="">
+													<div ng-messages="requestQuoteForm.schoolName.$error">
+														<div ng-message="required"></div>
+													</div>
+												</md-input-container>
+											</md-content>
+
+											<md-content layout-gt-sm="row" layout-padding>
+												<md-input-container class="md-block inputField33em">
+													<label>School Address</label>
+													<input required="" name="schoolAddress" ng-model="requestQuote.schoolAddress" md-no-asterisk="">
+													<div ng-messages="requestQuoteForm.schoolAddress.$error">
+														<div ng-message="required"></div>
+													</div>
+												</md-input-container>
+											</md-content>
+											
+											<md-content layout-gt-sm="row" layout-padding>
+												<md-input-container class="md-block inputField12em">
+													<label>City</label>
+													<input required="" name="schoolCity" ng-model="requestQuote.schoolCity" md-no-asterisk="">
+													<div ng-messages="requestQuoteForm.schoolCity.$error">
+														<div ng-message="required"></div>
+													</div>
+												</md-input-container>
+												<md-input-container class="md-block inputField12em">
+													<label>State</label>
+													<input required="" name="schoolState" ng-model="requestQuote.schoolState" md-no-asterisk="">
+													<div ng-messages="requestQuoteForm.schoolState.$error">
+														<div ng-message="required"></div>
+													</div>
+												</md-input-container>
+												<md-input-container class="md-block inputField7em">
+													<label>Zipcode</label>
+													<input required="" name="schoolZipcode" ng-model="requestQuote.schoolZipcode" md-no-asterisk="">
+													<div ng-messages="requestQuoteForm.schoolZipcode.$error">
+														<div ng-message="required"></div>
+													</div>
+												</md-input-container>
+											</md-content>
+
+											<md-content layout-gt-sm="row" layout-padding>
+												<md-input-container class="md-block inputField33em">
+													<label>School Year for this plan</label>
+													<input required="" name="schoolYear" ng-model="requestQuote.schoolYear" md-no-asterisk="">
+													<div ng-messages="requestQuoteForm.schoolYear.$error">
+														<div ng-message="required"></div>
+													</div>
+												</md-input-container>
+											</md-content>
+
+										
+										<div class="marginTop4em">
+											<span class="controlCircle">2</span><h1>Request a Quote Form</h1>
+											<p>Do you have an RFP that you would like us to respond to?  Fill out the form below. Additionally, you can send us information through email in the next section.</p>
+										</div>
+															
+										
+										<table class="requestQuote">
+											<thead>
+											<tr>
+												<th></th>
+												<th>Hours Req.</th>
+												<th>#Eligible</th>
+												<th>Mandatory</th>
+												<th>Hard Waiver</th>
+												<th>Soft Waiver</th>
+												<th>Voluntary</th>
+											</tr>
+											</thead>
+											<tbody>
+											<tr>
+												<td class="requestQuoteLeftText">Undergraduate</td>
+												<td>									
+													<md-input-container class="md-block inputField4em">
+														<label></label>
+														<input required="" name="quoteUnderHours" ng-model="requestQuote.quoteUnderHours" md-no-asterisk="">
+														<div ng-messages="requestQuoteForm.quoteUnderHours.$error">
+															<div ng-message="required"></div>
+														</div>
+													</md-input-container>
+												</td>
+												<td>									
+													<md-input-container class="md-block inputField4em">
+														<label></label>
+														<input required="" name="quoteUnderEligible" ng-model="requestQuote.quoteUnderEligible" md-no-asterisk="">
+														<div ng-messages="requestQuoteForm.quoteUnderEligible.$error">
+															<div ng-message="required"></div>
+														</div>
+													</md-input-container>
+												</td>
+												<td>									
+													<md-checkbox ng-disabled="false" aria-label="Undergraduate Mandatory"  md-no-ink ng-model="requestQuoteForm.quoteUnderMandatoryCheckbox" class="uhcCheckbox">
+													</md-checkbox>
+												</td>
+												<td>									
+													<md-checkbox ng-disabled="false" aria-label="Undergraduate Hard Waiver"  md-no-ink ng-model="requestQuoteForm.quoteUnderHardWaiverCheckbox" class="uhcCheckbox">
+													</md-checkbox>
+												</td>
+												<td>									
+													<md-checkbox ng-disabled="false" aria-label="Undergraduate Soft Waiver"  md-no-ink ng-model="requestQuoteForm.quoteUnderSoftWaiverCheckbox" class="uhcCheckbox">
+													</md-checkbox>
+												</td>
+												<td>									
+													<md-checkbox ng-disabled="false" aria-label="Undergraduate Volutary"  md-no-ink ng-model="requestQuoteForm.quoteUnderVolutaryCheckbox" class="uhcCheckbox">
+													</md-checkbox>
+												</td>
+											</tr>
+											<tr>
+												<td class="requestQuoteLeftText">Graduate</td>
+												<td>									
+													<md-input-container class="md-block inputField4em">
+														<label></label>
+														<input required="" name="quoteGradHours" ng-model="requestQuote.quoteGradHours" md-no-asterisk="">
+														<div ng-messages="requestQuoteForm.quoteGradHours.$error">
+															<div ng-message="required"></div>
+														</div>
+													</md-input-container>
+												</td>
+												<td>									
+													<md-input-container class="md-block inputField4em">
+														<label></label>
+														<input required="" name="quoteGradEligible" ng-model="requestQuote.quoteGradEligible" md-no-asterisk="">
+														<div ng-messages="requestQuoteForm.quoteGradEligible.$error">
+															<div ng-message="required"></div>
+														</div>
+													</md-input-container>
+												</td>
+												<td>									
+													<md-checkbox ng-disabled="false" aria-label="Graduate Mandatory"  md-no-ink ng-model="requestQuoteForm.quoteGradMandatoryCheckbox" class="uhcCheckbox">
+													</md-checkbox>
+												</td>
+												<td>									
+													<md-checkbox ng-disabled="false" aria-label="Graduate Hard Waiver"  md-no-ink ng-model="requestQuoteForm.quoteGradHardWaiverCheckbox" class="uhcCheckbox">
+													</md-checkbox>
+												</td>
+												<td>									
+													<md-checkbox ng-disabled="false" aria-label="Graduate Soft Waiver"  md-no-ink ng-model="requestQuoteForm.quoteGradSoftWaiverCheckbox" class="uhcCheckbox">
+													</md-checkbox>
+												</td>
+												<td>									
+													<md-checkbox ng-disabled="false" aria-label="Graduate Volutary"  md-no-ink ng-model="requestQuoteForm.quoteGradVolutaryCheckbox" class="uhcCheckbox">
+													</md-checkbox>
+												</td>
+											</tr>
+											<tr>
+												<td class="requestQuoteLeftText" >International</td>
+												<td>									
+													<md-input-container class="md-block inputField4em">
+														<label></label>
+														<input required="" name="quoteInterHours" ng-model="requestQuote.quoteInterHours" md-no-asterisk="">
+														<div ng-messages="requestQuoteForm.quoteInterHours.$error">
+															<div ng-message="required"></div>
+														</div>
+													</md-input-container>
+												</td>
+												<td>									
+													<md-input-container class="md-block inputField4em">
+														<label></label>
+														<input required="" name="quoteInterEligible" ng-model="requestQuote.quoteInterEligible" md-no-asterisk="">
+														<div ng-messages="requestQuoteForm.quoteInterEligible.$error">
+															<div ng-message="required"></div>
+														</div>
+													</md-input-container>
+												</td>
+												<td>									
+													<md-checkbox ng-disabled="false" aria-label="International Mandatory"  md-no-ink ng-model="requestQuoteForm.quoteInterMandatoryCheckbox" class="uhcCheckbox">
+													</md-checkbox>
+												</td>
+												<td>									
+													<md-checkbox ng-disabled="false" aria-label="International Hard Waiver"  md-no-ink ng-model="requestQuoteForm.quoteInterHardWaiverCheckbox" class="uhcCheckbox">
+													</md-checkbox>
+												</td>
+												<td>									
+													<md-checkbox ng-disabled="false" aria-label="International Soft Waiver"  md-no-ink ng-model="requestQuoteForm.quoteInterSoftWaiverCheckbox" class="uhcCheckbox">
+													</md-checkbox>
+												</td>
+												<td>									
+													<md-checkbox ng-disabled="false" aria-label="International Volutary"  md-no-ink ng-model="requestQuoteForm.quoteInterVolutaryCheckbox" class="uhcCheckbox">
+													</md-checkbox>
+												</td>
+											</tr>								
+											<tr>
+												<td class="requestQuoteLeftText" >Other</td>
+												<td>									
+													<md-input-container class="md-block inputField4em">
+														<label></label>
+														<input required="" name="quoteInterHours" ng-model="requestQuote.quoteInterHours" md-no-asterisk="">
+														<div ng-messages="requestQuoteForm.quoteInterHours.$error">
+															<div ng-message="required"></div>
+														</div>
+													</md-input-container>
+												</td>
+												<td>									
+													<md-input-container class="md-block inputField4em">
+														<label></label>
+														<input required="" name="quoteInterEligible" ng-model="requestQuote.quoteInterEligible" md-no-asterisk="">
+														<div ng-messages="requestQuoteForm.quoteInterEligible.$error">
+															<div ng-message="required"></div>
+														</div>
+													</md-input-container>
+												</td>
+												<td>									
+													<md-checkbox ng-disabled="false" aria-label="International Mandatory"  md-no-ink ng-model="requestQuoteForm.quoteInterMandatoryCheckbox" class="uhcCheckbox">
+													</md-checkbox>
+												</td>
+												<td>									
+													<md-checkbox ng-disabled="false" aria-label="International Hard Waiver"  md-no-ink ng-model="requestQuoteForm.quoteInterHardWaiverCheckbox" class="uhcCheckbox">
+													</md-checkbox>
+												</td>
+												<td>									
+													<md-checkbox ng-disabled="false" aria-label="International Soft Waiver"  md-no-ink ng-model="requestQuoteForm.quoteInterSoftWaiverCheckbox" class="uhcCheckbox">
+													</md-checkbox>
+												</td>
+												<td>									
+													<md-checkbox ng-disabled="false" aria-label="International Volutary"  md-no-ink ng-model="requestQuoteForm.quoteInterVolutaryCheckbox" class="uhcCheckbox">
+													</md-checkbox>
+												</td>
+											</tr>								
+
+
+
+											</tbody>
+										</table>
+										
+										
+										
+										<div class="requestQuote marginTop2em">
+											<span style="display:block;">Do you have a Student Health Center?</span>
+											<span class="rightThis noFloatMobile">
+												<md-radio-group ng-model="requestQuoteHealthCenterRadioModel" class="uhcRadio " md-no-ink>
+													<md-radio-button value="Yes" aria-label="Yes">
+														Yes
+													</md-radio-button>
+													<md-radio-button value="No" aria-label="No">
+														No
+													</md-radio-button>
+												</md-radio-group>
+											</span>
+										</div>
+										
+										
+										<div class="marginTop4em">
+											<span class="controlCircle">3</span><h1>Plan Information</h1>
+											<p>To provide the most accurate quote, we would like the last three years&rsquo; of claim history as well as the last three years&rsquo; plan outlines (brochures).</p>
+										</div>
+
+										<div class="marginTop2em">
+											<md-button  ng-href="mailto:sales@uhcsr.com" class="requestQuoteButton md-raised" >SEND CLAIM INFO</md-button>
+										</div>
+
+										<div class="marginTop2em">
+											<md-content layout-gt-sm="row" layout-padding>
+												<md-input-container class="md-block inputField33em">
+													<label>Please note any changes with your plan.</label>
+													<textarea required="" name="noteCurrentPlan" ng-model="requestQuote.noteCurrentPlan" md-no-asterisk="" md-maxlength="700"></textarea>
+													<div ng-messages="requestQuoteForm.noteCurrentPlan.$error">
+														<div ng-message="required"></div>
+													</div>
+												</md-input-container>
+											</md-content>
+										</div>
+
+										<div class="marginTop2em" >
+										 <span class="controlCircle">4</span> <p>Thanks for taking the time to request information from us. We look forward to having a conversation with you soon!</p>
+										</div>
+
+										<div class="marginTop2em" style="margin-bottom:100px;">
+											<md-button  class="requestQuoteButton md-raised" ng-click="verifyPage1Fields()">REQUEST QUOTE</md-button>
+										</div>
+
+                                        </div>
+                                    </section>
+                                    </form>					
+                        </div>		
+                    </section>
+                    </div>
+                    </div>			
+				</section>
+            </div>
+        </div>
+	</main>
+	       
+
+	<footer  ng-include src="'include/footer.html'"  >
+		
+
+	</footer>
+
+<!-- Javascript Libraries at bottom after DOM is loaded -->
+<script type="text/javascript" src="js/angular.min.js"></script>
+<script type="text/javascript" src="js/angular-animate.min.js"></script>
+<script type="text/javascript" src="js/angular-aria.min.js"></script>
+<script type="text/javascript" src="js/angular-material.min.js"></script>
+<script type="text/javascript" src="js/angular-messages.min.js"></script>
+<script type="text/javascript" src="js/jquery-2.0.3.min.js"></script>
+<script type="text/javascript" src="js/angular-pageslide-directive-modified.js"></script>
+
+
+<!-- Application Specific Javascript files at very bottom after DOM and libraries are loaded -->
+<script type="text/javascript" src="js/uhc_sr.js"></script>
+</body>
+</html>

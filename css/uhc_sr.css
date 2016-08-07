@@ -1,0 +1,4114 @@
+@charset "utf-8";
+
+/*
+  ** UHC Standard Fonts
+  */
+
+* {
+  text-rendering: optimizeLegibility !important;
+  -webkit-font-smoothing: antialiased !important;
+  -moz-osx-font-smoothing: grayscale !important;
+  zoom:1 !important;
+  -webkit-text-stroke: 1px transparent !important;
+   text-stroke: 1px transparent !important;
+}
+
+
+
+
+
+
+
+md-checkbox.md-default-theme.md-checked ._md-icon::after, md-checkbox.md-checked ._md-icon::after {
+    border-color: #fff !important;
+}
+
+md-input-container label:not(.md-no-float):not(._md-container-ignore), md-input-container ._md-placeholder {
+    font-size: 16px !important;}
+
+md-icon {
+  svg {
+    path {
+      fill: #ffffff !important;
+    }
+  }
+}
+
+
+
+#stickNav  { -webkit-transition: all 0.4s ease;
+    -moz-transition: all 0.4s ease;
+    -o-transition: all 0.4s ease;
+    transition: all 0.4s ease;
+}
+
+.stickyNav {
+
+	z-index: 10;
+	width: 140px;
+	height: 204px;
+	position: fixed !important;
+	top: 240px !important;
+	margin-top: 0px; 
+}
+
+.hideFAQMenu {visibility: hidden;}
+
+
+@font-face {
+	font-family: 'UHCSans-Black';
+	src: url('../fonts/UHCSans-Black.woff');
+	
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'UHCSans-Bold';
+	src: url('../fonts/UHCSans-Bold.woff');
+
+
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'UHCSans-Italic';
+	src: url('../fonts/UHCSans-Italic.woff');
+
+
+	font-weight: normal;
+	font-style: normal;
+}
+
+
+@font-face {
+	font-family: 'UHCSans-Regular';
+	src: url('../fonts/UHCSans-Regular.woff');
+	font-weight: normal;
+	font-style: normal;
+}
+
+
+
+.uhcFontBlack { font-family: 'UHCSans-Black', Arial, sans-serif; }
+.uhcFontBold { font-family: 'UHCSans-Bold', Arial, sans-serif; }
+.uhcFontItalic { font-family: 'UHCSans-Italic', Arial, sans-serif; }
+.uhcFontLight { font-family: 'UHCSans-Regular', Arial, sans-serif; font-weight: lighter;}
+.uhcFontLightItalic { font-family: 'UHCSans-RegularItalic', Arial, sans-serif; }
+
+
+h1.uhcFontBlack {font-size:36px;}
+
+/* .uhcFontMedium { font-family: 'UHCSans-Medium', Arial, sans-serif; }
+.uhcFontMediumItalic { font-family: 'UHCSans-MediumItalic', Arial, sans-serif; } */
+
+.uhcFontRegular { font-family: 'UHCSans-Regular', Arial, sans-serif; }
+
+.uhcBlackLink.active {font-family: 'UHCSans-Bold';}
+
+a#createAccount		  {color:#fff !important;}
+a#createAccount:hover {color:#777 !important;}
+
+/*
+  ** EOF
+  */
+
+
+
+/*
+  ** Hero images for each page
+  */
+
+/* BEGIN Hero image id for each specific page */
+
+
+/* specific school hero and logos 
+ *	unique naming convention: 
+ *   flip their URL and camel case: www.auburn.edu => eduAuburn 
+*/
+#eduAuburnHero { background-image: url("../img/eduAuburnHero.jpg"); }
+#eduAuburnLogo { background-image: url("../img/eduDefaultLogo.jpg"); }
+
+/* hero images for each page */
+#heroAboutUs { background-image: url("../img/heroAboutUs.jpg"); }
+#heroAdminOverview { background-image: url("../img/heroAdministrators.jpg"); }
+#heroAdminRequestRFP { background-image: url("../img/heroAbstract2.jpg"); }
+#heroBlogHome { background-image: url("../img/heroNews.jpg"); }
+#heroContact { background-image: url("../img/heroContact.jpg"); }
+#heroControl { background-image: url("../img/heroUnderwriting.jpg"); }
+#heroDifference { background-image: url("../img/heroAbstract3.jpg"); }
+#heroErrorPage { background-image: url("../img/heroAbstract1.jpg"); }
+#heroExplained { background-image: url("../img/heroAbstract1.jpg"); }
+#heroFAQ { background-image: url("../img/heroAbstract3.jpg"); }
+#heroGlossary { background-image: url("../img/heroAbstract1.jpg"); }
+#heroInsurance101 { background-image: url("../img/heroAbstract2.jpg"); }
+#heroInsuranceForms { background-image: url("../img/heroInsuranceForms.jpg"); }
+#heroMaintenancePage { background-image: url("../img/heroAbstract2.jpg"); }
+#heroPartnerTools { background-image: url("../img/heroProviderResources.jpg"); }
+#heroRegulatoryGlobal { background-image: url("../img/heroAbstract2.jpg"); }
+#heroRegulatoryOverview { background-image: url("../img/heroRegulatory.jpg"); }
+#heroRegulatoryPrivacy { background-image: url("../img/heroAbstract1.jpg"); }
+#heroRegulatoryState { background-image: url("../img/heroAbstract3.jpg"); }
+#heroSiteMap { background-image: url("../img/heroAbstract2.jpg"); }
+#heroTermsOfUse { background-image: url("../img/heroTermsOfUse.jpg"); }
+#heroUhcBlue { background-image: url("../img/heroUhcBlue.jpg"); }
+#heroUnderwriting { background-image: url("../img/heroUnderwriting.jpg"); }
+#heroVideo { background-image: url("../img/heroAbstract2.jpg"); }
+
+/* placeholder only used in development */
+#heroPlaceholder { background-image: url("../img/heroAbstract3.jpg"); }
+
+/* END Hero image id for each specific page */
+
+
+
+/* UHC Colors */
+/* Note: most colors are defined by class listed below. 
+ * However, in some cases, the colors are defined lower in the file due to CSS Specificity.
+ */
+.uhcBlue { color: #003da1; }
+a.uhcBlueLink:active,
+a.uhcBlueLink:link,
+a.uhcBlueLink:visited { color: #003da1; }
+a.uhcBlueLink:hover { color: #003da1; }
+.uhcBlueBackground { background-color: #003da1; }
+
+.uhcDarkBlueBackground { background-color: #122377 }
+.uhcDarkerBlueBackground { background-color: #0d1a64 }
+
+.uhcLightBlue { color: #4a90e2; }
+.uhcLightBlueBackground { background-color: #4a90e2; }
+a.uhcLightBlue:active,
+a.uhcLightBlue:link,
+a.uhcLightBlue:visited { color: #4a90e2; }
+a.uhcLightBlue:hover { color: #4a90e2; }
+
+.uhcDisabledLightBlue { color: #99b3d1; }
+
+.uhcGreen { color: #3da547; }
+.uhcGreenBackground  { background-color: #3da547; }
+
+.uhcWhite  { color: #fff; }
+a.uhcWhiteLink:active,
+a.uhcWhiteLink:link,
+a.uhcWhiteLink:visited { color: #fff; }
+a.uhcWhiteLink:hover { color: #aaa; }
+
+.uhcWhiteBackground  { background-color: #fff; }
+
+.uhcBlack { color: #000; }
+a.uhcBlackLink:active,
+a.uhcBlackLink:link,
+a.uhcBlackLink:visited { color: #000; }
+a.uhcBlackLink:hover { color: #000; }
+
+.uhcGray { color: #444; line-height:1.5em;}
+.uhcLightGray { color: #EEE; }
+.uhcDisabledGray { color: #AAA; }
+.uhcMediumGray { color: #777; }
+.uhcLightGrayBackground { background-color: #EEE; }
+
+a.uhcGrayLink:active,
+a.uhcGrayLink:link,
+a.uhcGrayLink:visited { color: #777; }
+a.uhcGrayLink:hover { color: #000; }
+
+.uhcRed { color: #f55; }
+
+h3.faqQuestion a:active,
+h3.faqQuestion a:link,
+h3.faqQuestion a:visited { color: #4a90e2; }
+h3.faqQuestion a:hover { color: #000; }
+
+
+#schoolStart 	{text-align: center;}
+#schoolStart h3 {max-width: 600px;display: inline-block;}
+
+
+
+/* input field blue line */
+md-input-container .md-input {
+	border-color: #003da1;
+}
+
+hr { 
+    display: block;
+   margin:0;
+    margin-left: auto;
+    margin-right: auto;
+    border-style: inset;
+    border-bottom: 1px solid #ddd;
+    padding:0;
+}
+
+span.uhcBlueCircle {
+    display: inline-block;
+    width:15px;
+    height:15px;
+    border-radius:50%;
+    border: 1px solid #003da1;
+    color:#003da1;
+    text-align:center;
+    padding:1px;
+    font-size:14px;
+ }
+
+a:active,
+a:link { 
+	color: #fff; 
+	text-decoration: none;
+}
+a:visited { 
+	color: #fff; 
+}
+a:hover { 
+	color: #aaa; 
+	text-decoration: none;
+}
+
+a {
+	border: 0px;
+}
+
+a.underlineThis {
+	text-decoration: underline;
+}
+
+md-checkbox {
+	color: #003da1;
+}
+
+.formText a  {
+	color: #003da1;
+	text-decoration: none;
+}
+
+.schoolButton {
+	padding: 0 1em;
+	margin: 5px 10px 5px 0;
+	font-size:12px !important;
+	font-family: 'UHCSans-Regular' !important;
+
+} 
+
+button.schoolButtonWhiteOnBlue {
+	color: #fff !important;
+	background-color: #003da1 !important;
+}
+
+span.schoolButtonWhiteOnOrange,
+button.schoolButtonWhiteOnOrange {
+	color: #fff !important;
+	background-color: #F87217 !important;
+}
+
+span.schoolButtonWhiteOnGreen,
+button.schoolButtonWhiteOnGreen {
+	color: #fff !important;
+	background-color: #3da547 !important;
+}
+
+span.schoolButtonWhiteOnYellow,
+button.schoolButtonWhiteOnYellow {
+	color: #fff !important;
+	background-color: #ffd00d !important;
+}
+
+span.schoolCircle {
+    border-radius: 50%;
+    float: right;
+    font-size: 13px;
+    height: 30px;
+    line-height: 32px;
+    padding: 0;
+    text-align: center;
+    width: 30px;
+}
+
+span.searchTerm {
+	background-color: #003da1;
+	color: #fff;
+}
+
+p.smallGrayText {
+	color: #AAA;
+	font-size: 12px;
+	line-height: 1.5em;
+}
+
+.errorPage {background: none; padding:50px;min-height:500px;}
+/* overriding angular-material theme */
+md-input-container label  {
+	color: #003da1;
+}
+
+md-tabs.md-default-theme md-ink-bar, md-tabs md-ink-bar {
+    color: #003da1 !important;
+    background-color: #003da1!important;
+}
+
+.uhcRadio md-radio-button  {
+	color: #777 !important;
+}
+
+.uhcRadio md-radio-button ._md-off {
+	color: #4a90e2 !important;
+	border-color: #4a90e2 !important;
+}
+
+.uhcRadio md-radio-button ._md-on {
+	color: #003da1 !important;
+	background-color: #003da1 !important;
+	border-color: #003da1 !important;
+}
+
+md-checkbox.uhcCheckbox   {
+	color: #777 !important;
+}
+
+md-checkbox.uhcCheckbox ._md-icon   {
+	border-color: #4a90e2 !important;
+}
+
+md-checkbox.uhcCheckbox.md-checked ._md-icon  {
+	background-color: #003da1 !important;
+}
+
+
+md-card 	  {box-shadow: 0px 0px 5px #aaa;margin-bottom: 16px;-moz-transition: .2s ease-in-out;-webkit-transition: .2s ease-in-out;transition: .2s ease-in-out;}
+md-card:hover {
+
+  
+
+}
+
+
+
+
+      
+
+
+
+/* DEV handy for debugging */
+.borderRed {
+	border: 1px solid #f00;
+}
+
+/* field input */
+.inputField4em {
+	max-width: 4em;
+	width: 100%;
+}
+
+.inputField7em {
+	max-width: 7em;
+	width: 100%;
+}
+
+.inputField8em {
+	max-width: 8em;
+	width: 100%;
+}
+
+.inputField12em {
+	max-width: 12em;
+	width: 100%;
+}
+
+.inputField16em {
+	max-width: 16em;
+	width: 100%;
+}
+
+.inputField33em {
+	max-width: 33em;
+	width: 100%;
+}
+
+
+
+
+/* custom radio toggler */
+.radioToggler label {
+	font-family: 'UHCSans-Medium', Arial, sans-serif; 
+	font-size: 14px;
+	color: #003da1;
+	padding: .6em 1em;
+}
+
+.radioToggler input {
+	margin:0;
+	padding:0;
+	-webkit-appearance:none;
+	-moz-appearance:none;
+	appearance:none;
+
+	visibility:hidden;  position:absolute; /* hack to hide radio button in IE */
+}
+
+.radioToggler input:active +.radioTogglerOption { 
+	color: #fff;
+	background-color:#003da1;
+	opacity: .9; 
+}
+
+.radioToggler input:checked +.radioTogglerOption {
+	color: #fff;
+	background-color:#003da1;
+	-webkit-filter: none;
+	-moz-filter: none;
+	filter: none;
+}
+
+
+.radioTogglerOption {
+	background-color:#fff;
+	border-radius: 3px;
+	cursor:pointer;
+	background-size:contain;
+	background-repeat:no-repeat;
+	display:inline-block;
+	-webkit-transition: all 100ms ease-in;
+	-moz-transition: all 100ms ease-in;
+	transition: all 100ms ease-in;
+}
+
+.radioTogglerOption:hover {
+	color: #fff;
+	background-color:#777;
+	opacity: .8; 
+}
+
+.md-ripple-container {background: none !important;}
+
+.slideMenuWrapper .md-button:hover, .slideMenuWrapper .md-button:hover * {background: none !important;}
+
+.swiper-button-next {margin-right:-40px;}
+
+.swiper-button-prev {margin-left:-40px;}
+
+.swiper-button-prev  , .swiper-button-next {
+
+  background-color: #0f49a9;
+    border-radius: 60px;
+    height: 60px !important;
+    width: 60px !important;
+    background-image: none !important;
+}
+
+/* Global Defaults */
+html {
+	overflow-x: hidden;
+}
+
+body {
+	font-family: 'UHCSans-Regular', Arial, sans-serif; 	
+	font-size: 18px;
+	margin:0;
+ 	padding:0;
+	
+	/* fade in on load */
+	opacity:0;	/* set to 1 in body tag onload in .html */
+	transition: opacity 0.5s;
+	-webkit-transition: opacity 0.5s; /* Safari */
+}
+
+html, body {     }
+
+img {
+	border: 0;
+}
+
+li {
+	line-height: 1.25em;
+	margin-bottom: 0.5em;
+}
+
+.marginTop1em {
+	margin-top: 1em;
+}
+
+.marginTop2em {
+	margin-top: 2em;
+}
+
+.marginTop4em {
+	margin-top: 4em;
+}
+
+.marginTop8em {
+	margin-top: 8em;
+}
+
+.marginRight1em {
+	margin-right: 1em;
+}
+
+.marginRight3em {
+	margin-right: 3em;
+}
+
+/*
+  ** BEGIN Full View
+  */
+
+/* Full View - Default */
+@media only screen {
+
+	/* These are used by both full and mobile */
+	div#headerAll {
+		display: block;
+	}
+	div#contentAll {
+		display: block;
+	}
+	
+	/* These are only seen in full view */
+	.displayFullOnly {
+		display: block;
+	}
+	div#contentFull {
+		display: block;
+	}
+	div#footerFull {
+		display: block;
+	}
+
+	/* These are only seen in mobile view */
+	.displayMobileOnly {
+		display: none;
+	}
+	div#contentMobile {
+		display: none;
+	}
+	div#footerMobile {
+		display: none;
+	}
+
+	/* ========  Full View Page Defaults ======== */
+
+	html, 
+	body {
+		height: 100%;
+		min-height: 100%;
+		background-color: #fff;				/* color is required here for css specificity (ok, this is overkill, but just wanted to make sure) */
+	}
+	
+	/* Interaction */
+	img.growLittleOnHover:hover {
+		transform: scale(1.01);
+		-webkit-transform: scale(1.01);
+		-o-transform: scale(1.01);
+		-moz-transform: scale(1.01);
+		-ms-transform: scale(1.01);
+		cursor: pointer;
+	}
+
+	img.growSomeOnHover:hover {
+		transform: scale(1.1);
+		-webkit-transform: scale(1.1);
+		-o-transform: scale(1.1);
+		-moz-transform: scale(1.1);
+		-ms-transform: scale(1.1);
+		cursor: pointer;
+
+	}
+
+	img.growBigOnHover:hover {
+		transform: scale(1.3);
+		-webkit-transform: scale(1.3);
+		-o-transform: scale(1.3);
+		-moz-transform: scale(1.3);
+		-ms-transform: scale(1.3);
+		cursor: pointer;
+	}
+	
+	a.growLittleOnHover:hover {
+		font-size: 102%;
+		line-height: 98%;
+}
+
+	a.growSomeOnHover:hover {
+		font-size: 105%;
+		line-height: 95%;
+	}
+
+	a.growBigOnHover:hover {
+ 		font-size: 110%;
+		line-height: 90%;
+	}	
+	.smallText {
+		font-size: 14px;
+		line-height: 1.25em;
+	}
+	.fontSize16Required {
+		font-size: 16px;
+	}
+	.centerText {
+		text-align: center;
+	}
+
+	.rightText {
+		text-align: right;
+	}
+
+	.centerThis {
+		margin: 0 auto;
+	}
+
+	.rightThis {
+		float: right;
+	}
+
+	.leftThis {
+		float: Left;
+	}
+
+	/* To use: text in span.leftThis and numbers in span.rightThis */
+	div.numbersLeft{
+		display: block;
+		clear:both;
+		height: 1em;
+		line-height: 1.25em;
+	}
+
+	/* hide completely removes spacing */
+	.hideInitially,
+	.hideNow {
+		display: none;
+	}
+	
+	/* invisible doesn't display, but keeps spacing */
+	.invisible {
+		visibility: hidden;
+	}
+
+	.sitePageWidth {
+		margin-left: auto;
+		margin-right: auto;
+		width: 95%;
+		max-width: 960px;
+
+	}
+
+	.formWidth8em {
+		margin: 0 auto;
+		width: 100%;
+		max-width: 8em;
+	}
+
+	.formWidth6em {
+		margin: 0 auto;
+		width: 100%;
+		max-width: 6em;
+	}
+
+	.mediumFormWidth {
+		margin-left: auto;
+		margin-right: auto;
+		width: 90%;
+		max-width: 500px;
+	}
+
+	.fullOnlyPaddingLeft7em {
+		padding-left: 7em;
+	}
+
+	/* progress indicator */
+	.progressSymbol { 
+		padding-top: 0px; 
+	}
+	.progressDot1, 
+	.progressDot2, 
+	.progressDot3, 
+	.progressDot4, 
+	.progressDot5 {
+		height:1px;
+		width:1px;
+		border-radius: 50%; 
+		border:1px solid;
+		padding:4px 4px; 
+		margin: 0px 4px;
+		display: inline-block;
+		vertical-align: middle;
+	}
+
+	/* ========  Full View Header  ======== */
+
+	div.innerHeaderWrapper {
+	}
+
+	nav#headerNav {
+		top: 0;
+    	width: 100%;
+    	background: #fff;
+		z-index: 100;
+    	border-bottom: 1px solid #CDD5D7;
+    	display: block;
+    	zoom:1; 
+    	text-align: center;
+    	padding: 10px;
+    	box-sizing: border-box;
+    	position: fixed;
+	}
+
+
+
+		#headerFullSearchIcon {position: relative;}
+	div#headerNavWrapper {
+		
+	}
+	
+	div#headerLogoWrapper {
+		float: left;
+		position: relative;
+		bottom: -3px; /* Making Sure logo is visually centered */
+	}
+	
+	
+	div#headerSearchWrapper {
+		width: 250px;
+ 		height:40px;
+ 		display: inline-block;
+ 	}
+	
+	div#mobileSearchWrapper {position:fixed; z-index:12000;top:0;left:0;right:0;bottom:0; background:#fff;overflow: auto;height: 100%; width: 100%;}
+
+	img#iconSearch {
+		margin: 0;
+	}
+	
+	div#headerRightSideWrapper {
+		float: right;
+		width: 220px;
+		height:40px;
+		text-align: right;
+	}
+
+	div#myAccountLink {
+		display: inline-block;
+		height:40px;
+	}
+	
+	a#myAccountLink  {
+		font-size: 16px;
+    	text-decoration: none;
+		text-transform: none;
+		height:40px;
+		line-height:40px;
+		display: inline-block;
+		line-height: 50px;
+		vertical-align: top;
+		padding-right: 10px;
+		cursor:pointer;
+		color:#003da1;
+	}
+	
+	div#headerHamburgerWrapper {
+	  	height: 40px;
+		margin: 0;
+		padding: 0;
+		position: relative;
+		bottom:-3px;
+		display: inline-block;
+	}
+	
+	img#iconHamburger {
+		width: 40px;
+		height: 40px;
+		margin: 0;
+		padding: 0;
+	}
+	
+	img.iconCloseMenuRight {
+	    width: 25px;
+	    height: 25px;
+		float: right;
+		margin-top: 5px;
+		margin-right: 20px;
+	}
+
+	img.iconCloseMenuTop {
+	    width: 20px;
+	    height: 20px;
+		float: right;
+		margin-top: 40px;
+		margin-right: 20px;
+	}
+
+	/* ========  Full View Search Fields  ======== */
+
+	div#headerFullSearchWrapper {
+		padding: 0;
+	}
+
+	div#headerMobileSearchWrapper {
+		padding: 0 0 0 25px;
+	}
+
+	div#homeSearchWrapper {
+		padding: 5px 5px 5px 30vw;
+	}
+
+
+	.searchBox {position: fixed;width:100%;height:240px !important;top:0; display: block;z-index: 2 !important;}
+
+div.resourceSearchWrapper input[type="submit"] {
+    background: rgba(0, 0, 0, 0) url("../img/iconSearch.svg") no-repeat scroll center center;
+    border: 0 hidden #fff;
+    cursor: pointer;
+    display: inline-block;
+    height: 50px;
+    left: -15px;
+    position: absolute;
+    top: 0;
+    width: 60px;
+}
+
+
+	.mobileBack {display: none;}
+
+	div#resultsSearchWrapper {
+		width:600px;
+		margin:auto;
+		padding-top:100px;
+		position: relative;
+		z-index: 9000;
+	}
+
+	div#resultsSearchWrapper * {color:#fff !important; border-color:#fff;}
+	div#resultsSearchWrapper *:after {content:'' !important;}
+	div.resourceSearchWrapper {
+		position: relative;
+		padding: 0 20px;
+		height: 40px;
+		width: 200px;
+		margin: 0px;
+		display: inline-block;
+	}
+
+
+	div#resultsSearchWrapper label 	   {font-family: 'UHCSans-Bold'; font-size:24px;}
+	div#resultsSearchWrapper .md-input {height: 35px;}
+
+	div.resourceSearchWrapper input[type="text"] {
+		position: absolute;
+		top: 0;
+		left: 0px;
+		height: 40px;
+ 		width: 200px;
+		padding: 3px 0px 0px 40px;
+		display: inline-block;
+		outline: none;
+		background: none;
+		transition: width .4s ease;
+		cursor: pointer;
+		border: 0px hidden #fff;
+		border-bottom: 1px solid #BBB;
+		font-size: 16px;
+		line-height:45px;
+	}
+
+ 	div.resourceSearchWrapper 
+
+
+	div.resourceSearchWrapper input[type="submit"] {
+		position: absolute;
+		top: 0;
+	    left: -15px; 
+		height: 50px;
+		width: 60px;
+		display: inline-block;
+		background: url('../img/iconSearch.svg') center center no-repeat;
+		border: 0px hidden #fff;
+		cursor: pointer;
+	}
+
+    #searchHeader {
+		background: #003da1;
+    }
+
+	/* ========  Full View My Account Login  ======== */
+
+	.accountCardWrapper {
+		box-shadow: 0px 2px 10px #777;
+		margin: 0 auto 5em auto;
+		padding: 15px;
+		width: 100%;
+		max-width: 420px;
+	}
+
+	h3.accountCardTitle {
+		font-size: 20px;
+		margin: 0;
+		padding: 0;
+		line-height: 1em;
+	}
+
+	#accountPage2ABC {
+	}
+	
+	div.accountPage2LoginState {		
+		position: relative;
+		display: inline-block;
+		top: 22px;
+		left: -10px;
+		float: left;
+		margin-left: 2em;
+	}
+
+	#accountPage2ABC md-input-container {
+		margin-left: 2em;
+	}
+
+	.accountFormWrapper {
+		margin: 0 2em;
+	}
+
+	.accountNarrowFormWrapper {
+		margin: 0 3em;
+		margin-top:40px;
+	}
+
+	.accountVeryNarrowFormWrapper {
+		margin: 0 6em;
+	}
+
+	.accountPage2FormWrapper {
+		margin: 0;
+		display: inline-block;
+		width: 100%;
+		max-width: 300px;
+	}
+
+	#loginBackground { 			/* overriden in mobile */
+		background-color: #EEE; 
+	}
+
+	#loginWrapper {
+		height: inherit;		
+	}
+
+	.loginTitle {
+		font-size: 24px;
+		margin-bottom: 50px;
+    margin-top: 100px;
+	}
+
+	div#accountPage1 {
+		margin: 30px 10px 0px 10px;
+	}
+
+	md-input-container.formNoMarginBottom, 
+	md-input-container#accountMenuLast {
+		margin-bottom: 0px;
+	}
+
+	p.accountFormMessage,
+	p.accountFormWarn {
+		margin: 2em 0 3em 0;
+		text-align: center;
+		line-height: 125%;
+		font-size: 20px;
+	}
+
+	div.underLastField {
+		margin-top: 5px;
+	}
+
+	md-checkbox#rememberMyID {
+		margin-top: 0px;
+	}
+
+	div.accountMenuHelpIcon  {
+		position: absolute;
+		right: -1.5em;
+		top: 10px;
+	}
+
+	div.accountHelpText {
+		margin: 0 0 2em 0;
+		font-size: 12px;
+	}
+		
+	#accountButton  {
+		padding: 7px 10px;
+		width: 100%;
+		max-width: 300px;
+		background-color: #003da1; 	
+	}
+	
+	#accountButton span {
+		font-size: 16px;
+		text-transform: none;
+		color: #fff;								
+	}
+	
+	div#accountLowerOption button {
+		text-transform: none;		
+		margin-top: 10px;
+		width:100%;
+	}
+
+	div.accountMessage {
+		text-align: center;
+		font-family: 'UHCSans-Bold';
+		font-size: 14px;
+		margin-top: 20px;
+	}
+
+	div.accountForgotCredentials {
+		margin: 1em 0 2em 0;
+	}
+
+	button.accountUnderlineLink {
+		font-size: 16px;
+		text-decoration: underline;
+		text-transform: none;
+	}
+		
+	button.accountBottomLinks {
+		font-size: 16px;
+		margin: 0;
+		padding: 5px;
+	}
+
+	button.accountSingleSmallBottomLink {
+
+	}
+
+	button.accountSingleLargeBottomLink {
+
+	}
+
+	div.accountWarn {
+		margin-top: 40px;
+		font-family: 'UHCSans-Bold';
+		font-size: 14px;
+		line-height: 1.2em;
+	}
+
+	div.accountWarn img {
+		margin-top: 10px;
+		width: 20px;
+		height: 20px;
+	}
+
+	div.checkConfirm img {
+			display: block;
+			margin: 2em auto 1em auto;
+	}
+
+	/* ========  Full View Slidepage Right Menu  ======== */
+
+	div#slideMenuRight {
+		background: #fff;
+		z-index:10000 !important;
+	}
+
+	div#slideMenuRightSearchWrapper {
+		padding-top: 50px;
+		padding-left: 45px;
+	}
+
+	img#logoStudentResources {
+		width: auto;
+		height: 50px;
+	}
+	
+	div#slideMenuTop {
+		background: #fff;
+	}	
+	
+	div.slideMenuWrapper button{
+		width: 100%;
+	}
+
+	div.slideMenuWrapper ul {
+		padding-top: 50px;
+		padding-right: 0;
+
+	}
+
+	/* initially hide sub items in right nav until user selects them */
+	ul#rightNav1, ul#rightNav2 {
+		display: none;
+	}
+	
+	div.slideMenuWrapper li {
+		list-style-type: none;
+		line-height: 1em;
+
+	}
+
+	div.slideMenuWrapper li a, 
+	div.slideMenuWrapper li button {
+		font-size: 18px;
+		width: 100%;
+		text-align: left;
+		margin: 0;
+		text-transform: none;
+	}
+	
+.stickySetup    { margin-left: 150px;margin-bottom: 80px;}
+.tempMenuHolder {width:140px; height:400px;position: absolute;top:40px;}
+.noMargin       {margin:0px; }
+div.adminSingleColumn {}
+
+	main ul li {font-size:16px;}
+
+
+div.cardColumn {width:50%;display: inline-block;float:left;padding-top: 50px;}
+
+/* NEWS AND REGULATORY */
+
+
+.newsItems ul li,.newsItems ul,.sideNavBox ul li,.sideNavBox ul{list-style: none; display:inline-block; margin: 0; padding: 0;}
+.newsItems ul li a,.newsItems ul li a:hover{color: #4a90e2;}
+.newsItems ul li{margin:15px; border-bottom: 1px solid #B3BABC;}
+    .newsItems ul{margin-bottom: 35px;}
+
+.sideNavBox ul li{margin: 0; padding: 0; list-style: none;}
+.sideNavBox h4{color: #93ed58; border-bottom: 1px solid #93ed58; padding-bottom: 5px;line-height:1.7em !important;}.sideNavBox a,.sideNavBox a:hover{color: #000;}
+.sideNavBox ul li{padding-bottom: 10px;}
+
+
+md-card md-card-title md-card-title-media .md-media-lg {width: 80px;height: auto;}
+	/* ========  Full View Hero Image  ======== */
+ 	/* Note: hero images for each specific page are defined near the top of this file */
+
+	/* Main */
+	main {
+		z-index: 90;
+	}
+
+	footer {}
+	
+	/* Parallax scrolling hero image */
+	.parallax {
+		background-position: top center;
+		background-repeat: no-repeat;
+		background-attachment: fixed;
+		background-size: contain;
+	    height: 420px;
+		z-index: 0;
+		margin-bottom:50px;
+	}
+	.schoolParallax {
+
+		  height: 350px;
+		  position: relative;
+		  margin-bottom:0px;
+
+	}
+
+	.heroLoginBackground {
+		background:#003da1;
+	    height: 320px;
+		z-index: 0;
+	}
+
+	.heroGradient {
+		height: 150px;
+		width: 100vw;
+		position: absolute;
+		top: 270px;
+		background: -moz-linear-gradient(top, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.8) 100%);
+		background: -webkit-linear-gradient(top, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.8) 100%);
+		background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.8) 100%);
+	}
+
+	.heroLoginNoGradient {
+		height: 150px;
+		width: 100vw;
+		position: absolute;
+		top: 180px;
+	}
+
+	.heroOverlayText {
+		padding-top: 0px;
+		opacity: 0.8;
+		margin-left: auto;
+		margin-right: auto;
+		width: 90%;
+		max-width: 960px;
+	}
+	
+	.heroOverlayText h2 {
+		font-family: 'UHCSans-Bold';
+		font-size: 36px;
+		line-height: 24px;
+		margin-bottom: 12px;
+		line-height: 1em;
+	}
+
+	.heroOverlayText p {
+	    margin: 0 auto;
+		font-family: 'UHCSans-Regular';
+	    font-size: 24px;
+	}
+
+	.heroOverlayText a {
+		text-decoration: underline;
+	}
+
+	/* ========  Full View Content  ======== */
+
+	main h3 {
+		font-family: 'UHCSans-Regular';
+	    font-size: 24px;
+		line-height: 36px;
+		margin:0;
+		font-weight: lighter;
+	}
+	
+	main h4 {
+		font-family: 'UHCSans-Bold';
+	    font-size: 18px;
+		line-height: 1.5em;
+	    -webkit-margin-after: 0.5em;
+	    margin-top:0;
+	}
+	
+	main p {
+		font-family: 'UHCSans-Regular';
+    font-size: 16px !important;
+		line-height: 1.5em;
+	}	
+	
+	main p.tight {
+		line-height: 18px;
+		-webkit-margin-before: 0.5em;
+    -webkit-margin-after: 0.5em;
+	}	
+
+	main section {
+		position: relative;
+		background: #fff;
+	}
+
+	main section div.single-column {
+		margin: 5em 3em;
+	}
+
+	div#navBar-single-column {
+		margin: 1em 0em 5em 0em;
+		padding-top: 40px;
+	}
+
+	main section div.single-column p,
+	div#navBar-single-column p,
+	div#navBar-single-column li {
+		font-size: 18px;
+	}
+
+	div#explorePolicy-single-column {
+		margin: 0;
+		padding-top: 0;
+	}
+
+	div#explorePolicy-single-column p,
+	div#explorePolicy-single-column li {
+		font-size: 16px;
+	}
+
+	div#explorePolicy-single-column h2 {
+
+		border-bottom: 1px solid #eee;
+    margin-bottom: 0;
+    margin-right: -15px;
+    padding: 15px;
+    margin-left:-15px;
+	}
+
+	h2.explorePolicyIndex {
+		font-size: 18px;
+		font-family: 'UHCSans-Bold', Arial, sans-serif;
+	}
+
+
+	
+	main section div.left-column {
+	    font-size: 18px;
+		margin: 5em 2em 5em 5em;
+	}
+
+	main section div.right-column {
+    font-size: 18px;
+		float: right;
+		position: absolute;
+		top: 0px;
+		left: 450px;
+		margin: 0em 2em 5em 5em;
+	}
+	
+	/* align first header with left column headers */
+	main section div.right-column :first-child {
+	  -webkit-margin-before: 0;
+	}
+
+	/* ========    Full View Home Page Specific  ======== */
+
+	div#homeWrapper {
+		max-width: 1024px;
+		margin: auto;
+	}
+
+	#MySchoolWrapper {
+		height: 100%;
+	}
+
+	#homeBlueBackground {
+		position: relative;
+		display: block;
+		height: 100%;
+		min-height:700px; 
+		margin-bottom:80px; 
+		overflow-x: hidden;
+	}
+
+	/* div#MySchoolWrapper .innerWrapper {
+		display: inline-block;
+		width: 600px;
+	} */
+
+
+		div#MySchoolWrapper .innerWrapper {
+    display: inline-block;
+    height: 174px;
+    margin-top: -174px !important;
+    position: relative;
+    top: 50%;
+    width: 600px;
+    left: 50%;
+    margin-left: -300px;
+    position: absolute;
+	} 
+	
+	.searchWrap      {
+
+		display: table;
+  		width: 100%;
+
+	}
+	.searchContainer {
+
+   		display: table-cell;
+  		text-align: center;
+  		vertical-align: middle;
+  		background: red;
+  		height:100px;
+  		width:100px;
+	}
+
+	.md-subhead {margin-left: 20px;}
+
+	.FindMySchoolTitle {
+		color: #fff;
+		text-align: left;
+		font-family: 'UHCSans-Black';
+		font-size: 30px;
+		text-transform: uppercase;
+		letter-spacing: 0px;
+		line-height:1.5em;
+	}
+
+	.FindMySchoolSubTitle {
+		color: #fff;
+		text-align: left;
+		font-family: 'UHCSans-Regular';
+		font-size: 24px;
+		line-height:1.5em;
+
+	}
+
+	#FindMySchool {margin-top:40px;}
+	#FindMySchool * {
+		color: #fff;
+		border-color: #fff;
+		font-size: 18px !important;
+	}
+
+	#FindMySchool label {
+		text-align: left;
+	}
+
+
+	#selectYearCenter {width:100%;text-align:center;margin-top:40px;}
+
+	#selectYearCenter .md-block {}
+
+	ul.md-autocomplete-suggestions {
+		z-index: 11000;
+	}
+	ul.md-autocomplete-suggestions * {
+		font-size: 36px;
+		color: #122377;
+		
+	}
+	
+	ul.md-autocomplete-suggestions * :hover{
+		
+	color:red;
+	}
+	div#heroHomeImage {
+		text-align: center;	
+		height: 110px;
+		z-index: 1;
+		padding-top: 40px;
+		margin-bottom: 0px;
+	}
+	div#heroHomeImage img{
+		z-index: 2;
+		height: auto;
+		width: 960px;
+	}
+
+
+.md-headline {
+
+ font-family: "UHCSans-Bold";
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 1.5em;
+		margin-left: 20px;
+
+}
+
+@-webkit-keyframes help-hop{0%{-webkit-transform:translateY(3px);transform:translateY(3px)}100%{-webkit-transform:translateY(-3px);transform:translateY(-3px)}}@keyframes doodle-hop{0%{-webkit-transform:translateY(3px);transform:translateY(3px)}100%{-webkit-transform:translateY(-3px);transform:translateY(-3px)}}
+
+	div#heroHelpCenterImage {
+		text-align: center; 
+height: 160px;
+z-index: 1;
+padding-top: 0px;
+margin-bottom: 0px;
+position: absolute;
+bottom: 100px;
+margin-left: 50%;
+left: -211px;
+-webkit-animation:doodle-hop linear infinite alternate;animation:doodle-hop linear infinite alternate;-webkit-animation-duration: 3s; animation-duration: 3s;
+-webkit-animation-duration: 1s; animation-duration: 1s;
+	}
+	div#heroHelpCenterImage img{
+		z-index: 2;
+		height: auto;
+		width: 960px;
+	}
+
+	a.homeBox1 {
+		box-sizing: border-box;
+		text-align: center;
+		margin: 0;
+		width: 50%;
+		height:170px;
+		display:inline-block;
+		float: left;
+		-ms-transition: .2s ease-in-out;
+        -moz-transition: .2s ease-in-out;
+        -webkit-transition: .2s ease-in-out;
+        transition: .2s ease-in-out;
+	}
+
+	a.homeBox1 * {		-ms-transition: .2s ease-in-out;
+        -moz-transition: .2s ease-in-out;
+        -webkit-transition: .2s ease-in-out;
+        transition: .2s ease-in-out;}	
+
+	a.homeBox1:nth-child(2) {border-left: 1px solid #CDD5D7;}
+	a.homeBox1:hover {background-color: #eee;}
+	a.homeBox1:hover * {
+
+        -ms-transition:.2s ease-in-out;-moz-transition:.2s ease-in-out;-webkit-transition:.2s ease-in-out;transition:.2s ease-in-out; 
+	     transform: scale(1.05);
+		-webkit-transform: scale(1.05);
+		-o-transform: scale(1.05);
+		-moz-transform: scale(1.05);
+		-ms-transform: scale(1.05);
+	}
+
+	a.homeBox1 h3 {
+		font-family: 'UHCSans-Black';
+		margin-top: 80px;
+		line-height: 0;
+		font-size:24px;
+	}
+
+	a.homeBox1 p {
+		margin-top: 0px;
+		font-family: 'UHCSans-Regular';
+		line-height: 0;
+		font-size:18px;
+
+	}
+
+	div#homeBox1Wrapper {
+		height: 170px;
+		position: absolute;
+		background: #fff;
+		width: 100%;
+		bottom: 0;
+		border-bottom: 1px solid #CDD5D7;
+		z-index: 1;
+		overflow:hidden;
+	}
+
+	div#homeBox2Wrapper h1, 
+	div#homeBox2Wrapper h4 
+	{
+		margin-top: 0px;
+		margin-bottom: 0px;
+	}
+
+	div#homeBox3Wrapper {
+		padding: 0;
+	}
+
+	div#homeBox3Wrapper button {
+		background-color: #003da1;
+	}
+
+	div#homeBox3Wrapper button span {
+		margin: 2em;
+	}
+
+	div.homeBox3 {
+		padding: 3em 0 3em 0;
+		margin: 0 50px;
+		border: 0;
+	}
+
+	div.homeBox3 p {
+		width: 50%;
+	}
+
+	div.homeBox3 img {
+		padding: 2em;
+		width: 100%;
+		max-width: 300px;
+		height: auto;
+		float: right;
+	}
+
+	div#homeBox4Wrapper {
+		padding: 0;
+		margin-bottom: 60px;
+
+	}
+
+	div.homeBox4 {
+		margin: 0 40px !important;
+		border: 0;
+	}
+
+	div.homeBox4 p {
+		width: 50%;
+	}
+
+	div.homeBox4 ul {
+		margin-left: 14em;
+		list-style: none; 
+		list-style-image: url('../img/Checkmark.png');
+	}
+
+	div.homeBox4 img#mobileApp {
+		padding-right: 2em;
+		width: 100%;
+		max-width: 200px;
+		float: left;
+	}
+
+
+	div#homeAppBadges {margin-top:40px;}
+	div#homeAppBadges img {
+		width: 100%;
+		max-width: 200px;
+		height: auto;
+	}
+
+	
+
+
+ 	/* SLIDER */
+
+	.fourty , .sixty , .fifty 			  {height:300px; display:inline-block;float: left;padding:10px; box-sizing: border-box;line-height: 1.5em; font-size:16px;background-size:cover; background-position:center; text-align: justify;box-sizing: border-box; padding:20px;} 
+	.fourty h5, .sixty h5 , .fifty h5     {font-family: 'UHCSans-Black'; font-size:18px;margin:0px;}
+
+	.fourty {width:40%;}
+	.fifty	{width:50%;}
+	.sixty  {width:60%;}
+
+	.buttonWrap  {padding:20px;display: block;}
+
+	#videoPlaceHolder {height:300px; width:400px;display: inline-block; background:#eee;}
+
+	/* ========  Full View School Menu  ======== */
+
+
+	#schoolNavDesktop {border-bottom:1px solid #eee;display: block;position: relative; height:45px;	transition-property: all;
+	transition-duration: .5s;
+	transition-timing-function: ease-out;
+	transform: translateZ(0);
+	-webkit-transform: translateZ(0);
+	will-change: transform;
+	background: #fff;	
+}
+
+	#schoolNavDesktop.sticky {
+	
+    position: fixed;
+    top: 68px;
+    width: 100%;
+    z-index: 10000;
+
+}
+
+	h3.schoolNameHeader	{line-height:0px;font-size:20px;line-height: 47px;color:#444;}
+	#schoolMenuBar * {font-size:12px !important;color:#444;}
+
+	#schoolMenuBar {
+				top: -5px;
+		float: right;
+	}
+
+	#schoolMenuBar button.openIcon::after {
+		color: #555;
+		content:  ' \25be'; 	/* note: can not use html entity in css content */
+	}
+
+	#logoWrapper {text-align:center;}
+	.optionalLogo {max-width:100px;padding:20px;}
+
+	#schoolMenuBar ul {
+		list-style:none;
+		position:relative;
+		float:left;
+		margin:0;
+		padding:0
+	}
+
+	#schoolMenuBar ul a {
+		display:block;
+		text-decoration:none;
+		text-transform: none;
+		text-align: left;
+		color: #000;
+		font-size: 12px;
+	}
+
+	#schoolMenuBar ul li {
+		position:relative;
+		float:left;
+		padding:0;
+		margin:0
+	}
+
+	#schoolMenuBar ul li.current-menu-item { /* not used */ }
+
+	#schoolMenuBar ul ul {
+		display:none;
+		position:absolute;
+		top: 13%;
+		left:10px;
+		padding:0;
+		background: #FAFAFA;
+		box-shadow: 0px 0px 8px 0px rgba(0,0,0,0.12), 0px 8px 8px 0px rgba(0,0,0,0.24);
+		border-radius: 2px;
+	}
+
+	li.parentMenuItem {}
+
+	li.parentMenuItem:hover ul {display: block !important;}
+
+
+	#schoolMenuBar ul ul li {
+		float:none;
+		width:132px;
+	}
+	#schoolMenuBar ul ul li  .md-button
+{
+		margin:0;
+		width:100%;
+
+	}
+
+	#schoolMenuBar ul ul li a
+{
+
+		padding: 9px !important;
+}
+
+	#schoolMenuBar ul ul a {
+		line-height:1.5em;
+		padding:0;
+		margin:0;
+	}
+
+	#schoolMenuBar ul ul ul {
+		top:0;
+		left:100%;
+		border-bottom: 1px solid #fff;
+	}
+
+	/* ========  Full View School Page  ======== */
+
+	div#schoolPageWrapper {
+		margin-top: 0.5em;
+	}
+
+	div#schoolWrapper md-content {
+		overflow: hidden;
+		margin: 0;
+		padding: 0;
+	}
+
+	div#schoolWrapper md-content form {
+		margin: 0;
+		padding: 0;
+	}
+
+	div#schoolStart {
+		margin-top: 1em;
+	}
+
+
+
+	div#schoolPage1 div#schoolWrapper {
+		margin-top: 0em;
+	}
+
+	section#schoolTop1 {
+		display: block;
+		margin-bottom: 60px;
+		text-align: center;
+	}
+
+	div.infoArea {
+		text-align: left;
+		margin: 0 100px 100px 100px;
+	}
+
+	div#schoolTopMenu3 {
+	display: block;
+	width:100%;
+	max-width: 960px;
+	margin:auto;
+	}
+
+	section#schoolTop2 {
+		display: none;
+	}
+
+	/* Parallax scrolling hero image */
+	 section#schoolTop1 .parallax {
+	    height: 350px;
+	}
+
+	.schoolTop1Gradient {
+		height: 100%;
+		width: 100vw;
+		background: -moz-linear-gradient(top, rgba(255, 255, 255, 0.8) 0%, rgba(255, 255, 255, 1.0) 100%);
+		background: -webkit-linear-gradient(top, rgba(255, 255, 255,  0.8) 0%, rgba(255, 255, 255,  1.0) 100%);
+		background: linear-gradient(to bottom, rgba(255, 255, 255,  0.8) 0%, rgba(255, 255, 255,  1.0) 100%);
+	}
+
+	.schoolTop2Gradient {
+		height: 100px;
+		width: 100%;
+		background: -moz-linear-gradient(top, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.8) 100%);
+		background: -webkit-linear-gradient(top, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.8) 100%);
+		background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.8) 100%);
+		position: absolute;
+		bottom:0;
+	}
+
+	#logoSchoolWrapper {
+		text-align: center;
+	}
+	
+	#noLogoSchoolWrapper {
+		height: 7em;
+	}
+
+	.logoSchoolTop1 {
+		opacity: 0.8;
+		padding-top: 200px;
+		z-index: 100;	
+		max-width: 150px;	
+	}
+
+	.logoSchoolTop2 {
+		margin: 50px auto 0px auto;
+		background-position: top center;
+		background-repeat: no-repeat;
+		background-size: contain;
+	    height: 150px;
+	    width: 150px;
+		z-index: 0;		
+	}
+
+	div.formFieldNarrow {
+		max-width: 440px;
+		width: 100%;
+		margin: 0 auto;
+	}
+
+	div.formFieldLabel {
+		padding: 1em 0;
+		font-size: 16px;
+	}
+
+	div.schoolFormLabelPadding {
+		font-size: 16px;
+		border-bottom: 1px solid #EBEBEB;
+    font-size: 16px;
+    margin-bottom: 10px;
+     margin-top: 30px;
+    padding: 0 0 10px;
+	}
+
+	div.formFieldSubLabel {
+		padding: 8px 0;
+		font-size: 16px;
+	}
+
+	div.schoolFormLabelPaddingNoTopMargin {
+		padding: 0 8px;
+		font-size: 16px;
+	}
+
+
+	div#tagBar {padding-bottom: 20px;}
+	
+	div.existingInsurance , div.newCoverage {
+		display: inline-block;
+		width:50%;
+		float:left;
+		padding: 10px 10px 20px;
+		box-sizing: border-box;
+	}
+
+	#paymentConfirmation div.schoolFormLabelPadding {padding: 0 0 10px; border-bottom:1px solid #EBEBEB;margin-bottom:10px;}
+	
+		div.existingInsurance span , div.newCoverage span {  
+	display: block;
+    font-size: 16px;
+    line-height: 1.5em;
+
+}
+
+
+	/* note: schoolInputSelect needs to be an id to override angular material css */
+   @media only screen and (min-width: 960px) {
+ 
+    div#tagBar               {text-align: center;-ms-transition:.2s ease-in-out;-moz-transition:.2s ease-in-out;-webkit-transition:.2s ease-in-out;transition:.2s ease-in-out; }
+    div#tagBar.sticky        {background-color: #fff; padding:10px; width:100%;position:fixed; top: 110px;left: 0; border-bottom: 1px solid #cdd5d7;margin-left: -10px;z-index: 9000;}   	    
+    div#tagWrapper			 {max-width: 960px; width:100%; display: inline-block; text-align: left;}
+
+}
+
+	div#schoolInputSelect  * {font-size:14px !important;}
+	div#schoolInputSelect {
+		margin: 0 auto;
+	}
+
+	div#schoolInputSelect  md-input-container {
+		width: 10em;
+	}
+
+	div#schoolInputSelect  md-select-value {
+		text-align: center;
+		border: 1px solid #4a90e2;
+		border-radius: 3px;
+		font-size: 16px;
+		padding: 10px;
+		color: #333;
+	}
+
+	section#schoolTop2 div#schoolInputSelect  md-select-value {
+		border: 0;
+	}
+
+
+section.sectionExplorePolicy div#sideNavRight {
+    margin-left: 0 !important;
+}
+
+
+	div#schoolInputSelect  md-select-value * {
+		text-align: center;
+	}
+
+	div#schoolLinksWrapper,
+	div#schoolClaimsWrapper {
+		text-align: center;
+	}
+
+	div#schoolWelcome {
+		font-size: 24px;
+		color:#323232;
+	}
+
+	div#schoolContent {
+
+ 	box-sizing: border-box;
+    padding: 20px;
+    width: 100%;
+
+
+	}
+	div#schoolWelcomeTagline {
+		font-size: 18px;
+				color:#323232;
+				line-height: 1.5em;
+	}
+
+	div#schoolSmallGrayBar {
+		border-bottom:3px solid #eee;
+		width:40px;
+		padding:5px;
+		display: inline-block;
+	}
+
+	a.schoolBlueLinks {
+		margin: 0 1em;
+		text-decoration: underline;
+		font-size:14px;
+	}
+
+	img#schoolClaimImg {
+		margin: 3em 0 2em 0;
+	}
+
+	div#schoolClaims {
+		font-size: 20px;
+		margin: 0 0 10px 0;
+	}
+
+	div#schoolClaimsTagline {
+		font-size: 18px;
+	}
+
+	div#schoolClaimsTagline a {
+		text-decoration: underline;
+	}
+
+	section#schoolBottom {
+		padding: 15px 0 5em;
+	}
+
+	div.schoolBigCard {
+		margin: 20px;
+		padding: 0px;
+		border: 2px solid #00aeff;
+		box-shadow: 0px 2px 10px #777;
+		background-color: #fff;
+		border-radius: 3px;
+	}
+
+	div.schoolCardArea {
+		/* margin: 20px; */
+		padding:15px;
+		border-bottom: 1px solid #eee;
+	}
+
+	div.schoolCardArea label {
+		/* font-weight: bold; */
+	}
+
+	div.schoolCardNavLinks {
+		margin:0;
+	}
+
+	md-card.policyMessageCard {
+		margin: 20px 0px;
+		padding: 10px;
+		position: relative;
+	}
+
+
+	img.closePolicyMessage {
+		float: right;
+		height: 30px !important;
+		width: 30px !important;
+
+	}
+
+	img.closePolicyFilter {
+		height: 20px;
+		width: 20px;
+		padding: 0 0 0 10px;
+		vertical-align: middle;
+	}
+
+
+	div#policyMessage {
+		font-size: 18px;
+		padding: 15px 0px;
+		margin: auto;
+		text-align: center;
+	}
+
+	md-card.schoolPolicyCard {
+		margin: 0px 0px 40px 0px;
+		padding: 15px 15px 0px 15px;
+	}
+
+	div.policyCardWrapper {
+		display: inline-block;
+		/*max-width: 460px;	*/ /* (sitePageWidth - column-gap) /2 */
+		width: 100%;
+
+	}
+
+	h2.policyCardMessage {
+		margin: 0 auto;
+		font-size: 18px;
+	}
+	
+	h3.policyCardMessage {
+		margin: 0 auto;
+		font-size: 18px;
+	}
+	
+	div.policyCardMessage {
+		margin-bottom: 2em;
+	}
+
+	h3.schoolStepTitle {
+		text-align: center;
+		margin: 2em auto 0 auto;
+	}
+
+	div.schoolProgress {
+		margin: 10px auto;
+		text-align: center;
+	}
+
+/* adapted from http://www.w3schools.com/css/css3_multiple_columns.asp */
+	.policyColumn {
+	   -webkit-column-count: 2; /* Chrome, Safari, Opera: warning from w3.org css validator */
+	   -moz-column-count: 2; /* Firefox: warning from w3.org css validator */
+		column-count: 2;
+
+	   -webkit-column-gap: 40px; /* Chrome, Safari, Opera: warning from w3.org css validator */
+	   -moz-column-gap: 40px; /* Firefox: warning from w3.org css validator */
+		column-gap: 40px;
+	}
+
+	img.iconCloseSchool {
+		width:  30px;
+		height: 30px;
+		margin: 0;
+		padding: 0;
+		float: right;
+	}
+
+	button.schoolBottomLinks {
+		font-size: 16px;
+		margin: 10px;
+		padding: 0px;
+	}
+
+	button.schoolSingleSmallBottomLink {
+		margin-left: 350px;
+	}
+
+	button.schoolSingleLargeBottomLink {
+		margin-left: 200px;
+	}
+
+	md-checkbox#readAllDocsCheckbox  {
+		margin: 10px 0 0 20px;
+	}
+
+	div.schoolBigCard md-input-container label {
+		color: #000;
+		margin-left: 5px;
+	}
+
+	div.schoolBigCard md-input-container .md-input {
+		border-color: #000;
+	}
+
+	div.schoolBigCard md-input-container {	
+		margin-top: 0;
+		margin-bottom: 0;
+		padding-left:0;
+	}
+
+	div.schoolBigCard md-input-container.formFieldMarginTopAlign {	
+		margin-top: 1.2em;
+	}
+
+	md-checkbox.checkboxWide {
+		width: 100%;
+		min-width: 300px;
+	}
+
+	div.schoolBigCard md-checkbox {
+		margin-left: 8px;
+	}
+
+
+	/* school: explore policy */
+
+	section#explorePolicy {
+		margin: 0px auto 1em auto;
+	}
+
+	section.sectionExplorePolicy div.sideNavLeftBox {
+		text-align: left;
+	}
+
+	section.sectionExplorePolicy div.explorePolicyGroup {
+		font-family: 'UHCSans-Bold', Arial, sans-serif;
+		border-bottom: 1px solid #ddd;
+	}
+	
+
+	section.sectionExplorePolicy div#sideNavLeft {
+		border-right: 1px solid #ddd;
+		padding-top:15px;
+		margin-bottom: -15px;
+    	margin-top: -15px;
+    	margin-bottom: -33px;
+    	margin-left: -15px;
+	}
+
+	section.sectionExplorePolicy div#sideNavRight {margin-left: -40px;}
+
+	#explorePolicy-single-column div#sideNavLeft a , #explorePolicy-single-column div#sideNavLeft a div{padding-left:15px;}
+
+	#policyDisplay1 {}
+
+	section.sectionExplorePolicy span.term {
+		font-family: 'UHCSans-Bold', Arial, sans-serif;
+	}
+
+	button.explorePolicy {margin-right:-14px !important;}
+	/* school: step 2 */
+
+	div#schoolStep2Table table {
+		margin: 2em 10px;
+		width: 100%;
+	}
+
+	div#schoolStep2Table th {
+		font-family: 'UHCSans-Bold', Arial, sans-serif; 
+		text-align: left;
+		padding-right: 2em;
+	}
+
+	div#schoolStep2Table td {
+		text-align: left;
+	}
+
+	div#schoolStep2Table td.total {
+		font-family: 'UHCSans-Bold', Arial, sans-serif; 
+	}
+
+	div#schoolStep2MobileBlueBox {
+		border: 2px solid #003da1;
+		border-radius: 3px;
+		margin: 1em 0 5em 0;
+		padding: 10px 1em 1em 1em;
+	}
+
+	div#schoolStep2MobilePolicyList {
+		display: block;
+		clear:both;
+		height: 100px;
+	}
+
+
+	/* school: step 5 */
+
+	div.schoolStep5Notice {
+		padding: 20px;
+	}
+
+	div#schoolStep5Payment  {
+		margin: 15px;
+	}
+
+	md-radio-group#schoolStep5Payment md-radio-button {
+		margin: 0 15px;
+	}
+
+	div#creditCardFields {
+		margin-top: 10px;
+	}
+
+	div#step5ElectToPurchase {
+		height: 5em;
+	}
+
+	div#step5ElectToPurchase md-checkbox {
+		margin-top: -15px;
+	}	
+
+	div#step5ElectToPurchase md-checkbox ._md-label {
+		padding-top: 20px;
+		color: #003da1;
+	}	
+
+	div#step5ElectToPurchase div.rightThis {
+		padding-top: 5px;
+	}
+
+	/* ========  Full View Help Navigation Page  ======== */
+	section#contentWithSideBar {
+		margin: 250px auto 1em auto;
+	}
+	
+	#helpCenterWrapper {
+		text-align: center;
+		margin-top: 10em;
+	}
+	div#helpCenterWrapper .innerWrapper {
+		display: inline-block;
+		width: 850px;
+	}
+
+	#helpCenterBlueBackground {
+		position: relative;
+		display: block;
+		height: 100%;
+
+/* TBD
+		min-height:700px; 
+		margin-bottom:80px; 
+*/
+		overflow: hidden;
+	}
+
+	div.helpCenterTitle {
+		color: #fff;
+		text-align: center;	
+		font-size: 36px;
+		font-family: UHCSans-Regular;
+		text-transform: none;
+		letter-spacing: 0px;
+	}
+
+	div#helpCenter div {
+		margin: 0 20px 40px 0;
+	}
+
+	div#helpCenter h3 {
+		color: #fff;
+		text-align: left;
+		font-family: 'UHCSans-bold';
+		font-size: 18px;
+		text-decoration: underline;
+	}
+
+	div#helpCenter h3 a {
+		border-bottom: 1px solid #999;
+		padding-bottom: 3px;
+	}
+
+	div#helpCenter p {
+		color: #eee;
+		text-align: left;
+		font-family: UHCSans-Regular;
+		font-size: 18px;
+		line-height: 1.25em;
+	}
+
+	div#heroHelpCenterImage {
+		text-align: center;	
+		height: 160px;
+		z-index: 1;
+		padding-top: 0px;
+		margin-bottom: 0px;
+	}
+	div#heroHelpCenterImage img{
+		z-index: 2;
+		height: auto;
+		width: auto;
+	}
+	div.navBarWrapper {
+		background-color: #fff;
+		width: 100%;
+		max-width: 100vw;
+		padding: 15px;
+		box-sizing: border-box;
+	}
+
+	div.navBarWrapper.unlocked {
+	    position: absolute;
+		bottom: 0;
+		z-index:9000;
+	}
+
+	div.navBarWrapper.locked {
+	    position: fixed;
+		top: 68px;
+		bottom: inherit;
+		z-index: 10;	
+	}
+
+	div#helpMainNavWrapper {
+		background-color: #fff;
+		width: 100%;
+		max-width: 960px;
+		margin: auto;
+		box-sizing: border-box;
+	}
+	
+	div#helpMainNavWrapper * {box-sizing: border-box;}
+
+	div#helpMainNavWrapper a {display:inline-block; position: relative;width: 25%;float: left;height:60px;}
+
+    div#helpMainNavWrapper a.active * {
+
+     font-family: 'UHCSans-Black';
+
+    }
+   
+   div#helpMainNavWrapper a.active {position: relative;}
+   
+   div#helpMainNavWrapper a.active:after {
+
+		content: '';
+		position: absolute;
+		display: block;
+		width: 0; 
+  		height: 0; 
+  		border-left: 10px solid transparent;
+  		border-right: 10px solid transparent;
+  		border-bottom: 10px solid #FAFAFA;	
+  		left:50%;
+  		margin-left:-10px;
+  		bottom:-17px;
+  
+    }
+ div#helpMainNavWrapper a.active:before {
+
+		content: '';
+		position: absolute;
+		display: block;
+		width: 0; 
+  		height: 0; 
+  		border-left: 10px solid transparent;
+  		border-right: 10px solid transparent;
+  		border-bottom: 10px solid #C5C5C5;	
+  		left:50%;
+  		margin-left:-10px;
+  		bottom:-16px;
+  
+    }
+	div.helpMainNavBox {
+		text-align: center;
+		padding: 0;
+		margin: auto;
+	}
+
+	div.helpMainNavBox:hover {
+		  -ms-transition:.2s ease-in-out;-moz-transition:.2s ease-in-out;-webkit-transition:.2s ease-in-out;transition:.2s ease-in-out; 
+	     transform: scale(1.05);
+		-webkit-transform: scale(1.05);
+		-o-transform: scale(1.05);
+		-moz-transform: scale(1.05);
+		-ms-transform: scale(1.05);
+
+	}
+	div.helpMainNavBox:hover * {}
+
+	div.helpMainNavBox.active:hover {
+		background-color: inherit;
+		-ms-transition:none;
+	}
+
+
+	div.helpMainNavBox:hover h3 {
+		transform: scale(1.3);
+		-webkit-transform: scale(1.3);
+		-o-transform: scale(1.3);
+		-moz-transform: scale(1.3);
+		-ms-transform: scale(1.3);
+		cursor: pointer;
+		-ms-transition:.2s ease-in-out;-moz-transition:.2s ease-in-out;-webkit-transition:.2s ease-in-out;transition:.2s ease-in-out;
+	}
+
+	div.helpMainNavBox p {
+		margin: 0px;
+		font-size:16px;
+	}
+
+	div.helpMainNavBox p.active {
+		font-family: 'UHCSans-Bold';
+	}
+
+	div.helpMainNavBox img.bottomLine {
+		width: 100%;
+		height: auto;
+	}
+
+	h2.glossaryLetter {color:#646464; font-family: 'UHCSans-Regular'; font-size:36px;
+
+position: relative;
+margin-left: -36px;
+}
+
+	#glossaryWrapper {margin-top:150px;}
+
+	
+
+	#navBar-single-column md-content.navBar-padding {
+		padding: 16px;
+	}
+
+	#explorePolicy-single-column md-content.navBar-padding {
+		padding: 16px;
+	}
+
+	div#marginUnderNavBar  {
+		padding-top: 200px;
+	}
+
+	div#sideNavRight {
+		/* float: left; */
+	}
+
+	div#sideNavLeft {
+		float: left;
+		margin: 50px 3em 0 0;
+		padding: 0;
+	}
+	
+	div.sideNavLeftBox {
+		margin-bottom: 1em;
+		/*padding: 1em 0 10px 5px; */
+		padding:5px;
+		list-style-type: none;
+		line-height: 1.25em;
+		font-size: 16px;
+		text-align: left;
+		margin: 0;
+		text-transform: none;
+		color:#646464;
+
+-ms-transition: .2s ease-in-out;
+        -moz-transition: .2s ease-in-out;
+        -webkit-transition: .2s ease-in-out;
+        transition: .2s ease-in-out;
+
+	}
+
+
+	.newsItems , .newsNav  {display: inline-block; float:left;}
+	.newsItems {width:80%;}
+	.newsNav   {width:20%;}
+	div.newsNav div.sideNavBox ul li {display: block;}
+
+
+
+	div.sideNavLeftBox.active {
+	}
+
+	.glossary div.sideNavLeftBox:hover {
+
+  -ms-transition:.2s ease-in-out;-moz-transition:.2s ease-in-out;-webkit-transition:.2s ease-in-out;transition:.2s ease-in-out; 
+	     transform: scale(1.05);
+		-webkit-transform: scale(1.05);
+		-o-transform: scale(1.05);
+		-moz-transform: scale(1.05);
+		-ms-transform: scale(1.05);
+    font-size:36px;
+	margin-top:0px;
+	font-family: 'UHCSans-Black';
+	padding-left:25px;
+	}
+
+
+	a.glossaryActive div.sideNavLeftBox {
+
+        -ms-transition:.2s ease-in-out;-moz-transition:.2s ease-in-out;-webkit-transition:.2s ease-in-out;transition:.2s ease-in-out; 
+	     transform: scale(1.05);
+		-webkit-transform: scale(1.05);
+		-o-transform: scale(1.05);
+		-moz-transform: scale(1.05);
+		-ms-transform: scale(1.05);
+    	font-size:36px;
+		margin-top:0px;
+		font-family: 'UHCSans-Black';
+		padding-left: 25px;
+	}
+
+	div.sideNavLeftBox.active:hover {
+		background-color: inherit;
+		-ms-transition:none;
+	}
+
+	/* ========  Full View Glossary  ======== */
+
+	section.sectionGlossary div.sideNavLeftBox {
+		text-align: center;
+	}
+
+	section.sectionGlossary span.term {
+		font-family: 'UHCSans-Regular';
+		color:#37474F; 
+		font-size:24px;
+	}
+
+   .glossaryContent p {font-size:18px !important;line-height:1.5em !important;}
+
+	/* ========  Full View FAQ  ======== */
+
+    #faqNavFixed {position:fixed;width: 250px;}
+    .faqSearch label {padding-left: 50px !important;}
+	img#iconSearch {
+	    text-align: center;
+		padding: 10px;
+	}	
+
+	span.searchTermResults {
+		padding: 0 18px;
+		vertical-align: 14px;
+		font-size: 18px;
+	}
+
+
+
+	div#faqWrapper dt {
+		color: #4a90e2;
+		margin: 1em 0 1em 0;
+	}
+
+	div#faqWrapper dt:hover {
+		color: #000;
+		cursor: pointer;
+	}
+
+	div#faqWrapper dt.noHover:hover {
+		color: #4a90e2;
+		cursor: auto;
+	}
+
+	div#faqWrapper dd {
+		color: #000;	
+		margin: 1em 0 2em 0;
+		line-height: 1.5em;
+	}
+
+
+
+	div#FaqResultsSearchIcon img#iconCancel {
+		vertical-align: 6px;
+		
+	}
+
+	div.faqSearch {
+		position: relative;
+		padding: 0px;
+		height: 60px;
+		width: 70%;
+		margin: 0px;
+		display: inline-block;
+	}
+
+	div.faqSearch input[type="text"] {
+		position: absolute;
+		top: 0;
+		left: 0px;
+		height: 40px;
+		padding: 3px 3px 3px 40px;
+		display: inline-block;
+		outline: none;
+		background: none;
+		transition: width .4s ease;
+		cursor: pointer;
+		border: 0px hidden #fff;
+		border-bottom: 1px solid #BBB;
+	}
+
+	div.faqSearch input[type="submit"] {
+		position: absolute;
+		top: 15px;
+		left: 0px;			
+		height: 40px;
+		width: 40px;
+		display: inline-block;
+		background: url('../img/iconFaqSearch.svg') center center no-repeat;
+		border: 0px hidden #fff;
+		cursor: pointer;
+	}
+.answer   {display:none }
+
+.answer {
+    line-height: 1.5em;
+    margin-bottom: 20px;
+    margin-top: 20px;
+    font-size: 16px;
+}
+.answer ul li {font-size:16px !important;}
+.answer a     {color:#4a90e2 !important;}
+}
+a.question {font-size: 18px; color:#4a90e2;line-height: 40px;}
+	
+	#faqParent {float:left;	margin-left:30%;}
+
+	div#faqWrapper {
+		margin-top: 2em;
+	}
+
+	div#faqWrapper h2 {
+		font-family: 'UHCSans-Regular', Arial, sans-serif; 
+		font-size: 30px;
+		font-weight: lighter;
+	}
+
+
+
+	/* ========  Full View Video  ======== */
+	div#marginForVideo {
+		
+    margin: auto;
+    margin-top:220px;
+    max-width: 960px;
+    width: 100%;
+    box-sizing: border-box;
+	}
+
+	div#marginForVideo .leftColumn, div#marginForVideo .rightColumn{width:50%;display: inline-block;padding:20px; box-sizing: border-box;float:left;}
+
+	div.video {
+		max-width: 420px;
+	}
+
+	div.video p {
+		margin-top: 0px;
+	}
+
+	/* ========  Full View Search Results  ======== */
+	div.searchResultsColumnWidth {
+		width: 100%;
+		max-width: 600px;
+		margin: 0 auto 5em auto;
+		margin-top:250px;
+		z-index: 0;
+	}
+
+	div.searchResultSummary {
+	}
+
+	div.searchResultTitle {
+		margin-top: 2em;
+		font-size: 20px;
+	}
+
+	div.searchResultQuote {
+		font-size: 20px;
+	}
+
+	div.searchResultLink {
+		font-size: 20px;
+	}
+
+	ul.desktopSearchNav {display: block; width:100%;height:40px;list-style: none;margin:0;padding: 0;}
+	ul.desktopSearchNav li {float:left;display: inline-block;width:25%;height:40px;}
+	ul.desktopSearchNav li a {color:#fff;font-size:16px;width:100%; display:block;height:40px;}
+	ul.desktopSearchNav li a.active {font-family:'UHCSans-Black';} 
+	ul.desktopSearchNav li:first-child  a {text-align: left;}
+	ul.desktopSearchNav li:nth-child(2) a {text-align: left;}
+	ul.desktopSearchNav li:nth-child(3) a {text-align: center;}	
+	ul.desktopSearchNav li:last-child   a {text-align: right;}	
+
+
+	/* ========  Full View Survey  ======== */
+
+	div.surveyAll {
+		margin: 1em 6em;
+	}
+
+	div.surveyQuestion {
+		margin: 0 0 2em 0;	
+	}
+
+	div.surveyAsk {
+		line-height: 1.5em;
+	}
+
+	div.surveyAnswer {
+		margin: 1em;
+		line-height: 1.25em;
+	}
+
+	div.longLabel  {
+		padding-bottom: 3em;
+	}
+
+
+
+/* ========  Full View Control  ======== */
+
+	.controlButton  {
+		padding: 4px 6px;
+		width: 100%;
+		max-width: 200px;
+		color: #fff !important;
+		font-family: 'UHCSans-Bold', Arial, sans-serif; 
+	}
+
+	.controlButtonActive  {
+		background-color: #4a90e2 !important; 	
+	}
+
+	.controlButtonDisabled  {
+		background-color: #99b3d1 !important; 	
+	}
+
+	span.controlCircle {
+		color: #fff;
+		background-color: #f87217;
+		float: left;
+		padding: 10px 5px 0 5px;
+		border-radius: 50%;
+		margin-top: -5px;
+		margin-right: 1em;
+		margin-left: -60px;
+		width: 30px;
+		height: 30px;
+		text-align: center;
+		font-size: 16px; /* same for full and mobile */
+		box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+	}
+
+	div#controlPage2Options {
+		height: 100px;
+		display: block;
+		clear:both;
+	}
+
+	div#controlPage2Options md-checkbox {
+		margin: 5px 0;
+	}
+
+	.controlPage2OptionMargin {
+		margin: 0 0 5px 30px;
+	}
+
+	div#controlNavLinksPage2 {
+		margin: 3em 0;
+		height: 50px;
+	}
+
+	div.controlPage3PlanItem {
+		margin-top: 5px;
+	}
+
+	div.controlECheckFields md-content {
+		overflow: hidden;
+	}
+
+	h3#controlPage4PaymentInfo {
+		margin: 2em 0 0 0;
+	}
+
+	/* move .clear up to general section around line 500-600 */
+	.clear {
+		clear: both;
+	}
+
+
+
+	/* ========  Full View Request Quote  ======== */
+
+	section#requestQuote md-content {
+	}
+
+	section#requestQuote .layout-padding {
+		padding: 0 2px;
+	}
+
+	section#requestQuote md-input-container label {
+		color: #000;
+		margin-left: 5px;
+	}
+
+	section#requestQuote md-input-container .md-input {
+		border-color: #000;
+	}
+
+	section#requestQuote md-input-container {
+		margin-bottom: 0;
+	}
+
+	table.requestQuote { 
+		width: 100%; 
+		border-collapse: collapse; 
+	}
+
+
+	table.requestQuote tr:nth-of-type(odd) { 
+		background: #fff; 
+	}
+
+	table.requestQuote th { 
+		font-size: 14px;
+	}
+
+	table.requestQuote td, 
+		table.requestQuote th { 
+		padding: 6px; 
+		border: 0px solid #fff; 
+		text-align: center; 
+	}
+
+	table.requestQuote label {
+		text-align: left !important;
+	}
+
+	.requestQuote md-radio-button {
+		margin-right: 30px;
+		display: inline-block;
+	}
+
+	.requestQuoteButton  {
+		padding: 4px 6px;
+		width: 100%;
+		max-width: 200px;
+		color: #fff !important;
+		font-family: 'UHCSans-Bold', Arial, sans-serif; 
+		background-color: #4a90e2 !important; 	
+	}
+
+	.requestQuoteLeftText {
+		text-align: left !important;
+	}
+
+
+
+
+
+	/* ========  Full View Footer  ======== */
+
+	nav#footerNav {
+		height: 214px;
+		position: relative;
+		display: block;
+		padding: 20px 0;
+	}
+
+	nav#footerNav * {
+		text-decoration: none;
+	}
+
+	div.footerWrapper {
+	  font-size: 18px;
+	}
+	
+	div.footerWrapper ul {
+	    list-style: none;
+	}
+
+	/* css selects "a", actually a "button" in HTML before angular material changes it */
+	div.footerWrapper li {
+		width: 180px;
+		text-align: left;
+		margin-bottom: 0.5em;
+			font-size: 16px;
+
+	}
+
+	#footerLogo 	{padding-left: 40px;}
+	.footerAlignRight	{padding-right: 80px !important;}
+
+div.footerWrapper li:first-child {
+	font-size: 18px;
+    margin-bottom: 20px;
+	}
+
+	div.footerWrapper li * {
+		text-transform: none;
+		text-align: left;
+		line-height: 1em;
+		min-height: 0px;
+		font-size: 18px;
+	}
+		
+	div.footerWrapper li.bold {
+	    font-family: 'UHCSans-Bold';
+	}
+
+	div.footerWrapper li.two-rows a {
+		line-height: inherit;
+	}
+
+	div#footerFullLogoWrapper {
+		height: 65px;
+		padding: 20px 0 0 0;
+	}
+
+	div#footerBottomRightWrapper, 
+	div#footerBottomRightWrapper p {
+		font-size: 14px;
+		text-align: right;
+		float: right;
+	}	
+
+	div#footerBottomRightWrapper a {
+		width: 50px;
+		text-decoration: none;
+        font-size: 14px;
+        width:100%;
+        text-align: right;
+	}
+	
+	/* Columns */
+	div.cols {
+		width: 25%;
+		float: left
+	}
+
+}
+
+/* Parallax adjustment to keep picture in view */
+@media only screen and (max-width: 1200px) {
+	.parallax, 
+	.heroLoginBackground {
+		/* keep size of picture constant when changing width of browser */
+		background-size: auto 520px; 
+	}
+}
+
+
+/*
+  ** BEGIN Mobile View
+  *  Note: breakpoint <= 959 is at layout-gt-sm for Angular Material 
+  * https://material.angularjs.org/latest/layout/options
+  */
+
+/* minium width allowed for any page */
+div.contentAll,
+div.innerContentWrapper {
+	/* min-width: 480px; */
+	height:100%;
+
+}
+
+div#helpCenterHero {height:100%;}
+
+
+
+
+@media only screen and (max-width: 959px) {
+
+
+a.mobileLoginBtn {
+    bottom: 0;
+    color: #003da1;
+    display: block;
+    font-size: 18px;
+    padding-bottom: 40px;
+    position: absolute;
+    text-align: center;
+    vertical-align: bottom;
+    width: 100%;
+}
+
+
+.extendsSearch {display: none !important;}
+
+   #helpCenterHeroOption1, #helpCenterHeroOption2 , #helpCenterHeroOption3, #helpCenterHeroOption4 {margin:auto !important;} 
+div#helpCenterHeroOption1.helpCenterHeroOption, div#helpCenterHeroOption2.helpCenterHeroOption, div#helpCenterHeroOption3.helpCenterHeroOption, div#helpCenterHeroOption4.helpCenterHeroOption{margin:auto !important;} 
+div#heroMobile.displayMobileOnly {width: 100% !important;display: block !important;margin-top: 30% !important;}
+div#helpCenterHeroOption1.helpCenterHeroOption *, div#helpCenterHeroOption2.helpCenterHeroOption *, div#helpCenterHeroOption3.helpCenterHeroOption *, div#helpCenterHeroOption4.helpCenterHeroOption * {margin:0px !important;} 
+div.progressSymbol{top:50px !important;position: relative;}
+div#sideNavRight {
+		float: left;
+		margin-left:0px;
+	}
+
+
+	img#mobileSearch {position: relative;padding: 12px;}
+
+
+div#headerLogoWrapper {
+		bottom: -1px; /* Making Sure logo is visually centered */
+	}
+
+	#myAccountLink {display: none !important;}
+	
+	/* These are only seen in full view */
+	.displayFullOnly {
+		display: none;
+	}
+	div#contentFull {
+		display: none;
+	}
+	div#footerFull {
+		display: none;
+	}
+	
+	#headerSearchWrapper {display: none !important;}
+	#faqParent {margin-left: 0%;}
+	div.faqSearch {width:100%;}
+	/* These are only seen in mobile view */
+	.displayMobileOnly {
+		display: block;
+	}
+	div#contentMobile {
+		display: block;
+	}
+	div#footerMobile {
+		display: block;
+	}
+
+	/* ========  Mobile View Page Defaults  ======== */
+
+	body {
+		font-size: 16px;
+	}
+
+	/* PREVENTS PAGE CONTENT FROM SCROLLING WHITE IN NAVIGATION OR SEARCH */
+
+    body.noScroll  {overflow: hidden !important; /* visibility: hidden !important; */}
+
+    body.noScroll #slideMenuRight  {visibility: visible !important; }
+
+
+
+	/* only go wide if open */
+	/* see js/angular-pageslide-directive-modified.js for how body is dynamically set */
+	body.slideMenuRightToggle-body-open div#slideMenuRight {
+		width: 100vw !important;
+	}
+
+	body.slideMenuTopToggle-body-open div#slideMenuTop {
+		left: 0 !important;
+		width: 100vw !important;
+	}
+
+	main section div.single-column {
+		margin: 5em 25px;
+	}
+
+	div#navBar-single-column {
+		margin: 1em 3em 5em 3em;
+	}
+
+	div#explorePolicy-single-column {
+		margin: 0 0 5em 0;
+	}
+
+	main section div.left-column,
+	main section div.right-column {
+	    font-size: 18px;
+		margin: 5em 20px;
+	}
+
+	.inputField4em,
+	.inputField7em,
+	.inputField8em,
+	.inputField12em,
+	.inputField16em,
+	.inputField33em {
+		max-width: 100%;
+	}
+
+	.fullOnlyPaddingLeft7em {
+		padding-left: 0;
+	}
+
+	/* ========  Mobile View Header  ======== */
+
+	f
+	div#headerRightSideWrapper {
+		right: 20px;
+	}
+
+	
+	#loginWrapper {
+		z-index: 990;	/* just under the slidepage default of 1000 */
+		height: 10000px;		/* really tall to block at content on very large screens */
+		background-color: #fff;			/* color is required here for css specificity */
+	}
+
+	img.iconCloseMenuTop {
+		margin-right: 40px;
+	}
+
+	/* ========  Mobile View My Account Login  ======== */
+
+	#loginBackground { 			
+		background-color: #FFF; 
+	}
+
+	.accountCardWrapper,
+	.accountPage2CardWrapper {
+		box-shadow: none;
+		margin: 0 auto 5em auto;
+		padding: 0px;
+		width: 100%;
+		min-width: 250px;
+	}
+
+	.accountFormWrapper {
+		margin: 5px;
+	}
+
+	div#accountLowerOption button  {
+		font-size: 18px;
+	}
+
+	div.accountMessage {
+		font-size: 18px;
+	}
+
+	button.accountSingleBottomLink {
+		margin-left: 0;
+	}
+
+	/* ========  Mobile View Hero Image  ======== */
+	
+	/* turn off parallax scrolling on mobile */
+	.parallax,
+	.heroLoginBackground {
+		background-position: 0px 0px;
+		background-repeat: no-repeat;
+		background-attachment: inherit;
+		background-size: inherit;
+		width: 100vw;
+		z-index: 0;
+		transform: inherit;
+	}
+	.parallax {
+    	height: 450px;
+	}
+
+.heroGradient {
+    background: rgba(0, 0, 0, 0) linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.8) 100%) repeat scroll 0 0;
+    height: 150px;
+    position: absolute;
+    top: 300px;
+    width: 100vw;
+}
+	
+	.heroOverlayText {
+		padding-left: 40px;
+		padding-right: 40px;
+	}
+
+
+	/* ========  Mobile View Content  ======== */
+
+	main section div.right-column {
+		float: inherit;
+		position: inherit;
+		top: inherit;
+		left: inherit;
+	}
+	
+	main section div.right-column :first-child {
+	  -webkit-margin-before: inherit;
+		margin-top: 2em;
+	}
+
+	/* ========    Mobile View Home Page Specific  ======== */
+
+	#MySchoolWrapper {
+	}
+
+	div#MySchoolWrapper .innerWrapper {
+		width:460px;
+		box-sizing: border-box;
+		margin-left:-230px;
+	}
+
+	.FindMySchoolTitle {
+		font-size: 24px;
+	}
+	div#heroHomeImage img{
+		width: 90%;
+		height: auto;
+	}
+
+	div.homeBox1 {
+		padding: 0;
+		width: 100%;
+	}
+
+	div#homeBox2Wrapper h1 {
+		font-size: 24px;
+	}
+
+	div#homeBox2Wrapper h3 {
+		margin: 0;
+		padding: 0;
+	}
+
+	div.homeBox3 {
+		margin: 0 10vw 0 20vw;
+	}
+
+	div.homeBox3 p {
+		width: 100%;
+	}
+
+	div.homeBox3 img {
+		padding-left: 0;
+		float: inherit;
+		width: 100%;
+		height: auto;
+	}
+
+	div.homeBox4 {
+		margin: 0 10vw 0 20vw;
+	}
+
+	div.homeBox4 ul {
+		margin-left: 0;
+	}
+
+	/* ========  Mobile View School Page  ======== */
+
+	div.infoArea {
+		text-align: left;
+		margin: 0 20px 100px 20px;
+	}
+
+	.policyColumn {
+		-webkit-column-count: 1; /* Chrome, Safari, Opera: warning from w3.org css validator */
+		-moz-column-count: 1; /* Firefox: warning from w3.org css validator */
+		column-count: 1;
+	}
+
+	div.policyCardWrapper {
+		max-width: 100%;
+	}
+
+	/* ========  Mobile View School Nav Bar  ======== */
+
+	div.schoolBigCard {
+		margin: 0;
+		padding: 0px;
+		border: none;
+		box-shadow: none;
+		background-color: #fff;
+	}
+
+	div.schoolNavMobileBox {
+		text-align: center;
+		padding: 0;
+		margin: 0;
+	    width: 25%;
+	}
+
+	.schoolLink {font-size:14px !important;}
+
+	div.schoolNavMobileBox:hover {
+	}
+
+	div.schoolNavMobileBox.active:hover {
+		background-color: inherit;
+		-ms-transition:none;
+	}
+
+	div.schoolNavMobileBox:hover h3 {
+		transform: scale(1.3);
+		-webkit-transform: scale(1.3);
+		-o-transform: scale(1.3);
+		-moz-transform: scale(1.3);
+		-ms-transform: scale(1.3);
+		cursor: pointer;
+		-ms-transition:.2s ease-in-out;-moz-transition:.2s ease-in-out;-webkit-transition:.2s ease-in-out;transition:.2s ease-in-out;
+	}
+
+	div.schoolNavMobileBox p {
+		margin: 0px;
+	}
+
+	div.schoolNavMobileBox p.active {
+		font-family: 'UHCSans-Bold';
+	}
+
+	div.schoolNavMobileBox img.bottomLine {
+		width: 100%;
+		height: auto;
+	}
+
+	div#schoolNavMobileBox1,
+	div#schoolNavMobileBox2,
+	div#schoolNavMobileBox3,
+	div#schoolNavMobileBox4 {
+		float: left;
+	}
+
+	img.schoolNavBarIcon {
+		height: 30px;
+		width: auto;
+		vertical-align: bottom;
+	}
+	
+
+	.idCardIcon {
+		height: 25px;
+		width: auto;
+		vertical-align: bottom;
+		margin-bottom: 5px;
+	}
+
+
+
+
+
+	div.schoolNavMobileSubMenu {
+	    
+	    background-color: #fff;
+	    bottom: 0;
+	    height: 100%;
+	    left: 0;
+	    position: fixed;
+	    right: 0;
+	    top: 65px;
+	    width: 100%;
+	    z-index: -1;
+	}
+
+
+	div.schoolNavMobileSubMenu ul {
+		list-style:none;
+		position:relative;
+		float:left;
+		margin:0;
+		padding:0
+	}
+
+	div.schoolNavMobileSubMenu ul li{
+		position:relative;
+		float:left;
+		padding:0;
+		padding-left: 20px;
+		margin: 0;
+		width: 100%;
+	}
+
+
+	div.schoolNavMobileSubMenu ul li:first-child {margin-top:50px;}
+	div.schoolNavMobileSubMenu ul a {
+		text-decoration:none;
+		text-transform: none;
+		text-align: left;
+ 		color: #003da1;
+        font-size: 24px;
+	}
+
+	div.schoolNavMobileSubMenu ul a strong {font-family: 'UHCSans-Bold';}
+
+	div#schoolInputSelect  md-input-container.inputField12em {
+		width: 100%;
+	}
+
+	span#mobileExplorePolicyMenu {
+		display: inline-block;
+		width: 16px;
+	}
+
+	div#schoolStep4checkboxLanguage {
+		width: 200%;
+	}
+
+	/* ========  Mobile View School Explore Policy  ======== */
+
+	div.mobileExplorePolicyWrapper {
+		margin: 0em;
+		height: 45px;
+		overflow: hidden;
+	}
+
+	div.mobileExplorePolicyIndex {
+		float: left;
+		width: auto;
+		margin: 0em;
+		padding: 0.5em 0.5em 0.5em 1em;
+		list-style-type: none;
+		line-height: 1.25em;
+		font-size: 18px;
+		text-align: left;
+		margin: 0;
+		text-transform: none;
+		color: #4a90e2;
+	}
+
+	div.mobileExplorePolicyIndex.active {
+	}
+
+	div.mobileExplorePolicyIndex:hover {
+		background-color: #eee;
+		-ms-transition:.2s ease-in-out;-moz-transition:.2s ease-in-out;-webkit-transition:.2s ease-in-out;transition:.2s ease-in-out;
+	}
+
+	div.mobileExplorePolicyIndex.active:hover {
+		background-color: inherit;
+		-ms-transition:none;
+	}
+
+	/* ========  Mobile View Help Navigation Page  ======== */
+	div#helpCenterWrapper {
+		margin-top: 5em;
+	}	
+
+	div#helpCenterWrapper .innerWrapper {
+		width: auto;
+	}
+
+	div.navBarWrapper.unlocked,
+	div.navBarWrapper.locked {
+	    position: fixed;
+		top: inherit;
+		bottom: 0px;
+		z-index: 10;	
+	}
+
+div#helpMainNavWrapper a.active::before , div#helpMainNavWrapper a.active::after {
+    border: medium none;
+}
+
+h2.glossaryLetter {
+    margin-left: 0;
+}
+
+section#contentWithSideBar {
+    margin-top: 100px !important;
+}
+
+	div#helpMainNavWrapper {
+	}
+
+
+	div.helpCenterTitle {
+		color: #fff;
+		text-align: center;	
+		font-size: 36px;
+		font-family: UHCSans-Regular;
+		text-transform: none;
+		letter-spacing: 0px;
+		margin: 1em 0;
+	}
+	
+
+	div#helpCenter div {
+		margin: 0 5px 20px 5px;
+	}
+
+	div#helpCenter h3 {
+		color: #fff;
+		font-family: UHCSans-Regular;
+		font-size: 18px;
+		padding-bottom:10px;
+	}
+
+	div#helpCenter h3 a {
+		border-bottom: 1px solid #999;
+		padding-bottom: 3px;
+	}
+
+	div#helpCenter p {
+		color: #eee;
+		text-align: left;
+		font-family: UHCSans-Regular;
+		font-size: 18px;
+		line-height: 1.25em;
+		margin:  0 0 2em 1em;
+	}
+
+
+.controlRight , .controlLeft {position: absolute;margin:0px !important;width:60px;height:60px;}
+.controlRight *, .controlLeft * {margin:0px !important;}
+
+.controlLeft {left:-30px;}
+.controlRight {right:-30px;}
+
+	/* Only used in mobile, so no Full version above */
+	div.helpCenterHeroArrow {
+		
+		background-color: #0F49A9;
+		height:60px;
+		width:60px;
+		border-radius: 60px;
+	}
+
+	div.helpCenterHeroOption {
+		width: 200px;
+	}
+
+	div.helpCenterHeroControl {
+	}
+
+	/* ========  Mobile View FAQ  ======== */
+	section#contentWithSideBar {
+		margin: 100px 0 1em 0;
+	}
+
+	/* ========  Mobile View Glossary  ======== */
+
+
+
+	/* HORIZONTAL MOBILE NAV */
+	div.mobileGlossaryWrapper::-webkit-scrollbar { display: none;}
+	div.mobileGlossaryWrapper   {z-index:200;position:fixed;background: #fff;height:50px; top:60px;width: 100%;white-space: nowrap;overflow-y: hidden;overflow-x: scroll;-webkit-overflow-scrolling: touch;   -ms-overflow-style: -ms-autohiding-scrollbar;border-bottom: 1px solid #CDD5D7;box-shadow: 0px 5px 5px 0px #FAFAFA;}
+	div.mobileGlossaryWrapper a {font-size: 18px;text-align: left;margin: 0;line-height: 50px;height:50px;padding-left:20px;padding-right:20px;display: inline; color:#000;}
+	div.mobileGlossaryWrapper a.glossaryActive  {font-family: "UHCSans-Bold",Arial,sans-serif;}
+
+
+	/* ========  Mobile View Help Video  ======== */
+
+	div#marginForVideo {
+		margin:0px;
+		margin-top: 180px;
+	}
+
+	/* ========  Mobile View Survey  ======== */
+
+	div.surveyAll {
+		margin: 1em 0;
+	}
+
+	div.surveyQuestion {
+		margin: 0 0 2em 0;	
+	}
+
+	div.longLabel  {
+		padding-bottom: 4em;
+		min-width: 500px;
+	}
+
+	/* ========  Mobile View Footer  ======== */
+
+	div.footerWrapper li a {
+		font-size:18px;
+		text-transform: none;
+		width: inherit;
+		text-align: inherit;
+		min-height: inherit;
+		line-height: inherit;
+		margin: inherit;
+		padding: 10px;
+	}
+	
+	div.footerWrapper li.bold {
+	    font-family: 'UHCSans-Black';
+	}
+
+	div.footerWrapper li.two-rows a {
+		line-height: inherit;
+	}
+	nav#footerNav {
+		padding: 10px 60px 0 60px;
+	}
+
+	hr {
+		margin-top: 1em;
+		margin-bottom: 1em;
+		color: #fff;							
+		border: none;
+	}
+
+	div#explorePolicy-single-column hr {
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+    border: 1px solid #ddd;
+	}
+
+	div.hrPadSides8px {
+		padding-left:8px; padding-right: 8px;
+	}
+
+	div#footerLink1Wrapper {
+		float: left;
+		padding-top: 2em;
+		font-size: 16px;
+	}
+	div#footerLink2Wrapper {
+		float: right;
+		padding-top: 2em;
+		font-size: 16px;
+	}
+	div#footerLink3Wrapper {
+		text-align: center;
+		padding-top: 4em;
+		font-size: 16px;
+	}
+	div#footerLogoWrapper {
+		width: 250px;
+		height: auto;
+		margin: auto;
+	}
+	div#footerLink4Wrapper {
+		text-align: center;
+		padding-top: 1em;
+		font-size: 11px;
+        color:#fff;
+        padding-bottom: 20px;
+	}
+
+	div#footerLink5Wrapper {
+		height: 50px;
+	}
+
+
+section#requestQuote md-content {
+		display: block;
+		overflow: hidden;
+	}
+
+	/* Force table to not be like tables anymore */
+	/* adapted from https: css-tricks.com/responsive-data-tables/ */
+	table.requestQuote {
+		box-sizing: border-box;
+		min-width: 100%;
+	} 
+
+	table.requestQuote, 
+	table.requestQuote thead, 
+	table.requestQuote tbody, 
+	table.requestQuote th, 
+	table.requestQuote td, 
+	table.requestQuote tr { 
+		display: block; 
+	}
+	
+	/* Hide table headers (but not display: none; for accessibility) */
+	table.requestQuote thead tr { 
+		position: absolute;
+		top: -9999px;
+		left: -9999px;
+	}
+	
+	table.requestQuote tr { 
+		margin-bottom: 2em;
+		border-radius: 3px;
+	}
+	
+	table.requestQuote td { 
+		border: none;
+		position: relative;
+		padding-left: 50%; 
+		width: 45%; 
+		text-align: left; 
+	}
+	table.requestQuote td.requestQuoteLeftText {padding:10px !important;padding-left:0px !important;font-family:'UHCSans-Bold';border-bottom: 2px solid #4a90e2; width:90%;margin-bottom: 40px;font-size:18px;}
+
+	table.requestQuote td:before { 
+		position: absolute;
+		top: 10px;
+		left: 6px;
+		width: 45%; 
+		padding-right: 10px; 
+		white-space: nowrap;
+		text-align: center; 
+	}
+
+	table.requestQuote td:nth-of-type(2):before,
+	table.requestQuote td:nth-of-type(3):before { 
+		top: 24px;
+	}
+
+	table.requestQuote md-checkbox {
+		margin: 0 0 1em 0;
+	}
+	
+	/*	Label the data */
+	table.requestQuote td:nth-of-type(1):before { content: ""; }
+	table.requestQuote td:nth-of-type(2):before { content: "Hours Req."; }
+	table.requestQuote td:nth-of-type(3):before { content: "#Eligible"; }
+	table.requestQuote td:nth-of-type(4):before { content: "Mandatory"; }
+	table.requestQuote td:nth-of-type(5):before { content: "Hard Waiver"; }
+	table.requestQuote td:nth-of-type(6):before { content: "Soft Waiver"; }
+	table.requestQuote td:nth-of-type(7):before { content: "Voluntary"; }
+ 	table.requestQuote td::before {text-align:left;}
+
+.adminSingleColumn h1 {font-family: 'UHCSans-Black';line-height:35px;}
+
+.marginTop2em {
+    text-align: center;
+}
+}
+/*
+  ** END Mobile View
+  */
+
+
+.radioRow {text-align:right; display: block;}
+.righPush {margin-right:40px !important;}
+/* Homepage specific Query */
+@media only screen and (max-width: 788px) {
+
+
+img.iconCloseMenuRight {
+	
+		margin-top: 24px;
+	}
+
+
+
+	div.existingInsurance , div.newCoverage {
+
+		width:100%;
+	}
+
+
+div#homeAppBadges {
+    text-align: center;
+}
+
+
+#FindMySchool {
+    margin-top: 0px;
+}
+
+.md-virtual-repeat-container.md-autocomplete-suggestions-container {
+    margin-top: 10px;
+}
+
+.radioRow, .centerQuestion {text-align:center; }
+
+.centerQuestion {margin-top:40px;}
+.submitButton {text-align: center;}
+.righPush {margin-right:0px !important;}
+
+
+.swiper-slide {
+    box-sizing: border-box;
+    padding: 40px;
+}
+
+
+div#homeBox3Wrapper button {
+    background-color: #003da1;
+    width: 100%;
+}
+iframe {height:200px !important;}
+	#footerLogo 	{padding-left: 0px;}
+	.footerAlignRight	{padding-right: 0px !important;}
+	h3.schoolStepTitle {font-size:16px; margin:auto;}
+	
+	section#contentWithSideBar { margin: 70px auto 1em !important;}
+	#glossaryWrapper {margin-top:100px;}
+
+	nav#footerNav {height:auto;}
+	div#footerLink5Wrapper {display: none;}
+	.progressDot1, .progressDot2, .progressDot3, .progressDot4, .progressDot5 {padding: 3px;}
+
+	section.sectionExplorePolicy div#sideNavRight {margin-left:0px;}
+
+
+	div.fingerSlider 		  	{height: 50px;overflow-x: scroll;overflow-y: hidden;white-space: nowrap;z-index: 200;left:10px;right:10px;}
+	div.fingerSlider a 	  		{display: inline;font-size: 18px;height: 50px;line-height: 50px;margin: 0;padding-left: 20px;padding-right: 20px;text-align: left;}
+	div.fingerSlider.enroll1 	{top:190px;}
+	div.fingerSlider.enroll2 	{top:240px;}
+	div#explorePolicy-single-column p, div#explorePolicy-single-column li {font-size: 18px;}
+	
+
+
+div#MySchoolWrapper .innerWrapper {
+    box-sizing: border-box;
+    left: 0;
+    margin-left: 0;
+    margin-top: 100px !important;
+    top: 0;
+    width: 100%;
+    height: auto;
+    padding: 40px;
+}
+
+	.noFloatMobile {float:none;margin-top:20px;display: block;}
+
+	.parallax {background-position: center !important; background-size:cover !important;}
+
+
+	.logoSchoolTop1 {padding-top: 100px;max-width: 100px;}
+
+	section#schoolTop1 .parallax {height: 200px;}
+	div#schoolStart h3 {font-size:16px; padding-left:20px;padding-right:20px;line-height: 1.5em;}
+	div#schoolStart h3 br {display: none !important;}
+
+	.policyContentScrollable ul li {}
+
+
+section.sectionExplorePolicy div#sideNavRight {
+    margin: 0;
+    padding: 5px;
+}
+
+   /* SCHOOL PAGE CSS */
+	div#schoolWelcome {font-size: 18px;}
+	div#schoolWelcomeTagline {margin-top:20px;}
+	div#schoolTopMenu3 {margin:0; }
+	div#schoolTopMenu3 md-input-container.md-block {display: block; margin: auto;}
+	   #schoolInputSelect {padding-bottom: 20px;}
+
+	a.schoolBlueLinks {padding: 10px;display: inline-block;}
+	#schoolNavMobileWrapper {}
+	#schoolNavMobileWrapper div {width:25%;}
+	#schoolNavDesktop {display: none !important;}
+	img#logoStudentResources {height: 55px;width: auto;}
+	img#mobileSearch {display: inline-block;padding: 10px;position: relative;width: 30px;}
+	img.iconCloseSchool {height: 25px;width: 25px;}
+	#policyCardExpanded	{box-sizing: border-box;}
+	div.schoolBigCard		{box-shadow: 0 0 5px #aaa !important;}
+
+
+	div#schoolPage3 {background: #eee; position: fixed;left:0;right: 0;bottom:0;top: 68px;z-index: 900; box-sizing: border-box;padding: 10px; overflow-y: scroll;}
+	
+	div.slideMenuWrapper li a, div.slideMenuWrapper li button { font-size: 26px; line-height:1.7em;}
+
+
+div.schoolCardNavLinks {
+padding:15px;
+}
+
+	h2.policyCardMessage ,h3.policyCardMessage , button.schoolBottomLinks {font-size: 16px;}
+
+
+   div#resultsSearchWrapper .md-input { height: 35px;}
+   div#resultsSearchWrapper {width: 100%;padding: 20px; box-sizing: border-box;z-index:10000;}
+   div#resultsSearchWrapper * {box-sizing: border-box;}
+   div#resultsSearchWrapper label {font-family: "UHCSans-Bold";font-size: 18px;}
+
+     #searchHeader {
+		transition-property: all;
+		transition-duration: .5s;
+		transition-timing-function: ease-out;
+		transform: translateZ(0);
+		-webkit-transform: translateZ(0);
+		will-change: transform;
+    }
+
+
+
+   div.searchResultsColumnWidth {
+		width: 100%;
+		max-width:100%;
+		box-sizing: border-box;
+		margin: 0 auto 5em auto;
+		margin-top:200px;
+		z-index: 0;
+		padding:20px;
+	}
+
+md-input-container {
+    margin-top:30px !important;
+  
+}
+
+	ul.desktopSearchNav {display: none;}
+
+
+	div.searchResultTitle {
+    font-size: 18px;
+    padding-bottom:15px;
+}
+
+div.searchResultQuote,div.searchResultLink {
+    font-size: 16px;
+}
+
+
+	.extendsSearch {
+    background: rgba(0, 0, 0, 0) none repeat scroll 0 0 !important;
+    top: 130px !important;
+    z-index: 11001 !important;
+    display: block !important;
+    left:0;
+    position: absolute !important;
+    box-shadow: none !important;
+}
+
+/* THIS CLASS IS FOR DESKTOP USERS THAT HAVE A 'MOBILE SIZED' VIEWPORT. FIXES A BUG IN FEW MINOR INSTANCES. */
+
+.extendsSearchHybrid {
+
+    position: fixed !important;
+}
+
+	.extendsSearch a {color:#fff !important;}
+
+    .searchBox {z-index:11000 !important;height:180px !important;}
+	.mobileBack {display: block;opacity: .4;}
+	.toggleSearch {top: -132px;-webkit-transform: translateZ(0);}
+
+div#homeBox2Wrapper	{padding:20px;}
+
+div#homeBox2Wrapper h1, div#homeBox4Wrapper h1   {font-size:20px;    line-height: 1.5em;}
+div#homeBox2Wrapper h3,  div#homeBox4Wrapper h3   {font-size:18px;    line-height: 1.5em;}
+a.homeBox1 h3 			  {font-size: 18px;}
+a.homeBox1 p  			  {font-size: 16px;}
+
+div#homeBox3Wrapper {height:auto;}
+.fourty, .sixty , .fifty {display: block; width:100%;padding:20px;height: 200px;text-align: justify;}
+.fourty h5, .sixty h5, .fifty h5 {margin-bottom:10px;}
+
+.hideImage				  {display: none;}	
+div.helpCenterTitle		  {font-size:24px;}
+a.homeBox1 h3 			  {font-size: 18px;}
+a.homeBox1 p  			  {font-size: 16px;}
+div.homeBox3 			  {margin:0px;padding:20px;}
+
+.buttonWrap  {padding-left: 0px;}
+
+
+div.cardColumn {width:100% !important;padding-top: 0px;}
+div.cardColumn:first-child {padding-top: 20px;}
+
+span.controlCircle {display: none;}	
+div.helpCenterTitle		  {font-size:24px;}
+
+
+div.helpMainNavBox p {font-size:14px !important;}
+div#helpCenter div {margin:0px;}
+div#navBar-single-column {
+	padding-top:0px;
+    margin: 20px;
+
+}
+
+#policyImportantMessage {right: 5px;top: 5px;}
+#closeImportantMessage {position: absolute;right: 5px;top: 5px;}
+
+.policyMessage {padding-right:40px;}
+.importantMessage {
+}
+
+	.newsItems , .newsNav  { box-sizing: border-box;
+    display: block;
+    float: none;
+    padding: 20px;
+    width: 100%;}
+	.newsItems ul li.flex-gt-sm-45.flex-75	   {width: 100% !important;max-width: 100%;}
+
+div.faqSearch {width:100%;}
+
+div#faqWrapper h2 {
+    font-size: 24px;
+}
+
+a.question {
+    font-size: 16px;
+    line-height: 36px;
+}
+
+
+.answer {
+    font-size: 16px;
+    line-height: 1.5em;
+    margin-bottom: 10px;
+    margin-top: 10px;
+}
+
+div.navBarWrapper {
+		padding: 7px;
+		padding-bottom:0px;
+		z-index: 0;
+	}
+div#helpMainNavWrapper a.active:before {border:none;}
+div#helpMainNavWrapper a.active:after {border:none;}
+
+div#marginForVideo .leftColumn, div#marginForVideo .rightColumn{width:100%; margin:auto; float:none;display:block; text-align: center;}
+
+div#marginForVideo .video {display: inline;}
+#faqParent {margin-left:0px;}
+
+
+}
+
+@media only screen and (max-height: 620px) {
+
+#heroHelpCenterImage {display: none !important;}
+
+}
+@media only screen and (max-width: 568px) {
+
+div#homeBox1Wrapper 	  {height:160px;}
+a.homeBox1:first-child    {border-bottom:1px solid #CDD5D7;padding-top:20px;height:90px;}
+a.homeBox1 				  {display:block;width:100%;height:70px; vertical-align: bottom; bottom: 0;position: relative;}
+a.homeBox1 h3 			  {font-size: 18px;margin-top: 15px;line-height: 1em;}
+a.homeBox1 p  			  {font-size: 16px;}
+
+
+.FindMySchoolSubTitle {
+   
+    font-size: 18px;
+    padding-bottom: 1.5em;
+}
+
+h2.glossaryLetter {margin-left:0px;}
+
+
+/* CREATE ACCOUNT FOR SMALL SCREENS */
+#accountPage2ABC md-input-container {margin-left: 0px !important;}
+div.accountPage2LoginState  {margin-left:.5em !important;}
+div.accountPage2FormWrapper {max-width: 250px !important;}
+div.accountPage2FormWrapper md-input-container {margin-top: 15px !important;} 
+.loginTitle {display: none !important;}
+button.accountBottomLinks {font-size: 16px;padding:0px 6px;}
+p.accountFormMessage, p.accountFormWarn {font-size: 16px !important;line-height: 125%;text-align: center;}
+.accountVeryNarrowFormWrapper {margin: 0 20px;}
+button.accountSingleLargeBottomLink {
+    margin: auto;
+    margin-left: 40px;
+}
+}
+
+/*
+  ** BEGIN Print View
+  */
+
+.blue-link{color: #4a90e2 !important;}
+ul li{font-size: 16px;}
+.footer-mobile{padding-top: 20px; margin-bottom: 20px;}
+.mobile-footer-border{border-bottom: 1px solid #fff; padding-bottom: 20px;}
+@media only print {
+
+	/* hide (using display: none) anything that should not be printed on paper */
+
+	header,
+	div.parallax,
+	div.controlPage1,
+	div.controlPage2,
+	div.controlPage3,
+	footer {
+		display: none;
+	}
+
+	div.controlPage4 {
+		display: inherit;
+	}
+}
+
+
+
+
+
+
+
+
+/*
+  ** END Print View
+  */
+
+	div#heroFull.displayFullOnly {margin-top:30px !important;}
+	.insurance101 	{max-width:700px !important;margin:auto !important;font-size:16px;padding-left:20px;padding-right:20px; padding-bottom:50px;}
+    .insurance101 p {font-size:18px !important;}
+    .insurance101 h2 {font-size:25px !important;}
+    .insurance101 li {font-size:16px !important;}
+
+
+
+
+    
+    
+   
+    
+    
+    
+    
+    
+    
+   

@@ -1,0 +1,90 @@
+<!-- NOTE: if using Angular ng-include for client side includes, do not use jQuery events (e.g. mouseleave) within the included code. -->
+
+<style>
+.hideThisButton {display: none !important;}
+
+   @media only screen and (max-width: 960px) {
+
+
+.hideThisButton {display: inline-block !important;}
+
+
+}
+
+</style>
+
+<div id="headerAll">
+	<nav id="headerNav" >
+		<div id="headerNavWrapper"  class="">
+
+			<div id="headerLogoWrapper">
+				<a href="index.html">
+					<img class="displayFullOnly" src="img/logoDefaultUHC.svg" /><img class="growSomeOnHover displayMobileOnly" src="img/logoMobileUHC.svg" />
+				</a>
+			</div>  <!-- .headerLogoWrapper -->
+
+			<div id="headerSearchWrapper" class="displayFullOnly" ng-controller="searchCtrl">
+
+				<div id="headerFullSearchIcon" class="">
+					<img class="growBigOnHover" onclick="openHeaderFullSearch()" id="iconSearch" src="img/iconSearch.svg" />
+				</div>
+
+				<div id="headerFullSearchWrapper" class="hideInitially">
+					<div class="resourceSearchWrapper">
+					  <form action="search-results.html" autocomplete="on">
+
+					  <!-- using HTML DOM Event onmouseout to avoid jquery conflict with angular ng-include. Is called for all children, so placed on field, not on div to event a stream of events -->
+					  <!-- Note: autocomplete off to disable browser based auto complete -->
+					  <input id="search_submit" type="submit" value=""><input id="search" name="search" type="text" autocomplete="off" placeholder="School or search term" onblur="closeHeaderFullSearch();" >
+					  </form>
+					</div>
+				</div>
+			</div>  <!-- .headerSearchWrapper -->
+
+
+			<div id="headerRightSideWrapper">
+
+					
+				<a class="displayFullOnly uhcBlueLink" id="myAccountLink" onclick="javascript:location.href='login.html'" >Login to My Account</a>
+
+
+				<div id="headerHamburgerWrapper" ng-controller="pageslideRightMenuCtrl">
+					<a href="" ng-click="sideMenuOn()"><img class="growSomeOnHover" id="iconHamburger" src="img/iconOpenMenu.svg" /></a>
+					<div id="slideMenuRight" pageslide ps-class="slideMenuRightToggle" ps-body-class="true" ps-open="checked" ps-side="right" ps-size="300px">
+						
+
+						<div class="slideMenuWrapper">
+							<a ng-click="sideMenuOff()" class="button" ><img class="growSomeOnHover iconCloseMenuRight" src="img/iconCloseMenu.svg" /></a>
+
+							<div id="slideMenuRightSearchWrapper" class="displayMobileOnly">
+								<img id="logoStudentResources" src="img/logoStudentResources.jpg" />
+								<img id="mobileSearch" class="growBigOnHover" id="iconSearch" src="img/iconSearch.svg" onclick="showSearch();"   />
+							</div>
+
+
+							<ul>
+								<li><md-button class="uhcBlueLink" ng-click="sideMenuOff()" ng-href="help-center.html">Help Center</md-button></li>	
+								<li><md-button class="uhcBlueLink" ng-click="sideMenuOff()" ng-href="insurance-forms.html">Insurance Forms</md-button></li>
+								<li><md-button class="uhcBlueLink" ng-click="sideMenuOff()" ng-href="admin-overview.html">Administrators</md-button></li>	
+								<li><md-button class="uhcBlueLink" ng-click="sideMenuOff()" ng-href="blog-home.html">News</md-button></li>	
+							</ul>
+
+							<div id="mobileSearchWrapper" ng-include src="'include/mobileSearch.html'"  class="ng-hide" isolateScrolling></div>
+
+
+						</div> <!-- .slideMenuWrapper -->
+
+
+										<a class="mobileLoginBtn hideThisButton" onclick="javascript:location.href='login.html'" >Login to My Account</a>
+
+					</div> <!-- .slideMenuRight -->
+				</div> <!-- .headerHamburgerWrapper -->
+
+			</div>	<!-- .headerRightSideWrapper -->
+
+
+<br clear="all">
+		</div> <!-- headerNavWrapper -->
+		</nav> <!-- headerNav -->
+
+</div> <!-- .headerAll -->

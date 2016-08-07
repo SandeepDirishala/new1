@@ -1,0 +1,81 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Underwriters</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+		<meta name="apple-mobile-web-app-capable" content="yes">
+
+	<!-- CSS files -->
+	<link rel="stylesheet" type="text/css" href="css/angular-material.min.css">
+	<link rel="shortcut icon" href='favicon.ico' type='image/x-icon' >
+	
+	<!-- Application Specific CSS -->
+	<link rel="stylesheet" type="text/css" href="css/uhc_sr.css">
+</head>
+
+<!-- fade-in when page finishes loading -->
+<body ng-app= "srApp" onload="document.body.style.opacity='1'">
+	<header ng-include src="'include/header.html'"  ></header>
+
+	<!-- Page Content -->
+	<main>
+		<div id="contentAll">
+			<div class="innerContentWrapper" >
+
+			<!-- change id to select hero image for current page -->
+				<div id="heroUnderwriting" class="parallax">
+				
+					<div class="heroGradient">
+						<div class="heroOverlayText uhcWhite">
+							<h2 class="uhcWhite">Underwriters</h2>
+
+						</div>
+					</div>
+				</div>	
+
+				<section  class="sitePageWidth">
+					<div class="single-column">
+        <h1>
+            Our Underwriters</h1>
+            
+            
+            <p>
+                Although we partner with a variety of organizations, the majority of student insurance
+                products are now underwritten by the UnitedHealthcare Insurance Company.
+            </p>
+            
+             
+            <h2 class="subhead">
+                UnitedHealthcare Insurance Company</h2>
+            <p>
+                The UnitedHealthcare Insurance Company is the underwriter of insurance provided by UnitedHealthcare
+                Services, a subsidiary of Minnetonka, Minnesota-based healthcare giant UnitedHealth
+                Group. UnitedHealthcare Insurance Company underwrites insurance plans which cover students, individuals
+                and small to midsized employer groups across the country (except in New York State,
+                where insurance is underwritten by UnitedHealthcare Insurance Company of New York).
+                UnitedHealth Group&lsquo;s Health Care Services segment manages HMO, PPO, and POS (point-of-service)
+                plans, as well as various Medicare and Medicaid options for more than 18 million
+                medical members.</p>
+					</div>
+				</section>
+			</div>
+		</div>
+	</main>
+	<footer ng-include src="'include/footer.html'"  ></footer>
+
+<!-- Javascript Libraries at bottom after DOM is loaded -->
+<script type="text/javascript" src="js/angular.min.js"></script>
+<script type="text/javascript" src="js/angular-animate.min.js"></script>
+<script type="text/javascript" src="js/angular-aria.min.js"></script>
+<script type="text/javascript" src="js/angular-material.min.js"></script>
+<script type="text/javascript" src="js/angular-messages.min.js"></script>
+<script type="text/javascript" src="js/jquery-2.0.3.min.js"></script>
+<script type="text/javascript" src="js/angular-pageslide-directive-modified.js"></script>
+
+
+<!-- Application Specific Javascript files at very bottom after DOM and libraries are loaded -->
+<script type="text/javascript" src="js/uhc_sr.js"></script>
+
+</body>
+</html>

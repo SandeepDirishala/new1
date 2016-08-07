@@ -1,0 +1,178 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>UHC Student Resources</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+		<meta name="apple-mobile-web-app-capable" content="yes">
+
+	<!-- CSS files -->
+	<link rel="stylesheet" type="text/css" href="css/angular-material.min.css">
+	<link rel="shortcut icon"  type='image/x-icon'>
+
+	<!-- Application Specific CSS -->
+	<link rel="stylesheet" type="text/css" href="css/uhc_sr.css">
+
+	<!-- Page Specific CSS (only used on this page) -->
+	<link rel="stylesheet" type="text/css" href="css/doodle.css">
+	<script src="../helloworld.ts"></script>
+
+</head>
+
+<!-- fade-in when page finishes loading -->
+<body ng-app= "srApp" onload="document.body.style.opacity='1'">
+
+	<!-- Verify HTML5 browser -->
+	<!--[if lt IE 10]>
+	<script>window.location = "upgrade.html";</script>
+	<![endif]-->
+
+	<header ng-include src="'include/header.html'"  ></header>
+
+	<div id="homeBlueBackground" class="uhcBlueBackground">
+
+		<div id="MySchoolWrapper">
+			<div class="innerWrapper">
+			 		<div class="FindMySchoolTitle">Student insurance happens here.</div>
+				 	<div class="FindMySchoolSubTitle">It can be confusing. We&rsquo;re here to help! </div>
+
+					<div ng-controller="searchSchoolCtrl as ctrl" layout="column" ng-cloak>
+						<form id="FindMySchool" action="registration.html" name="searchForm" onFocus="window.scrollTo(10,10);">
+						  <div layout-gt-sm="row">
+							<md-autocomplete flex required
+								md-input-name="search"
+								md-input-minlength="3"
+								md-input-maxlength="10"
+								md-search-text="ctrl.searchText"
+								md-items="item in ctrl.querySearch(ctrl.searchText)"
+								md-item-text="item.name"
+								md-no-asterisk
+								md-selected-item-change	= "ctrl.selectedItemChange(item)"
+								md-floating-label="Let's start with your school's name.">
+							  <md-item-template class="new">
+								<span md-highlight-text="ctrl.searchText" >{{item.name}}</span>
+							  </md-item-template>
+							  <md-not-found>
+								We can&rsquo;t seem to find that.
+							  </md-not-found>
+							</md-autocomplete>
+						  </div>
+						</form>
+					</div>
+			</div>
+		</div>
+
+
+		<!-- INTERACTIVE DOODLE -->
+		<!-- \\\\\\\\\\\\\\\\\\\\\\\ -->
+		<div id="doodleWrap">
+			<ul id="doodle">
+				  <li data-depth="0.10"></li>
+				  <li data-depth="0.15"></li>
+				  <li data-depth="0.30"></li>
+				  <li data-depth="0.20"></li>
+				  <li data-depth="0.25"></li>
+				  <li data-depth="0.30"></li>
+			</ul>
+		</div>
+		<!-- //////////////////////// -->
+		<!-- (END) INTERACTIVE DOODLE -->
+
+		<!-- STICKY NAVIGATION -->
+		<!-- \\\\\\\\\\\\\\\\\\\\\\\\\\\ -->
+		<div id="homeBox1Wrapper">
+			<a  href="help-center.html" class="homeBox1 uhcBlackLink">
+				<h3>STUDENT INSURANCE HIT LIST</h3>
+				<p>What do you need to get done today?</p>
+			</a>
+			<a  href="admin-overview.html" class="homeBox1 uhcBlackLink">
+				<h3>SCHOOL ADMINS</h3>
+				<p>There&rsquo;s a place here for you too!</p>
+			</a>
+		</div>
+		<!-- //////////////////////////// -->
+		<!-- STICKY NAVIGATION -->
+
+	</div>
+
+	<!-- Page Content -->
+	<main>
+		<div id="contentAll" >
+			<div class="innerContentWrapper" >
+				<div id="homeWrapper">
+
+					<div id="homeBox2Wrapper" class="centerText">
+						<h1 class="uhcFontBlack">IMPORTANT TO KNOW</h1>
+						<h3 class="uhcFontLight">Student insurance has a lot of details. Here are the ones we think are important now!</h3>
+					</div>
+
+					<div id="homeSlider" ng-include src="'include/slider.html'">
+
+					</div>
+
+					<div id="homeBox4Wrapper" >
+						<div class="homeBox4">
+							<img id="mobileApp" src="img/imageGetApp.png" class="displayFullOnly"/>
+							<h1 class="uhcFontBlack" style="margin:0;">YES, THERE&rsquo;S AN APP FOR THAT!</h1>
+							<h3>You&rsquo;re not living at a desk, why should your student insurance plan?</h3>
+							<ul>
+								<li>On the App Store and Google Play.</li>
+								<li>Digital ID card</li>
+								<li>Find a local doctor, wherever you are</li>
+								<li>Easy claim status info</li>
+							</ul>
+							<div id="homeAppBadges">
+								<a  target="_blank" href="https://itunes.apple.com/us/app/uhc-studentresources/id740854874?mt=8"><img class="homeBadge growSomeOnHover" src="img/badgeAppstore.png"></a> &nbsp;
+								<a  target="_blank" href="https://play.google.com/store/apps/details?id=com.laser2mail.uhcsrmobile&hl=en"><img class="homeBadge growSomeOnHover" src="img/badgeGooglePlay.png"></a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</main>
+	<footer ng-include src="'include/footer.html'"  ></footer>
+
+<!-- Javascript Libraries at bottom after DOM is loaded -->
+<script type="text/javascript" src="js/angular.min.js"></script>
+<script type="text/javascript" src="js/angular-animate.min.js"></script>
+<script type="text/javascript" src="js/angular-aria.min.js"></script>
+<script type="text/javascript" src="js/angular-material.min.js"></script>
+<script type="text/javascript" src="js/angular-messages.min.js"></script>
+<script type="text/javascript" src="js/jquery-2.0.3.min.js"></script>
+<script type="text/javascript" src="js/angular-pageslide-directive-modified.js"></script>
+
+<!-- Application Specific Javascript files at very bottom after DOM and libraries are loaded -->
+<script type="text/javascript" src="js/uhc_sr.js"></script>
+
+<!-- Page Specific Javascript (only used on this page) -->
+<script type="text/javascript" src="js/doodle.js"></script>
+
+<!-- REFACTOR into doodle.js -->
+<script>
+	  var doodle    = document.getElementById('doodle');
+	  var parallax  = new Parallax(doodle);
+
+
+$(document).ready(function () {
+
+
+$('#fl-input-0').focus(function () {
+
+
+
+});
+
+
+});
+
+
+ $('body').bind('focusin focus', function(e){
+  e.preventDefault();
+});
+
+
+ </script>
+
+</body>
+</html>

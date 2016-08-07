@@ -1,0 +1,1518 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Auburn University</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+		<meta name="apple-mobile-web-app-capable" content="yes">
+
+	<!-- CSS files -->
+	<link rel="stylesheet" type="text/css" href="css/angular-material.min.css">
+	<link rel="shortcut icon" href='favicon.ico' type='image/x-icon' >
+	
+	<!-- Application Specific CSS -->
+	<link rel="stylesheet" type="text/css" href="css/uhc_sr.css">
+</head>
+
+<!-- fade-in when page finishes loading -->
+<body ng-app= "srApp" onload="document.body.style.opacity='1'">
+	<header ng-include src="'include/header.html'"  ></header>
+
+	<!-- Page Content -->
+	<main>
+		<div id="contentAll">
+			<div class="innerContentWrapper" >
+
+				<div id="schoolWrapper">
+			
+<div ng-controller="schoolPageCtrl" layout="column" ng-cloak="" class="md-inline-form inputLogin" ng-app="srApp">
+	<md-content style="padding:0px !important;">
+    <form name="schoolForm">
+
+	<!-- School specific section -->
+	<section id="schoolTop1" > <!-- only displayed on page 1 -->
+		<!-- change id to select hero image for current page -->
+		<div id="eduAuburnHero" class="parallax schoolParallax">
+			<div class="schoolTop1Gradient">
+				<div><img src="img/eduAuburnLogo.png" class="logoSchoolTop1"></div>
+			</div>
+		</div>	
+
+		<div id="schoolStart" class="centerText">
+			<h3>Hi there. Welcome to the <span id="dynamicSchoolName">Auburn University</span> policy page.<br /> To get started let's choose a policy year that applies to you.</h3>
+		</div>
+
+
+<div id="selectYearCenter">
+	
+
+<!--
+
+
+    							<md-input-container class="md-block inputField12em">
+										<label>US SSN/ITIN</label>
+										<input type="text" required="" maxlength="11" md-maxlength="11" id="selfGovID" name="selfGovID" ng-model="school.selfGovID" >
+										<div ng-messages="schoolForm.selfGovID.$error">
+											<div ng-message="required">This is required.</div>
+										</div>
+								</md-input-container>
+
+								<script>
+
+								</script>
+-->
+		<div id="schoolInputSelect">
+			<md-input-container class="md-block formWidth9em" style="margin: auto;">
+				<md-select ng-model="policyYearModel" 
+					md-selected-text="getPolicyYear()" 
+					aria-label="Policy Year" 
+					ng-change="schoolPage('schoolPage2')" >
+					<md-option ng-value="item" ng-repeat="item in policyYears" >
+						{{item}}
+					</md-option>
+				</md-select>
+			</md-input-container>
+		</div> 
+</div>
+	</section>
+
+<!-- displayed on all pages after page 1 -->
+<a id="scrollTop"></a>
+	<section id="schoolTop2" class="hideInitially"> 
+		<!-- change id to select hero image for current page -->
+		<div id="eduAuburnHero" class="parallax schoolParallax">
+
+			<div class="schoolTop2Gradient">
+			</div>
+		</div>	
+
+		<!-- mobile nav bar at bottom  -->
+		<div class="navBarWrapper locked displayMobileOnly">
+			<div id="schoolNavMobileMenu1" class="schoolNavMobileSubMenu hideInitially">
+			<a ng-click="schoolMenuBarMobileToggle('schoolNavMobileMenu1')" class="button" ><img class="growSomeOnHover iconCloseMenuRight" src="img/iconCloseMenu.svg" /></a>
+				<ul>
+					<li><md-button class="uhcGray" id="schoolMenuBarLinkButton" ng-href="placeholder.html"><strong>Medical</strong><br>UHC Choice Plus</md-button></li>
+					<li><md-button class="uhcGray" id="schoolMenuBarLinkButton" ng-href="placeholder.html"><strong>Vision</strong><br>My UHC Vision</md-button></li>
+					<li><md-button class="uhcGray" id="schoolMenuBarLinkButton" ng-href="placeholder.html"><strong>Dental</strong><br>My UHC Dental</md-button></li>
+					<li><md-button class="uhcGray" id="schoolMenuBarLinkButton" ng-href="placeholder.html"><strong>Behavioral</strong><br>Live &amp; Work Well</md-button></li>
+				</ul>
+			</div>
+
+			<div id="schoolNavMobileMenu2" class="schoolNavMobileSubMenu hideInitially">
+			<a ng-click="schoolMenuBarMobileToggle('schoolNavMobileMenu2')" class="button" ><img class="growSomeOnHover iconCloseMenuRight" src="img/iconCloseMenu.svg" /></a>
+				<ul>
+					<li><md-button class="uhcGray" id="schoolMenuBarLinkButton" ng-href="placeholder.html">Requestion Information</md-button></li>
+					<li><md-button class="uhcGray" id="schoolMenuBarLinkButton" ng-href="placeholder.html">Regulatory</md-button></li>
+					<li><md-button class="uhcGray" id="schoolMenuBarLinkButton" ng-href="placeholder.html">Rx Drug List</md-button></li>
+				</ul>
+			</div>
+
+			<div id="schoolNavMobileMenu3" class="schoolNavMobileSubMenu hideInitially">
+			<a ng-click="schoolMenuBarMobileToggle('schoolNavMobileMenu3')" class="button" ><img class="growSomeOnHover iconCloseMenuRight" src="img/iconCloseMenu.svg" /></a>
+				<ul>
+						<li><md-button class="uhcGray" id="schoolMenuBarLinkButton" ng-href="placeholder.html">Pharmacy 1</md-button></li>
+						<li><md-button class="uhcGray" id="schoolMenuBarLinkButton" ng-href="placeholder.html">Pharmacy 2</md-button></li>
+						<li><md-button class="uhcGray" id="schoolMenuBarLinkButton" ng-href="placeholder.html">Pharmacy 3</md-button></li>
+				</ul>
+			</div>
+
+
+			<div id="schoolNavMobileWrapper">
+				<a  href="placeholder.html" class="uhcBlackLink"><div id="schoolNavMobileBox1" class="schoolNavMobileBox">
+					<img class="idCardIcon" src="img/iconCard.png" >
+					<p class="uhcGray schoolLink">ID Card</p>
+					<img src="img/navBarNormal.png" class="bottomLine displayFullOnly">
+				</div></a>
+				<a  ng-click="schoolMenuBarMobileToggle('schoolNavMobileMenu1')" class="uhcBlackLink"><div id="schoolNavMobileBox2" class="schoolNavMobileBox">
+					<img class="schoolNavBarIcon" src="img/iconProviders.png">
+					<p class="uhcGray schoolLink">Providers</p>
+					<img src="img/navBarNormal.png" class="bottomLine displayFullOnly">
+				</div></a>
+
+				<a  ng-click="schoolMenuBarMobileToggle('schoolNavMobileMenu3')" class="uhcBlackLink"><div id="schoolNavMobileBox3" class="schoolNavMobileBox">
+					<img class="schoolNavBarIcon" src="img/iconPharmacies.png">
+					<p class="uhcGray schoolLink">Pharmacies</p>
+					<img src="img/navBarNormal.png" class="bottomLine displayFullOnly">
+				</div></a>
+
+				<a  ng-click="schoolMenuBarMobileToggle('schoolNavMobileMenu2')" class="uhcBlackLink"><div id="schoolNavMobileBox4" class="schoolNavMobileBox">
+					<img class="schoolNavBarIcon" src="img/iconLinks.png">
+					<p class="uhcGray schoolLink">Helpful Links</p>
+					<img src="img/navBarNormal.png" class="bottomLine displayFullOnly">
+				</div></a>
+			</div>
+		</div>
+
+
+<div id="schoolNavDesktop">
+		<div class="sitePageWidth">
+			<h3 class="leftThis schoolNameHeader">Auburn University</h3>
+
+			<!-- full nav bar under hero  -->
+			<nav id="schoolMenuBar" class="displayFullOnly">
+				<ul>
+					<li><md-button id="schoolMenuBarLinkButton" ng-href="placeholder.html" style="text-align:center;">ID CARD</md-button></li>
+					<li class="parentMenuItem" >
+						<md-button class="uhcGray openIcon" id="schoolMenuBarLinkButton" style="width:100%">FIND PROVIDERS</md-button>
+						<ul id="menu1" >
+							<li><md-button class="uhcGray openIcon" ng-click="schoolMenuBarToggle('menu1')" >FIND PROVIDERS</md-button></li>
+							<li><md-button class="uhcGray" id="schoolMenuBarLinkButton" ng-href="placeholder.html"><strong>Medical</strong><br>UHC Choice Plus</md-button></li>
+							<li><md-button class="uhcGray" id="schoolMenuBarLinkButton" ng-href="placeholder.html"><strong>Vision</strong><br>My UHC Vision</md-button></li>
+							<li><md-button class="uhcGray" id="schoolMenuBarLinkButton" ng-href="placeholder.html"><strong>Dental</strong><br>My UHC Dental</md-button></li>
+							<li><md-button class="uhcGray" id="schoolMenuBarLinkButton" ng-href="placeholder.html"><strong>Behavioral</strong><br>Live &amp; Work Well</md-button></li>
+						</ul>
+					</li>
+					<li class="parentMenuItem" >
+ 						<md-button class="uhcGray openIcon" id="schoolMenuBarLinkButton"  style="width:100%">FIND PHARMACY</md-button>
+						<ul id="menu3">
+							<li><md-button class="uhcGray openIcon" ng-click="schoolMenuBarToggle('menu3')" >FIND PHARMACY</md-button></li>
+							<li><md-button class="uhcGray" id="schoolMenuBarLinkButton" ng-href="placeholder.html">Pharmacy 1</md-button></li>
+						</ul>
+
+
+					</li>
+					<li class="parentMenuItem" ><md-button class="uhcGray openIcon" id="schoolMenuBarLinkButton" >HELPFUL LINKS</md-button>
+						<ul id="menu2">
+							<li><md-button class="uhcGray openIcon" ng-click="schoolMenuBarToggle('menu2')" style="width:100%">HELPFUL LINKS</md-button>
+							<li><md-button class="uhcGray" id="schoolMenuBarLinkButton" ng-href="request-information.html">Requestion<br>Info</md-button></li>
+							<li><md-button class="uhcGray" id="schoolMenuBarLinkButton" ng-href="regulatory-overview.html">Regulatory</md-button></li>
+							<li><md-button class="uhcGray" id="schoolMenuBarLinkButton" ng-href="placeholder.html">Rx Drug List</md-button></li>
+						</ul>
+					</li>
+				</ul>
+			</nav>
+			</div>	
+</div>	
+			<!-- school page 2 -->
+<br clear="all">
+
+<!-- SCHOOL CONTENT -->
+<!-- \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\ -->
+<div id="schoolContent">
+		<div id="logoWrapper" >
+					<img src="img/eduAuburnLogo.png" class="optionalLogo">
+		</div>
+		
+		<div id="schoolLinksWrapper" >
+			<div id="infoDefault">
+				<div id="schoolWelcome" class="uhcFontBold">Welcome to your student health insurance plan page.</div>
+				<div id="schoolWelcomeTagline" class="uhcLight uhcGray">For plan details, including benefits and rates, please refer to the Plan Information section below.</div>
+
+				<div id="schoolSmallGrayBar"></div>	
+
+			<div class="infoGroup">
+				<a href="" ng-click="showInfo('info1')" class="schoolBlueLinks uhcLightBlue">Read This First</a>
+				<a href="" ng-click="showInfo('info2')" class="schoolBlueLinks uhcLightBlue">Enrollment Info</a>
+				<a href="" ng-click="showInfo('info3')"  class="schoolBlueLinks uhcLightBlue">Waiver Info</a>
+				<a href="" ng-click="showInfo('info4')"  class="schoolBlueLinks uhcLightBlue">Provider Info</a>
+			</div>
+			</div> <!-- #infoDefault -->
+
+			<div id="info1" class="sitePageWidth hideInitially">
+				<div class="infoArea">
+					<h3>Read This First</h3>
+					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse ornare vel nunc eget convallis. Curabitur a risus tristique lectus pellentesque ultrices quis sed diam. In ullamcorper nibh mi, sit amet ultricies neque laoreet quis. Aliquam erat volutpat. Ut quis facilisis lorem. Curabitur suscipit tempus nunc. Proin non vehicula mauris. Sed eu erat eget ligula varius ullamcorper. . </p>
+					<md-button class="schoolButtonWhiteOnBlue schoolButton md-raised center-this rightThis" ng-click="showInfo('infoDefault')">Got it. Thanks.</md-button>
+				</div>
+			</div>
+
+			<div id="info2" class="sitePageWidth hideInitially">
+				<div class="infoArea">
+					<h3>Enrollment Information</h3>
+					<p>Curabitur a risus tristique lectus pellentesque ultrices quis sed diam. In ullamcorper nibh mi, sit amet ultricies neque laoreet quis. Aliquam erat volutpat. Ut quis facilisis lorem. Curabitur suscipit tempus nunc. Proin non vehicula mauris. Sed eu erat eget ligula varius ullamcorper. Ut dignissim neque a pellentesque faucibus. Vivamus ultrices volutpat pretium. Donec semper tempus mauris ut hendrerit. </p>
+					<md-button class="schoolButtonWhiteOnBlue schoolButton md-raised center-this rightThis" ng-click="showInfo('infoDefault')">Got it. Thanks.</md-button>
+				</div>
+			</div>
+
+			<div id="info3" class="sitePageWidth hideInitially">
+				<div class="infoArea">
+					<h3>Waivers Info</h3>
+					<p>Aliquam erat volutpat. Ut quis facilisis lorem. Curabitur suscipit tempus nunc. Proin non vehicula mauris. Sed eu erat eget ligula varius ullamcorper. Ut dignissim neque a pellentesque faucibus. Vivamus ultrices volutpat pretium. Donec semper tempus mauris ut hendrerit. Aenean maximus turpis neque, sit amet lacinia ligula laoreet ut. Nunc viverra congue mauris et fringilla. Sed porttitor urna risus. </p>
+					<md-button class="schoolButtonWhiteOnBlue schoolButton md-raised center-this rightThis" ng-click="showInfo('infoDefault')">Got it. Thanks.</md-button>
+				</div>
+			</div>
+
+			<div id="info4" class="sitePageWidth hideInitially">
+				<div class="infoArea">
+					<h3>Provider Info</h3>
+					<p>Aliquam erat volutpat. Ut quis facilisis lorem. Curabitur suscipit tempus nunc. Proin non vehicula mauris. Sed eu erat eget ligula varius ullamcorper. Ut dignissim neque a pellentesque faucibus. Vivamus ultrices volutpat pretium. Donec semper tempus mauris ut hendrerit. Aenean maximus turpis neque, sit amet lacinia ligula laoreet ut. Nunc viverra congue mauris et fringilla. Sed porttitor urna risus. </p>
+					<md-button class="schoolButtonWhiteOnBlue schoolButton md-raised center-this rightThis" ng-click="showInfo('infoDefault')">Got it. Thanks.</md-button>
+				</div>
+			</div>
+
+		</div>
+</div>
+<!-- ///////////////////////////////// -->
+<!-- (END) SCHOOL CONTENT -->
+
+		<div id="schoolTopMenu3">
+			<div id="schoolInputSelect" style="float:right;">
+				<md-input-container class="md-block">
+					<md-select ng-model="policyYearModel" 
+						md-selected-text="getPolicyYear()" 
+						aria-label="Policy Year" 
+						ng-change="schoolPage('schoolPage2')">
+						<md-option ng-value="item" ng-repeat="item in policyYears">
+							{{item}}
+						</md-option>
+					</md-select>
+				</md-input-container>
+			</div>
+			<br clear="all" />
+		</div>
+
+	</section>
+
+	<!-- on first page background behind ambulance is white instead of gray
+		  controller will add class when user proceeds to another page
+		-->
+	<section id="schoolBottom"> 
+
+		<!-- gray background above stretches beyond page width below -->
+		<div class="sitePageWidth">
+
+			<div id="schoolPage2" class="centerThis hideInitially">
+				<div id="policyMessage" class="uhcGray">
+					To begin, choose a policy tag.
+				</div>
+
+				<div id="tagBar">
+					<div id="tagWrapper">
+						<md-button class="schoolButtonWhiteOnBlue schoolButton md-raised center-this" ng-click="showPolicy('all')">All</md-button>
+						<md-button id="policyDU" class="schoolButtonWhiteOnOrange schoolButton md-raised center-this" ng-click="showPolicy('policyDU')">Domestic Undergraduate Student Plan</md-button>
+						<md-button id="policyDUClose" class="hideInitially schoolButtonWhiteOnOrange schoolButton md-raised center-this" ng-click="showPolicy('policyDU')">Domestic Undergraduate Student Plan <img src="img/iconCloseCircleWhite.png" class="closePolicyFilter" /></md-button>
+						<md-button id="policyIS" class="schoolButtonWhiteOnGreen schoolButton md-raised center-this" ng-click="showPolicy('policyIS')">International Students &amp; Scholars</md-button>
+						<md-button id="policyISClose" class="hideInitially schoolButtonWhiteOnGreen schoolButton md-raised center-this" ng-click="showPolicy('policyIS')">International Students &amp; Scholars <img src="img/iconCloseCircleWhite.png" class="closePolicyFilter" /></md-button>
+						<md-button id="policyGP" class="schoolButtonWhiteOnYellow schoolButton md-raised center-this" ng-click="showPolicy('policyGP')">Graduate Plan</md-button>
+						<md-button id="policyGPClose" class="hideInitially schoolButtonWhiteOnYellow schoolButton md-raised center-this" ng-click="showPolicy('policyGP')">Graduate Plan <img src="img/iconCloseCircleWhite.png" class="closePolicyFilter" /></md-button>
+					</div>
+				</div>
+
+				<div id="policyImportantMessage">
+					<md-card class="policyMessageCard">
+						<div class="policyMessage uhcGray">
+							<span class="uhcFontBold">Important Announcement:</span> <span class="importantMessage">Lorem ipsum dolor sit amet, consectetur adipiscing elit. </span>
+							<a id="closeImportantMessage" href="" ng-click="policyMessageClose()"><img src="img/iconCloseCircle.png" class="closePolicyMessage" /></a>
+						</div>
+					</md-card>
+				</div>
+
+				<div class="policyColumn"> 
+					<div class="policyDU policyCardWrapper">
+						<md-card class="schoolPolicyCard">
+							<div class="policyCardMessage uhcGray">
+								<span class="uhcFontBold">Domestic Undergraduate Student Plan</span><span class="schoolCircle schoolButtonWhiteOnOrange">DU</span><br><span class="uhcFontLight uhcGray">Policy #2015-38-1</span>
+							</div>
+							<md-card-actions layout="row" layout-align="end center">
+							<md-button class="uhcLightBlue explorePolicy" ng-click="schoolPage('schoolPage3')"><span class="uhcFontBold">EXPLORE POLICY</span></md-button>
+							</md-card-actions>
+						</md-card>
+					</div>
+
+					<div class="policyDU policyCardWrapper">
+						<md-card class="schoolPolicyCard">
+							<div class="policyCardMessage uhcGray">
+								<span class="uhcFontBold">Domestic Undergraduate Dental Plan</span><span class="schoolCircle schoolButtonWhiteOnOrange">DU</span><br><span class="uhcFontLight uhcGray">Policy #2015-38-1</span>
+							</div>
+							<md-card-actions layout="row" layout-align="end center">
+							<md-button class="uhcLightBlue explorePolicy" ng-click="schoolPage('schoolPage3')"><span class="uhcFontBold">EXPLORE POLICY</span></md-button>
+							</md-card-actions>
+						</md-card>
+					</div>
+
+					<div class="policyIS policyCardWrapper">
+						<md-card class="schoolPolicyCard">
+							<div class="policyCardMessage uhcGray">
+								<span class="uhcFontBold">International Students & Scholars Plan</span><span class="schoolCircle schoolButtonWhiteOnGreen">IS</span><br><span class="uhcFontLight uhcGray">Policy #2015-38-1</span>
+							</div>
+							<md-card-actions layout="row" layout-align="end center">
+							<md-button class="uhcLightBlue explorePolicy" ng-click="schoolPage('schoolPage3')"><span class="uhcFontBold">EXPLORE POLICY</span></md-button>
+							</md-card-actions>
+						</md-card>
+					</div>
+
+					<div class="policyGP policyCardWrapper">
+						<md-card class="schoolPolicyCard">
+							<div class="policyCardMessage uhcGray">
+								<span class="uhcFontBold">Gradulate Plan</span><span class="schoolCircle schoolButtonWhiteOnYellow">GP</span><br><span class="uhcFontLight uhcGray">Policy #2015-38-1</span>
+							</div>
+							<md-card-actions layout="row" layout-align="end center">
+							<md-button class="uhcLightBlue explorePolicy" ng-click="schoolPage('schoolPage3')"><span class="uhcFontBold">EXPLORE POLICY</span></md-button>
+							</md-card-actions>
+						</md-card>
+					</div>
+
+					<div class="policyGP policyCardWrapper">
+						<md-card class="schoolPolicyCard">
+							<div class="policyCardMessage uhcGray">
+								<span class="uhcFontBold">Graduate Plan Dental</span><span class="schoolCircle schoolButtonWhiteOnYellow">GP</span><br><span class="uhcFontLight uhcGray">Policy #2015-38-1</span>
+							</div>
+							<md-card-actions layout="row" layout-align="end center">
+							<md-button class="uhcLightBlue explorePolicy" ng-click="schoolPage('schoolPage3')"><span class="uhcFontBold">EXPLORE POLICY</span></md-button>
+							</md-card-actions>
+						</md-card>
+					</div>
+				</div>
+			</div>	<!-- END school page 2 -->
+	
+			<!-- school page 3 -->
+
+			<!-- SCHOOL ENROLLMENT CARD -->
+			<!-- \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\ -->
+			<div id="policyCardExpanded" >
+			<div id="schoolPage3" class="centerThis  hideInitially">
+				<div flex-sm layout="column">
+					<div class="schoolBigCard">
+						<div class="schoolCardArea">
+							<a ng-click="schoolPage('schoolPage2')" class="button" ><img src="img/iconCloseCircle.png" class="iconCloseSchool growSomeOnHover" /></a>
+							<h2 class="policyCardMessage uhcFontBold uhcGray">
+								Domestic Undergraduate Student Plan
+							</h2>
+							<h3 class="policyCardMessage uhcFontLight uhcMediumGray">
+								Policy #2015-38-1
+							</h3>
+						</div>	<!-- .schoolCardArea -->
+						<div class="schoolCardArea">
+
+				<section id="explorePolicy" class="sectionExplorePolicy">
+					<div id="marginUnderNavBar" class="hideInitially"></div>
+					<div id="explorePolicy-single-column">
+						<div ng-cloak>
+
+
+						<!-- MOBILE POLICY DOCUMENT NAVIGATION -->
+						<!-- \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\ -->
+							<div class="displayMobileOnly">
+								<!--MOBILE MENU -->
+								<!-- \\\\\\\\\\\\\\\\\\\\\\\\\\\\\ -->
+								<div id="mobileExplorePolicyMenu1" class="">
+									<div class="fingerSlider enroll1" >
+										<a class="uhcBlueLink uhcFontBold" href="" ng-click="togglePolicyMenuMobile('mobileExplorePolicyMenu1')">Plan Documents</a>
+										<a class="uhcBlueLink" href="" 			   ng-click="togglePolicyMenuMobile('mobileExplorePolicyMenu2')">Value Added Benefits</a>
+									</div>
+								<!-- DOCUMENT OPTIONS -->
+										<div class="fingerSlider enroll2" >
+											<a class="uhcBlackLink" ng-click="scrollTo('a')" href="">Brochures</a>
+											<a class="uhcBlackLink" ng-click="scrollTo('b')" href="">Summary Documents</a>
+											<a class="uhcBlackLink" ng-click="scrollTo('c')" href="">Enrollment Documents</a>
+										</div>								
+								</div>
+								<!-- MOBILE MENU - (STATE CHANGE) -->
+								<div id="mobileExplorePolicyMenu2" class="hideInitially">			
+									<div class="fingerSlider enroll1" >
+										<a class="uhcBlueLink" 			   href="" 	ng-click="togglePolicyMenuMobile('mobileExplorePolicyMenu1')">Plan Documents</a>
+										<a class="uhcBlueLink uhcFontBold" href="" 	ng-click="togglePolicyMenuMobile('mobileExplorePolicyMenu2')">Value Added Benefits</a>
+									</div>
+								<!-- VALUE ADDED BENEFIT SUMMARIES -->
+									<div class="mobileExplorePolicyWrapper">
+										<div class="fingerSlider enroll2" >
+											<a href="" ng-click="showPolicyDisplay('policyDisplay2')" class="uhcBlackLink">HealthiestYou: Telehealth</a>
+											<a href="" ng-click="showPolicyDisplay('policyDisplay3')" class="uhcBlackLink">Discount Plan</a>
+											<a href="" ng-click="showPolicyDisplay('policyDisplay4')" class="uhcBlackLink">Global Emergency Services</a>
+											<a href="" ng-click="showPolicyDisplay('policyDisplay5')" class="uhcBlackLink">Student Assistant Program</a>
+											<a href="" ng-click="showPolicyDisplay('policyDisplay6')" class="uhcBlackLink">Nurseline</a>
+										</div>										
+									</div> 
+								</div>
+							</div>
+							<!--  /////////////////////////////////////// -->
+							<!--  (END) MOBILE POLICY DOCUMENT NAVIGATION -->
+
+							<div layout="row">
+								<div flex="30" id="sideNavLeft" class="displayFullOnly">
+									<a class="uhcLightBlue" ng-click="showPolicyDisplay('policyDisplay1')" href=""><div class="uhcLightBlue sideNavLeftBox explorePolicyGroup">Policy Documents</div></a>								
+									<a class="uhcLightBlue" ng-click="scrollTo('a')" href=""><div class="sideNavLeftBox">Brochures</div></a>
+									<a class="uhcLightBlue" ng-click="scrollTo('b')" href=""><div class="sideNavLeftBox">Summary Documents</div></a>
+									<a class="uhcLightBlue" ng-click="scrollTo('c')" href=""><div class="sideNavLeftBox">Enrollment Documents</div></a>
+									<a class="uhcLightBlue" ng-click="showPolicyDisplay('policyDisplay2')" href=""><div class="uhcLightBlue sideNavLeftBox explorePolicyGroup">Value Added Benefits</div></a>								
+									<a class="uhcLightBlue" ng-click="showPolicyDisplay('policyDisplay2')" href=""><div class="sideNavLeftBox">HealthiestYou: Telehealth</div></a>
+									<a class="uhcLightBlue" ng-click="showPolicyDisplay('policyDisplay3')" href=""><div class="sideNavLeftBox">Discount Plan</div></a>
+									<a class="uhcLightBlue" ng-click="showPolicyDisplay('policyDisplay4')" href=""><div class="sideNavLeftBox">Global Emergency Services</div></a>
+									<a class="uhcLightBlue" ng-click="showPolicyDisplay('policyDisplay5')" href=""><div class="sideNavLeftBox">Student Assistant Program</div></a>
+									<a class="uhcLightBlue" ng-click="showPolicyDisplay('policyDisplay6')" href=""><div class="sideNavLeftBox">Nurseline</div></a>
+
+								</div>
+								<div flex="100" flex-gt-sm="70" id="sideNavRight" class="policyContentScrollable" >
+									<div class="displayFullOnly"></div>
+									<div id="policyDisplay1">
+										<a id="a"></a><h2 class="explorePolicyIndex">Brochures</h2>
+										  <p><a href="" class="uhcBlackLink">2015-1 Brochure - NOC2 (update 9/22/2016)</a></p>
+										<a id="b"></a><h2 class="explorePolicyIndex">Summary Documents</h2>
+										<p><a href="" class="uhcBlackLink">2015-1 Summary Documents</a></p>
+									</div>
+									<div id="policyDisplay2" class="hideInitially">
+										<h2 class="explorePolicyIndex">HealthiestYou: Telehealth</h2>
+										<p>Doctors are making house calls again! Included with your student insurance plan, and provided by HealthiestYou, is 24/7/365 access to board-certified physicians online or on the phone (where permitted). Totally worth it for minor stuff (like allergies, pink eye and earaches), the doctors on Telehealth can even send your prescription to your preferred pharmacy. The future is here!<br />
+Telehealth can be a win/win:
+<br />
+</p>
+
+										<ul>
+											<li>Talk to a licensed physician 24 hours a day, 7 days a week.</li>
+											<li>Pay no consultation fee.</li>
+                                            <li>Save money and time.</li>
+											<li>Toll free # is on your SR ID card or in My Account</li>
+										</ul>
+
+									</div>
+									<div id="policyDisplay3" class="hideInitially">
+										<h2 class="explorePolicyIndex">Discount Plan</h2>
+										<p>
+											This idea is pretty simple: Save between 5% and 50% on healthcare-related items that may not be covered under your student insurance plan. From gym memberships to teeth whitening – the UnitedHealth Allies discount program saves you money at the point of purchase. It’s not insurance. There are no claim forms and there’s no limit to how much you can save every year!<br />
+Save on: <br /></p>
+										<ul>
+											<li>Cosmetic dental services (ready for that WHITE smile?)</li>
+											<li>Gym memberships, active apparel and fitness equipment</li> 
+											<li>Annual eye exams, eyeglasses, contact lenses, even LASIK vision correction surgery</li>
+											<li>Natural foods, teas, vitamins and supplements, and skin care products</li>
+											<li>Learn more at www.sr.unitedhealthallies.com.</li>
+										</ul>
+										
+
+									</div>
+									<div id="policyDisplay4" class="hideInitially">
+										<h2 class="explorePolicyIndex">Global Emergency Services</h2>
+										<p>One of our superheroes, GES tells great stories about saving the day for students who are studying or traveling in other states or other countries. When you’re at least 100 miles from home and you’re sick or hurt, GES steps in and steps up with immediate access to doctors, hospitals and pharmacies in unfamiliar places. In the extreme, they’ll even help you get you home if you need to be medically evacuated.<br /> 
+										GES’ superpowers include: </p>
+										<ul>								
+											<li>Medical Assistance Service</li>
+											<li>Medical Evacuation and Repatriation Services</li>
+											<li>Security and Natural Disaster</li>
+											<li>Evacuation Services</li>
+											<li>Worldwide Destination Intelligence</li>
+											<li>Travel Assistance Services</li>
+											<li>Toll free # is on your SR ID card or in My Account</li>
+										</ul>
+									</div>
+									<div id="policyDisplay5" class="hideInitially">
+										<h2 class="explorePolicyIndex">Student Assistant Program</h2>
+										<p>
+											College just isn’t easy! SAP counselors are there to help you deal with everything from missing your mom to helping review your lease. Call any time, any day. Talk to us about anything and everything – it’s all totally confidential! Not so comfortable on the phone? No worries – SAP’s online too. <br />
+Included with your student insurance plan, call if you need:<br />
+										</p>
+										<ul>
+											<li>Someone to talk to</li> 
+											<li>A lawyer’s advice</li>
+											<li>Answers with financial questions</li>
+											<li>To work something out in mediation</li>
+											<li>Toll free # is on your SR ID card or in My Account</li>
+										</ul>
+									</div>
+									<div id="policyDisplay6" class="hideInitially">
+										<h2 class="explorePolicyIndex">Nurseline</h2>
+										<p>Being in charge of your own health is actually a big deal, you’ll probably have a lot of questions. Call the team of registered nurses at NurseLine any time to get answers. Knowledge equals power! Call Nurseline and take control of your healthcare.  <br />
+Call NurseLine when you: 
+<br /></p>
+
+									<ul>
+										<li>Aren’t sure if you have a serious medical problem</li>
+										<li>Want to learn how to take care of a new or chronic condition</li>
+										<li>Need information about medications, tests or procedures</li>
+										<li>Want to find new ways to talk effectively with your health care provider</li>
+										<li>Toll free # is on your SR ID card or in My Account</li>
+									</ul>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</section> <!-- #explorePolicy -->
+
+
+						</div>	<!-- .schoolCardArea -->
+						<div class="schoolCardNavLinks">
+							<div>
+								<!-- <md-button class="schoolBottomLinks uhcFontBold uhcLightBlue" ng-click="schoolPage('schoolPage2')">BACK</md-button> -->
+								<md-button class="schoolBottomLinks uhcFontBold uhcLightBlue rightThis" ng-click="schoolPage('schoolPage4')">ENROLL NOW</md-button>
+							</div>
+
+						</div>	<!-- .schoolCardArea -->
+					</div>	<!-- .schoolBigCard -->
+				</div>	<!-- flex column -->
+			</div>	<!-- #schoolPage3 -->
+
+			<!-- school page 4 -->
+
+			<div id="schoolPage4" class="centerThis  hideInitially">
+				<div flex-sm layout="column">
+					<div class="schoolBigCard">
+						<div class="schoolCardArea">
+							<a ng-click="schoolPage('schoolPage2')" class="button" ><img src="img/iconCloseCircle.png" class="iconCloseSchool growSomeOnHover" /></a>
+							<h2 class="policyCardMessage uhcFontBold uhcGray">
+								Domestic Undergraduate Student Plan
+							</h2>
+							<h3 class="policyCardMessage uhcFontLight uhcMediumGray">
+								Policy #2015-38-1
+							</h3>
+						</div>	<!-- .schoolCardArea -->
+						
+						<div class="schoolCardArea">
+						<h3 class="schoolStepTitle uhcFontBold">Step 1 - Basic Info</h3>
+						<div class="schoolProgress">
+							 <span class="progressSymbol">
+								<div class="progressDot1 uhcBlue uhcBlueBackground"> </div>
+								<div class="progressDot2 uhcLightBlue uhcLightBlueBackground"> </div>
+								<div class="progressDot3 uhcLightBlue uhcLightBlueBackground"> </div>
+								<div class="progressDot4 uhcLightBlue uhcLightBlueBackground"> </div>
+								<div class="progressDot5 uhcLightBlue uhcLightBlueBackground"> </div>
+							</span>
+						</div>
+						<p class="centerText">Hi there! Tell us a little bit about yourself.</p>
+							<div class="formFieldNarrow">
+								<div id="schoolInputSelect">
+									<div class="formFieldLabel uhcFontBold uhcGray" style="text-align:center;">What insurance category best describes you?</div>
+									<md-input-container class="md-block formWidth9em" style="margin:auto;">
+										<md-select ng-model="selectOptionStep1CategoryModel" 
+											placeholder="Category"
+											aria-label="Category">
+											<md-option ng-value="item" ng-repeat="item in selectOptionStep1CategoryItems">
+												{{item}}
+											</md-option>
+										</md-select>
+									</md-input-container>
+
+									<div class="formFieldLabel uhcFontBold uhcGray marginTop2em">Birthday</div>
+									<div layout="row">
+										<md-input-container class="marginRight1em">
+											<md-select ng-model="selectOptionBirthMonthModel" 
+												placeholder="Month"
+												aria-label="Month">
+												<md-option ng-value="item" ng-repeat="item in selectOptionBirthMonthItems">
+													{{item}}
+											</md-option>
+											</md-select>
+										</md-input-container>
+										<md-input-container class="marginRight1em">
+											<md-select ng-model="selectOptionBirthDayOfMonthModel" 
+												placeholder="Day"
+												aria-label="Day">
+												<md-option ng-value="item" ng-repeat="item in selectOptionBirthDayOfMonthItems">
+													{{item}}
+											</md-option>
+											</md-select>
+										</md-input-container>								
+										<md-input-container>
+											<md-select ng-model="selectOptionBirthYearModel" 
+												placeholder="Year"
+												aria-label="Year">
+												<md-option ng-value="item" ng-repeat="item in selectOptionBirthYearItems">
+													{{item}}
+											</md-option>
+											</md-select>
+										</md-input-container>								
+									</div> <!-- layout row -->
+
+									<div class="formFieldLabel uhcFontBold uhcGray marginTop2em">Spouse</div>
+									<div class="centerText">
+										<md-radio-group ng-model="selectRadioStep1SpouseModel" class="uhcRadio" md-no-ink>
+											<md-radio-button value="Step1SpouseNo" aria-label="No" class="marginRight3em">
+											  No
+											</md-radio-button>
+											<md-radio-button value="Step1SpouseYes" aria-label="Yes">
+											  Yes
+											</md-radio-button>
+										</md-radio-group>
+									</div>
+
+									<div class="formFieldLabel uhcFontBold uhcGray marginTop2em">Number of Children?</div>
+									<md-input-container class="md-block formWidth6em">
+										<md-select ng-model="selectOptionStep1ChildrenModel" 
+											aria-label="Select an Option" placeholder="0">
+											<md-option ng-value="item" ng-repeat="item in selectOptionStep1ChildrenItems">
+												{{item}}
+										</md-option>
+										</md-select>
+									</md-input-container>
+								</div>	<!-- #schoolInputSelect -->
+
+							</div> <!-- .formFieldNarrow -->						</div>	<!-- .schoolCardArea -->
+						<div class="schoolCardNavLinks">
+							<div>
+								<md-checkbox id="readAllDocsCheckbox" ng-disabled="false" aria-label="Checkbox" ng-click="schoolStep1CheckboxChanged()" md-no-ink ng-model="account.checkbox1" class="uhcCheckbox">
+										I have read all applicable plan documents.
+									</md-checkbox>
+								<md-button  id="readAllDocsStep1Next" class="schoolBottomLinks uhcFontBold  rightThis uhcDisabledLightBlue" ng-click="schoolStep1NextClicked()">NEXT</md-button>
+							</div>
+
+						</div>	<!-- .schoolCardArea -->
+					</div>	<!-- .schoolBigCard -->
+				</div>	<!-- flex column -->
+			</div>	<!-- #schoolPage4 -->
+
+			<!-- school page 5 -->
+
+			<div id="schoolPage5" class="centerThis hideInitially">
+				<div flex-sm layout="column">
+					<div class="schoolBigCard">
+						<div class="schoolCardArea">
+							<a ng-click="schoolPage('schoolPage2')" class="button" ><img src="img/iconCloseCircle.png" class="iconCloseSchool growSomeOnHover" /></a>
+							<h2 class="policyCardMessage uhcFontBold uhcGray">
+								Domestic Undergraduate Student Plan
+							</h2>
+							<h3 class="policyCardMessage uhcFontLight uhcMediumGray">
+								Policy #2015-38-1
+							</h3>
+						</div>	<!-- .schoolCardArea -->
+						
+						<div class="schoolCardArea">
+						<h3 class="schoolStepTitle uhcFontBold">Step 2 - Select a policy Term</h3>
+						<div class="schoolProgress">
+							 <span class="progressSymbol">
+								<div class="progressDot1 uhcLightBlue uhcLightBlueBackground"> </div>
+								<div class="progressDot2 uhcBlue uhcBlueBackground"> </div>
+								<div class="progressDot3 uhcLightBlue uhcLightBlueBackground"> </div>
+								<div class="progressDot4 uhcLightBlue uhcLightBlueBackground"> </div>
+								<div class="progressDot5 uhcLightBlue uhcLightBlueBackground"> </div>
+							</span>
+						</div>
+						<div class="displayFullOnly">
+						<p class="centerText">Nice! We made these just for you.<br>Choose from <strong>1</strong> policy option below.</p>
+
+							<div class="schoolFormLabelPadding uhcFontBold uhcLightBlue marginTop2em">Important Message: Sample schools specific message.</div>	
+
+							<div id="schoolStep2Table">
+								<table>
+									<tr>
+										<th>Select Policy</th>
+										<th>Term</th>
+										<th>Student</th>
+										<th>Spouse</th>
+										<th>Child</th>
+										<th>Price</th>
+										<th></th>
+									</tr>
+									<tr>
+										<td>Summer</td>
+										<td>5/7/2016 - 8/16/2016</td>
+										<td>$531.00</td>
+										<td>$531.00</td>
+										<td>$531.00</td>
+										<td class="total">$1,593.00</td>
+										<td><md-checkbox ng-disabled="false" aria-label="Checkbox to select this policy"  md-no-ink ng-model="schoolForm.checkboxSelectPolicy1" class="uhcCheckbox"></md-checkbox></td>
+									</tr>
+								</table>
+							</div>
+						</div>
+						<div class="displayMobileOnly">
+							<div class="schoolFormLabelPadding uhcFontBold uhcLightBlue marginTop2em">Important Message: Sample schools specific message.</div>	
+						<div id="schoolStep2MobileBlueBox">
+							<div class="numbersLeft schoolFormLabelPadding">
+								<div class="leftThis uhcBlack uhcFontBold">Summer</div>
+								<div class="rightThis">
+									5/7/2016 - 8/16/2016
+								</div>
+							</div>
+
+							<div id="schoolStep2MobilePolicyList" class="marginTop4em ">
+								<div class="rightThis rightText">
+									Total - <span class="uhcFontBold">$1,593.00</span>
+<md-checkbox ng-disabled="false" aria-label="Checkbox to select this policy"  md-no-ink ng-model="schoolForm.checkboxSelectPolicy1" class="uhcCheckbox"></md-checkbox>
+								</div>
+							</div>
+						</div>
+
+						</div>
+						</div>	<!-- .schoolCardArea -->
+						<div class="schoolCardNavLinks">
+							<div>
+								<md-button class="schoolBottomLinks uhcFontBold uhcLightBlue" ng-click="schoolPage('schoolPage4')">BACK</md-button>
+								<md-button class="schoolBottomLinks uhcFontBold uhcLightBlue rightThis" ng-click="schoolPage('schoolPage6')">NEXT</md-button>
+							</div>
+
+						</div>	<!-- .schoolCardArea -->
+					</div>	<!-- .schoolBigCard -->
+				</div>	<!-- flex column -->
+			</div>	<!-- #schoolPage5 -->
+
+			<!-- school page 6 -->
+
+			<div id="schoolPage6" class="centerThis  hideInitially">
+				<div flex-sm layout="column">
+					<div class="schoolBigCard">
+						<div class="schoolCardArea">
+							<a ng-click="schoolPage('schoolPage2')" class="button" ><img src="img/iconCloseCircle.png" class="iconCloseSchool growSomeOnHover" /></a>
+							<h2 class="policyCardMessage uhcFontBold uhcGray">
+								Domestic Undergraduate Student Plan
+							</h2>
+							<h3 class="policyCardMessage uhcFontLight uhcMediumGray">
+								Policy #2015-38-1
+							</h3>
+						</div>	<!-- .schoolCardArea -->
+						
+						<div class="schoolCardArea">
+						<h3 class="schoolStepTitle uhcFontBold">Step 3 - Account Status</h3>
+						<div class="schoolProgress">
+							 <span class="progressSymbol">
+								<div class="progressDot1 uhcLightBlue uhcLightBlueBackground"> </div>
+								<div class="progressDot2 uhcLightBlue uhcLightBlueBackground"> </div>
+								<div class="progressDot3 uhcBlue uhcBlueBackground"> </div>
+								<div class="progressDot4 uhcLightBlue uhcLightBlueBackground"> </div>
+								<div class="progressDot5 uhcLightBlue uhcLightBlueBackground"> </div>
+							</span>
+						</div>
+						<p class="centerText">Do you already have an account? If so, login now.<br>If not - No problem, we will create one for you at the end of the process.</p>
+						<div class="centerText">
+							<md-button id="accountButton" class="md-raised " ng-href="login.html">Log In</md-button>
+						</div>
+						<div class="centerText marginTop2em">
+							<a href="javascript:void(0)" ng-click="schoolPage('schoolPage7')" class="uhcLightBlue underlineThis fontSize16Required">I need to create an account. </a>
+						</div>
+						</div>	<!-- .schoolCardArea -->
+						<div class="schoolCardNavLinks">
+							<div>
+								<md-button class="schoolBottomLinks uhcFontBold uhcLightBlue" ng-click="schoolPage('schoolPage5')">BACK</md-button>
+							</div>
+
+						</div>	<!-- .schoolCardArea -->
+					</div>	<!-- .schoolBigCard -->
+				</div>	<!-- flex column -->
+			</div>	<!-- #schoolPage6 -->
+
+			<!-- school page 7 -->
+
+			<div id="schoolPage7" class="centerThis  hideInitially">
+				<div flex-sm layout="column">
+					<div class="schoolBigCard">
+						<div class="schoolCardArea">
+							<a ng-click="schoolPage('schoolPage2')" class="button" ><img src="img/iconCloseCircle.png" class="iconCloseSchool growSomeOnHover" /></a>
+							<h2 class="policyCardMessage uhcFontBold uhcGray">
+								Domestic Undergraduate Student Plan
+							</h2>
+							<h3 class="policyCardMessage uhcFontLight uhcMediumGray">
+								Policy #2015-38-1
+							</h3>
+						</div>	<!-- .schoolCardArea -->
+						
+						<div class="schoolCardArea">
+						<h3 class="schoolStepTitle uhcFontBold">Step 4 - Tell Us About Yourself</h3>
+						<div class="schoolProgress">
+							 <span class="progressSymbol">
+								<div class="progressDot1 uhcLightBlue uhcLightBlueBackground"> </div>
+								<div class="progressDot2 uhcLightBlue uhcLightBlueBackground"> </div>
+								<div class="progressDot3 uhcLightBlue uhcLightBlueBackground"> </div>
+								<div class="progressDot4 uhcBlue uhcBlueBackground"> </div>
+								<div class="progressDot5 uhcLightBlue uhcLightBlueBackground"> </div>
+							</span>
+						</div>
+						<p class="centerText">You select the <span class="uhcFontBold">Summer Term</span> for the <span class="uhcFontBold">Domestic Undergraduate Student Plan</span></p>
+							
+								<div class="schoolFormLabelPadding uhcFontBold uhcGray">Username & Password<br></div>	
+								<md-content layout-gt-sm="row" layout-padding>
+									<md-input-container class="md-block inputField12em">
+										<label>Username *</label>
+										<input required="" name="selfFirstName" ng-model="school.selfFirstName" md-no-asterisk="">
+										<div ng-messages="schoolForm.selfFirstName.$error">
+											<div ng-message="required">This is required.</div>
+										</div>
+									</md-input-container>
+									<md-input-container class="md-block inputField12em">
+										<label>Password *</label>
+										<input required="" name="selfLastName" ng-model="school.selfLastName" md-no-asterisk="">
+										<div ng-messages="schoolForm.selfLastName.$error">
+											<div ng-message="required">This is required.</div>
+										</div>
+									</md-input-container>
+									<md-input-container class="md-block inputField12em">
+										<label>Email</label>
+										<input required="" name="selfMiddleInitial" ng-model="school.selfMiddleInitial" md-no-asterisk="">
+										<div ng-messages="schoolForm.selfMiddleInitial.$error">
+											<div ng-message="required">This is required.</div>
+										</div>
+									</md-input-container>						
+								</md-content>
+
+								<div class="schoolFormLabelPadding uhcFontBold uhcGray">Personal Information<br></div>	
+								<md-content layout-gt-sm="row" layout-padding>
+									<md-input-container class="md-block inputField12em">
+										<label>First Name *</label>
+										<input required="" name="selfFirstName" ng-model="school.selfFirstName" md-no-asterisk="">
+										<div ng-messages="schoolForm.selfFirstName.$error">
+											<div ng-message="required">This is required.</div>
+										</div>
+									</md-input-container>
+									<md-input-container class="md-block inputField12em">
+										<label>Last Name *</label>
+										<input required="" name="selfLastName" ng-model="school.selfLastName" md-no-asterisk="">
+										<div ng-messages="schoolForm.selfLastName.$error">
+											<div ng-message="required">This is required.</div>
+										</div>
+									</md-input-container>
+									<md-input-container class="md-block inputField8em">
+										<label>Middle Initial</label>
+										<input required="" name="selfMiddleInitial" ng-model="school.selfMiddleInitial" md-no-asterisk="">
+										<div ng-messages="schoolForm.selfMiddleInitial.$error">
+											<div ng-message=""></div>
+										</div>
+									</md-input-container>
+									<div class="radioToggler">
+										<input id="schoolStep4SelfGenderMale" type="radio" name="schoolStep4SelfGender" value="radioGenderMale" />
+										<label class="radioTogglerOption" for="schoolStep4SelfGenderMale">MALE</label>
+										<input id="schoolStep4SelfGenderFemale" type="radio" name="schoolStep4SelfGender" value="radioGenderFemale" />
+										<label class="radioTogglerOption" for="schoolStep4SelfGenderFemale">FEMALE</label>
+									</div>							
+								</md-content>
+
+								<div class="marginTop2em displayMobileOnly"></div>
+								<md-content layout-gt-sm="row" layout-padding>
+									<md-input-container class="md-block inputField12em">
+										<label>Permanent Address *</label>
+										<input required="" name="permAddress" ng-model="school.permAddress" md-no-asterisk="">
+										<div ng-messages="schoolForm.permAddress.$error">
+											<div ng-message="required">This is required.</div>
+										</div>
+									</md-input-container>
+									<md-input-container class="md-block inputField12em">
+										<label>City *</label>
+										<input required="" name="permCity" ng-model="school.permCity" md-no-asterisk="">
+										<div ng-messages="schoolForm.permCity.$error">
+											<div ng-message="required">This is required.</div>
+										</div>
+									</md-input-container>
+									<md-input-container class="md-block inputField8em">
+										<label>State *</label>
+										<input required="" name="permState" ng-model="school.permState" md-no-asterisk="">
+										<div ng-messages="schoolForm.permState.$error">
+											<div ng-message="required">This is required.</div>
+										</div>
+									</md-input-container>
+									<md-input-container class="md-block inputField8em">
+										<label>Zipcode *</label>
+										<input required="" name="permZipcode" ng-model="school.permZipcode" md-no-asterisk="">
+										<div ng-messages="schoolForm.permZipcode.$error">
+											<div ng-message="required">This is required.</div>
+										</div>
+									</md-input-container>
+								</md-content>
+
+								<md-content layout-gt-sm="row" layout-padding>
+									<md-input-container class="md-block inputField8em">
+										<label>Phone Number *</label>
+										<input required="" name="permPhone" ng-model="school.permPhone" md-no-asterisk="">
+										<div ng-messages="schoolForm.permPhone.$error">
+											<div ng-message="required">This is required.</div>
+										</div>
+									</md-input-container>
+								</md-content>
+
+								<md-checkbox id="checkboxMailSame" ng-disabled="false" aria-label="Mailing Address is same"  md-no-ink ng-model="checkboxMailSameInitialState" class="uhcCheckbox" ng-click="checkboxMailSameToggle()">
+									Mailing Address is same as above
+								</md-checkbox>
+								<div id="mailingAddress" class="hideInitially">
+									<md-content layout-gt-sm="row" layout-padding>
+										<md-input-container class="md-block inputField12em">
+											<label>Mailing Address *</label>
+											<input required="" name="mailAddress" ng-model="school.mailAddress" md-no-asterisk="">
+											<div ng-messages="schoolForm.mailAddress.$error">
+												<div ng-message="required">This is required.</div>
+											</div>
+										</md-input-container>
+										<md-input-container class="md-block inputField12em">
+											<label>City *</label>
+											<input required="" name="mailCity" ng-model="school.mailCity" md-no-asterisk="">
+											<div ng-messages="schoolForm.mailCity.$error">
+												<div ng-message="required">This is required.</div>
+											</div>
+										</md-input-container>
+										<md-input-container class="md-block inputField8em">
+											<label>State *</label>
+											<input required="" name="mailState" ng-model="school.mailState" md-no-asterisk="">
+											<div ng-messages="schoolForm.mailState.$error">
+												<div ng-message="required">This is required.</div>
+											</div>
+										</md-input-container>
+										<md-input-container class="md-block inputField8em">
+											<label>Zipcode *</label>
+											<input required="" name="mailZipcode" ng-model="school.mailZipcode" md-no-asterisk="">
+											<div ng-messages="schoolForm.mailZipcode.$error">
+												<div ng-message="required">This is required.</div>
+											</div>
+										</md-input-container>
+									</md-content>
+								</div>
+
+								<div class="schoolFormLabelPadding uhcFontBold uhcGray">Verify Information</div>
+								<md-content layout-gt-sm="row" layout-padding>
+									<md-input-container class="md-block inputField12em">
+										<label>US SSN/ITIN</label>
+										<input type="text" required="" maxlength="11" md-maxlength="11" id="selfGovID" name="selfGovID" ng-focus="socialSecurityFormat ()" ng-model="school.selfGovID" >
+										<div ng-messages="schoolForm.selfGovID.$error">
+											<div ng-message="required">This is required.</div>
+										</div>
+									</md-input-container>
+									<md-input-container class="md-block inputField12em">
+										<label>School Assigned ID</label>
+										<input required="" name="schoolID" ng-model="school.schoolID" md-no-asterisk="">
+										<div ng-messages="schoolForm.schoolID.$error">
+											<div ng-message="required"></div>
+										</div>
+									</md-input-container>
+								</md-content>
+								<div class="schoolFormLabelPadding uhcFontBold uhcGray">Spouse Information<br></div>	
+								<md-content layout-gt-sm="row" layout-padding>
+									<md-input-container class="md-block inputField12em">
+										<label>First Name *</label>
+										<input required="" name="spouseFirstName" ng-model="school.spouseFirstName" md-no-asterisk="">
+										<div ng-messages="schoolForm.spouseFirstName.$error">
+											<div ng-message="required">This is required.</div>
+										</div>
+									</md-input-container>
+									<md-input-container class="md-block inputField12em">
+										<label>Last Name *</label>
+										<input required="" name="spouseLastName" ng-model="school.spouseLastName" md-no-asterisk="">
+										<div ng-messages="schoolForm.spouseLastName.$error">
+											<div ng-message="required">This is required.</div>
+										</div>
+									</md-input-container>
+									<md-input-container class="md-block inputField8em">
+										<label>Middle Initial</label>
+										<input required="" name="spouseMiddleInitial" ng-model="school.spouseMiddleInitial" md-no-asterisk="">
+										<div ng-messages="schoolForm.spouseMiddleInitial.$error">
+											<div ng-message=""></div>
+										</div>
+									</md-input-container>
+									<div class="radioToggler">
+										<input id="schoolStep4SpouseGenderMale" type="radio" name="schoolStep4SpouseGender" value="radioGenderMale" />
+										<label class="radioTogglerOption" for="schoolStep4SpouseGenderMale">MALE</label>
+										<input id="schoolStep4SpouseGenderFemale" type="radio" name="schoolStep4SpouseGender" value="radioGenderFemale" />
+										<label class="radioTogglerOption" for="schoolStep4SpouseGenderFemale">FEMALE</label>
+									</div>							
+								</md-content>
+
+								<div class="marginTop2em displayMobileOnly"></div>
+								<md-content layout-gt-sm="row" layout-padding>
+									<md-input-container class="md-block inputField12em">
+										<label>US SSN/ITIN</label>
+										<input type="text" required=""  maxlength="11" id="spouseGovID" name="spouseGovID"  ng-focus="socialSecurityFormat ()" required md-maxlength="11" ng-model="school.spouseGovID" >
+										<div ng-messages="schoolForm.spouseGovID.$error">
+											<div ng-message="required">This is required.</div>
+										</div>
+										<div class="formFieldSubLabel uhcBlue">Provide your spouse&rsquo;s SSN/ITIN</div>
+									</md-input-container>
+									<md-input-container class="md-block inputField12em">
+										<label>Passport Number</label>
+										<input required="" name="spousePassportNumber" ng-model="school.spousePassportNumber" md-no-asterisk="">
+										<div ng-messages="schoolForm.spousePassportNumber.$error">
+											<div ng-message="required"></div>
+										</div>
+										<div class="formFieldSubLabel uhcBlue">or Passport Number</div>
+									</md-input-container>
+									<md-input-container class="md-block inputField8em">
+										<label>Date of Birth *</label>
+										<input required="" name="spouseDateOfBirth" ng-model="school.spouseDateOfBirth" md-no-asterisk="">
+										<div ng-messages="schoolForm.spouseDateOfBirth.$error">
+											<div ng-message="required">This is required.</div>
+										</div>
+										<div class="formFieldSubLabel uhcBlue">(E.g. mm/dd/yyyy)</div>
+									</md-input-container>
+								</md-content>
+
+								<div class="schoolFormLabelPadding uhcFontBold uhcGray">Child Information<br></div>	
+								<md-content layout-gt-sm="row" layout-padding>
+									<md-input-container class="md-block inputField12em">
+										<label>First Name *</label>
+										<input required="" name="child1FirstName" ng-model="school.child1FirstName" md-no-asterisk="">
+										<div ng-messages="schoolForm.child1FirstName.$error">
+											<div ng-message="required">This is required.</div>
+										</div>
+									</md-input-container>
+									<md-input-container class="md-block inputField12em">
+										<label>Last Name *</label>
+										<input required="" name="child1LastName" ng-model="school.child1LastName" md-no-asterisk="">
+										<div ng-messages="schoolForm.child1LastName.$error">
+											<div ng-message="required">This is required.</div>
+										</div>
+									</md-input-container>
+									<md-input-container class="md-block inputField8em">
+										<label>Middle Initial</label>
+										<input required="" name="child1MiddleInitial" ng-model="school.child1MiddleInitial" md-no-asterisk="">
+										<div ng-messages="schoolForm.child1MiddleInitial.$error">
+											<div ng-message=""></div>
+										</div>
+									</md-input-container>
+									<div class="radioToggler">
+										<input id="schoolStep4Child1GenderMale" type="radio" name="schoolStep4Child1Gender" value="radioGenderMale" />
+										<label class="radioTogglerOption" for="schoolStep4Child1GenderMale">MALE</label>
+										<input id="schoolStep4Child1GenderFemale" type="radio" name="schoolStep4Child1Gender" value="radioGenderFemale" />
+										<label class="radioTogglerOption" for="schoolStep4Child1GenderFemale">FEMALE</label>
+									</div>							
+								</md-content>
+
+								<div class="marginTop2em displayMobileOnly"></div>
+								<md-content layout-gt-sm="row" layout-padding>
+									<md-input-container class="md-block inputField12em">
+										<label>US SSN/ITIN</label>
+										<input type="text"  maxlength="11" required="" id="child1GovID" name="child1GovID" ng-model="school.child1GovID" ng-focus="socialSecurityFormat ()" required md-maxlength="11">
+										<div ng-messages="schoolForm.child1GovID.$error">
+											<div ng-message="required"></div>
+										</div>
+										<div class="formFieldSubLabel uhcBlue">Provide your child&rsquo;s SSN/ITIN</div>
+									</md-input-container>
+									<md-input-container class="md-block inputField12em">
+										<label>Passport Number</label>
+										<input required="" name="child1PassportNumber" ng-model="school.child1PassportNumber" md-no-asterisk="">
+										<div ng-messages="schoolForm.child1PassportNumber.$error">
+											<div ng-message="required"></div>
+										</div>
+										<div class="formFieldSubLabel uhcBlue">or Passport Number</div>
+									</md-input-container>
+									<md-input-container class="md-block inputField8em">
+										<label>Date of Birth *</label>
+										<input required="" name="child1DateOfBirth" ng-model="school.child1DateOfBirth" md-no-asterisk="">
+										<div ng-messages="schoolForm.child1DateOfBirth.$error">
+											<div ng-message="required">This is required.</div>
+										</div>
+										<div class="formFieldSubLabel uhcBlue">(E.g. mm/dd/yyyy)</div>
+									</md-input-container>
+								</md-content>
+
+								<div class="schoolFormLabelPadding uhcFontBold uhcGray">Race &amp; Ethnicity Information<br></div>	
+								<div class="schoolFormLabelPadding uhcFontBold uhcLightBlue">This is a sample race &amp; ethnicity disclaimer message</div>
+								<md-checkbox ng-disabled="false" aria-label="Checkbox"  md-no-ink ng-model="schoolForm.checkbox1" class="uhcCheckbox">
+									I have read the request for information and choose not to supply a response.
+								</md-checkbox>
+
+								<div class="marginTop2em displayMobileOnly"></div>
+
+								<div id="schoolInputSelect" class="fullOnlyPaddingLeft7em">
+									<md-content layout-gt-sm="row" layout-padding>
+										<md-input-container class="md-block ">
+											<md-select ng-model="selectRaceModel" 
+												placeholder="Race"
+												aria-label="Race">
+												<md-option ng-value="item" ng-repeat="item in selectRaceItems">
+													{{item}}
+												</md-option>
+											</md-select>
+										</md-input-container>
+
+										<md-input-container class="md-block inputField12em formFieldMarginTopAlign">
+											<label>Other Race</label>
+											<input required="" name="otherRace" ng-model="school.otherRace" md-no-asterisk="">
+											<div ng-messages="schoolForm.otherRace.$error">
+												<div ng-message="required"></div>
+											</div>
+										</md-input-container>
+									</md-content>
+
+									<md-content id="schoolRaceInfo" layout-gt-sm="row" layout-padding>
+										<md-input-container class="md-block ">
+											<md-select ng-model="selectEthnicityModel" 
+												placeholder="Ethnicity"
+												aria-label="Ethnicity">
+												<md-option ng-value="item" ng-repeat="item in selectEthnicityItems">
+													{{item}}
+												</md-option>
+											</md-select>
+										</md-input-container>
+
+										<md-input-container class="md-block inputField12em formFieldMarginTopAlign">
+											<label>Other Ethnicity</label>
+											<input required="" name="otherEthnicity" ng-model="school.otherEthnicity" md-no-asterisk="">
+											<div ng-messages="schoolForm.otherEthnicity.$error">
+												<div ng-message="required"></div>
+											</div>
+										</md-input-container>
+									</md-content>
+
+									<md-content layout-gt-sm="row" layout-padding>
+										<md-input-container class="md-block ">
+											<md-select ng-model="selectLanguageModel" 
+												placeholder="Language"
+												aria-label="Language">
+												<md-option ng-value="item" ng-repeat="item in selectLanguageItems">
+													{{item}}
+												</md-option>
+											</md-select>
+										</md-input-container>
+
+										<div id="schoolStep4checkboxLanguage">
+											<md-checkbox ng-disabled="false" aria-label="Checkbox"  md-no-ink ng-model="schoolForm.checkboxLanguage" class="uhcCheckbox checkboxWide">
+												I choose not to supply a language preference.
+											</md-checkbox>
+										</div>
+
+									</md-content>
+								</div>
+			
+						</div>	<!-- .schoolCardArea -->
+						<div class="schoolCardNavLinks">
+							<div>
+								<md-button class="schoolBottomLinks uhcFontBold uhcLightBlue" ng-click="schoolPage('schoolPage6')">BACK</md-button>
+								<md-button class="schoolBottomLinks uhcFontBold uhcLightBlue rightThis" ng-click="schoolPage('schoolPage8')">NEXT</md-button>
+							</div>
+
+						</div>	<!-- .schoolCardArea -->
+					</div>	<!-- .schoolBigCard -->
+				</div>	<!-- flex column -->
+			</div>	<!-- #schoolPage7 -->
+
+			<!-- school page 8 -->
+
+			<div id="schoolPage8" class="centerThis hideInitially">
+				<div flex-sm layout="column">
+					<div class="schoolBigCard">
+						<div class="schoolCardArea">
+							<a ng-click="schoolPage('schoolPage2')" class="button" ><img src="img/iconCloseCircle.png" class="iconCloseSchool growSomeOnHover" /></a>
+							<h2 class="policyCardMessage uhcFontBold uhcGray">
+								Domestic Undergraduate Student Plan
+							</h2>
+							<h3 class="policyCardMessage uhcFontLight uhcMediumGray">
+								Policy #2015-38-1
+							</h3>
+						</div>	<!-- .schoolCardArea -->
+						
+						<div class="schoolCardArea">
+						<h3 class="schoolStepTitle uhcFontBold">Step 5 - Complete Purchase</h3>
+						<div class="schoolProgress">
+							 <span class="progressSymbol">
+								<div class="progressDot1 uhcLightBlue uhcLightBlueBackground"> </div>
+								<div class="progressDot2 uhcLightBlue uhcLightBlueBackground"> </div>
+								<div class="progressDot3 uhcLightBlue uhcLightBlueBackground"> </div>
+								<div class="progressDot4 uhcLightBlue uhcLightBlueBackground"> </div>
+								<div class="progressDot5 uhcBlue uhcBlueBackground"> </div>
+							</span>
+						</div>
+						<p class="centerText">You select the <span class="uhcFontBold">Summer Term</span> for the <span class="uhcFontBold">Domestic Undergraduate Student Plan</span><br><span class="uhcFontBold">Good through:</span> May 7, 2016 - August 16, 2016</p>
+						<p class="centerText"><a href="" ng-click="schoolPage('schoolPage2')" class="schoolBlueLinks uhcLightBlue">Change This</a></p>
+
+						<p style="text-align:center;">Insurance can be confusing. Please review your previous and existing coverage to make sure everything looks correct. </p>
+						
+						<div id="paymentConfirmation">
+							<!-- Existing Insurnace -->
+							<div class="existingInsurance">
+								<div class="schoolFormLabelPadding uhcFontBold uhcGray">Previous Coverage</div>								
+								<span data-coverage="policyNumber">Policy Number: #2015-381-1</span>
+								<span data-coverage="schoolName">School/Association Name: Auburn University</span> 
+								<span data-coverage="campus">Campus: Auburn University</span>
+								<span data-coverage="product">Product Name: Domestic Undergraduate Student Plan</span> 
+								<span data-coverage="coverageType">Coverage Type: Student</span>
+								<span data-coverage="effective">Effective Date: 1/7/2015</span>
+								<span data-coverage="expiration">Expiration Date: 4/30/2015</span>
+							</div>
+							<!-- New Coveage -->
+							<div class="newCoverage">
+								<div class="schoolFormLabelPadding uhcFontBold uhcGray">Selected Coverage</div>								
+								<span data-coverage="policyNumber">Policy Number: #2015-381-1</span>
+								<span data-coverage="schoolName">School/Association Name: Auburn University</span> 
+								<span data-coverage="campus">Campus: Auburn University</span>
+								<span data-coverage="product">Product Name: Domestic Undergraduate Student Plan</span> 
+								<span data-coverage="coverageType">Coverage Type: Student</span>
+								<span data-coverage="effective">Effective Date: 1/7/2016</span>
+								<span data-coverage="expiration">Expiration Date: 4/30/2016</span>								
+							</div>
+						</div>
+
+						
+								<div class="schoolFormLabelPadding uhcFontBold uhcGray">Payment Information<br></div>	
+								<div id="schoolStep5Payment">
+									<md-radio-group ng-model="selectRadioPlaymentModel" class="uhcRadio" md-no-ink>
+										<md-content layout-gt-sm="row" layout-padding>
+											<md-radio-button value="optionPayByEcheck" aria-label="Pay By Electronic Check"  ng-click="showPayment('on')">
+											  Pay By Electronic Check
+											</md-radio-button>
+											<div id="echeckFields" class="hideInitially">
+												<md-content layout-gt-sm="row" layout-padding>
+													<md-input-container class="md-block inputField12em">
+														<label>Routing Number</label>
+														<input type="password" required="" name="echeckRoutingNumber" ng-model="school.echeckRoutingNumber" md-no-asterisk="" md-maxlength="9">
+														<div ng-messages="schoolForm.echeckRoutingNumber.$error">
+															<div ng-message="required"></div>
+														</div>
+													</md-input-container>
+													<md-input-container class="md-block inputField12em">
+														<label>Account Number</label>
+														<input type="password" required="" name="echeckAccountNumber" ng-model="school.echeckAccountNumber" md-no-asterisk="">
+														<div ng-messages="schoolForm.echeckAccountNumber.$error">
+															<div ng-message="required"></div>
+														</div>
+													</md-input-container>
+												</md-content>
+											</div>
+										</md-content>
+
+										<md-content layout-gt-sm="row" layout-padding>
+											<md-radio-button value="optionPayByCreditCard" aria-label="Pay By Credit Card"  ng-click="showPayment('off')">
+											  Pay By Credit Card
+											</md-radio-button>
+										</md-content>
+									</md-radio-group>
+								</div>
+
+								<div class="schoolFormLabelPaddingNoTopMargin uhcFontBold uhcGray">Confirm Purchase<br></div>	
+								<div class="numbersLeft schoolFormLabelPadding">
+									<div class="leftThis uhcBlue">2015 Domestic Undergraduate Student Plan (All)</div>
+									<div class="rightThis">
+										$1,593.00
+									</div>
+								</div>
+
+								<div id="step5ElectToPurchase" class="numbersLeft schoolFormLabelPaddingNoTopMargin">
+									<div class="leftThis">
+										<md-checkbox ng-disabled="false" aria-label="Checkbox"  md-no-ink ng-model="schoolForm.checkbox1" class="uhcCheckbox">
+										I elect to purchase insurance coverage under this student insurance plan.<br>Above are the choices I have made.
+										</md-checkbox>
+									</div>
+									<div class="rightThis uhcFontBold">
+										TOTAL: $1,593.00
+									</div>
+								</div>
+
+
+						</div>	<!-- .schoolCardArea -->
+
+						<div class="schoolCardNavLinks">
+							<div>
+								<md-button class="schoolBottomLinks uhcFontBold uhcLightBlue" ng-click="schoolPage('schoolPage7')">BACK</md-button>
+								<md-button class="schoolBottomLinks uhcFontBold uhcLightBlue rightThis" ng-click="schoolPage('schoolPage9')">NEXT</md-button>
+							</div>
+
+						</div>	<!-- .schoolCardArea -->
+						
+						<div class="schoolCardArea">
+							<div class="schoolStep5Notice">
+								<p class="smallGrayText uhcFontBold ">NOTICE TO STUDENTS:</p>
+								<p class="smallGrayText ">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse ornare vel nunc eget convallis. Curabitur a risus tristique lectus pellentesque ultrices quis sed diam. In ullamcorper nibh mi, sit amet ultricies neque laoreet quis. Aliquam erat volutpat. Ut quis facilisis lorem. Curabitur suscipit tempus nunc. Proin non vehicula mauris. Sed eu erat eget ligula varius ullamcorper. Ut dignissim neque a pellentesque faucibus. Vivamus ultrices volutpat pretium. Donec semper tempus mauris ut hendrerit. Aenean maximus turpis neque, sit amet lacinia ligula laoreet ut. Nunc viverra congue mauris et fringilla. Sed porttitor urna risus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.</p>
+							</div>
+						</div>	<!-- .schoolCardNavLinks -->
+					</div>	<!-- .schoolBigCard -->
+				</div>	<!-- flex column -->
+			</div>	<!-- #schoolPage8 -->
+
+			<!-- school page 9 -->
+
+			<div id="schoolPage9" class="centerThis hideInitially">
+				<div flex-sm layout="column">
+					<div class="schoolBigCard">
+						<div class="schoolCardArea">
+							<a ng-click="schoolPage('schoolPage2')" class="button" ><img src="img/iconCloseCircle.png" class="iconCloseSchool growSomeOnHover" /></a>
+							<h2 class="policyCardMessage uhcFontBold uhcGray">
+								Domestic Undergraduate Student Plan
+							</h2>
+							<h3 class="policyCardMessage uhcFontLight uhcMediumGray">
+								Policy #2015-38-1
+							</h3>
+						</div>	<!-- .schoolCardArea -->
+						
+						<div class="schoolCardArea">
+						<div class="checkConfirm">
+							<img  src="img/iconCheckConfirm.svg">
+						</div>
+						<p class="centerText">Congratulations! You have successfully completed your purchase.<br>To review your purchase and manage your account, please log in below.</p>
+						<div class="centerText">
+							<p>You can also <a href="registration.html" class="uhcLightBlue underlineThis">Print Your Receipt</a></p>
+						</div>
+						<div class="centerText">
+							<md-button id="accountButton" class="md-raised " ng-href="login.html">Log In</md-button>
+						</div>
+						<p class="centerText uhcRed smallText">Please note, if you are enrolling in a policy that includes pharmacy benefits,<br>your benefits will be available 1-2 business days after your enrollment confirmation.</p>
+						</div>	<!-- .schoolCardArea -->
+						<div class="schoolCardNavLinks">
+							<div>								
+								<md-button class="schoolBottomLinks uhcFontBold uhcLightBlue rightThis" ng-click="schoolPage('schoolPage2')">CLOSE THIS</md-button>
+							</div>
+
+						</div>	<!-- .schoolCardArea -->
+					</div>	<!-- .schoolBigCard -->
+				</div>	<!-- flex column -->
+			</div>	<!-- #schoolPage9 -->
+
+			<!-- school page 10 DEV ONLY ALL FORM ELEMENTS -->
+
+			<div id="schoolPage10" class="centerThis hideInitially">
+				<div flex-sm layout="column">
+					<div class="schoolBigCard">
+						<div class="schoolCardArea">
+							<a ng-click="schoolPage('schoolPage2')" class="button" ><img src="img/iconCloseCircle.png" class="iconCloseSchool growSomeOnHover" /></a>
+							<h2 class="policyCardMessage uhcFontBold uhcGray">
+								All Form Elements
+							</h2>
+							<h3 class="policyCardMessage uhcFontLight uhcMediumGray">
+								Tagline
+							</h3>
+						</div>	<!-- .schoolCardArea -->
+						
+
+						<div class="schoolCardArea">
+							<div class="formFieldNarrow">
+								<div id="schoolInputSelect">
+									<!-- SELECT OPTION 1 -->
+									<div class="formFieldLabel uhcFontBold uhcGray">Form Field Label</div>
+									<md-input-container class="md-block formWidth8em">
+										<md-select ng-model="selectOption1Model" 
+											placeholder="Select an Option"
+											aria-label="Select an Option">
+											<md-option ng-value="item" ng-repeat="item in selectOption1Items">
+												{{item}}
+											</md-option>
+										</md-select>
+									</md-input-container>
+
+									<!-- SELECT OPTION 2 -->
+									<div class="formFieldLabel uhcFontBold uhcGray marginTop2em">Form Field Label</div>
+									<md-input-container>
+										<md-select ng-model="selectOption2Model" 
+											md-selected-text="0" 
+											aria-label="Select an Option">
+											<md-option ng-value="item" ng-repeat="item in selectOption2Items">
+												{{item}}
+										</md-option>
+										</md-select>
+									</md-input-container>
+									<md-input-container>
+										<md-select ng-model="selectOption3Model" 
+											md-selected-text="0" 
+											aria-label="Select an Option">
+											<md-option ng-value="item" ng-repeat="item in selectOption3Items">
+												{{item}}
+										</md-option>
+										</md-select>
+									</md-input-container>								
+								</div>	<!-- #schoolInputSelect -->
+
+								<!-- RADIO GROUP CIRCLES-->
+								<div class="formFieldLabel uhcFontBold uhcGray marginTop2em">Form Field Label</div>
+								<div class="centerText">
+									<md-radio-group ng-model="selectRadio1Model" class="uhcRadio" md-no-ink>
+										<md-radio-button value="1" aria-label="Label 1">
+										  Label 1
+										</md-radio-button>
+										<md-radio-button value="2" aria-label="Label 2">
+										  Label 2
+										</md-radio-button>
+									</md-radio-group>
+								</div>
+
+								<!-- TOGGLE RADIO BUTTONS -->
+								<div class="formFieldLabel uhcFontBold uhcGray">Form Field Label</div>
+								<div class="centerText">
+									<div class="radioToggler">
+										<input checked="checked" id="radioTogglerOption1" type="radio" name="radioToggler1" value="valueOption1" />
+										<label class="radioTogglerOption" for="radioTogglerOption1">OPTION 1</label>
+										<input id="radioTogglerOption2" type="radio" name="radioToggler1" value="valueOption2" />
+										<label class="radioTogglerOption" for="radioTogglerOption2">OPTION 2</label>
+									</div>							
+								</div>
+
+								<!-- CHECK BOX LEFT OF TEXT -->
+									<div class="formFieldLabel uhcFontBold uhcGray">Form Field Label</div>
+								<div class="centerText">
+									<md-checkbox ng-disabled="false" aria-label="Checkbox"  md-no-ink ng-model="schoolForm.checkbox1" class="uhcCheckbox">
+										Checkbox 1
+									</md-checkbox>
+
+									<md-checkbox ng-disabled="false" aria-label="Checkbox"  md-no-ink ng-model="schoolForm.checkbox2" class="uhcCheckbox">
+										Checkbox 2
+									</md-checkbox>
+								</div>
+
+								<!-- TEXT INPUT -->
+								<div class="formFieldLabel uhcFontBold uhcGray">Form Field Label</div>
+								<div class="inputField15em">
+									<md-input-container class="md-block">
+										<label>Field 1</label>
+										<input required="" name="field1" ng-model="school.field1" md-no-asterisk="" ng-maxlength="20">
+										<div ng-messages="schoolForm.field1.$error">
+											<div ng-message="required">This is required.</div>
+										</div>
+									</md-input-container>
+								</div>
+
+								<div class="formFieldLabel uhcFontBold uhcGray">Form Field Label</div>
+								<md-content layout-gt-sm="row" layout-padding>
+									<md-input-container class="md-block ">
+										<label>Field 2</label>
+										<input required="" name="field2" ng-model="school.field2" md-no-asterisk="">
+										<div ng-messages="schoolForm.field2.$error">
+											<div ng-message="required">This is required.</div>
+										</div>
+									</md-input-container>
+									<md-input-container class="md-block ">
+										<label>Field 3</label>
+										<input required="" name="field3" ng-model="school.field3" md-no-asterisk="">
+										<div ng-messages="schoolForm.field3.$error">
+											<div ng-message="required">This is required.</div>
+										</div>
+									</md-input-container>
+								</md-content>
+
+								<div class="checkConfirm">
+									<img  src="img/iconCheckConfirm.svg">
+								</div>v
+								<p class="centerText">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse ornare vel nunc eget convallis. </p>
+								<div class="centerText">
+									<p><a href="placeholder.html" class="uhcLightBlue underlineThis">Underlined Light Blue Link</a></p>
+								</div>
+								<div class="centerText">
+									<md-button id="accountButton" class="md-raised " ng-href="login.html">Big Blue Button</md-button>
+								</div>
+								<p class="centerText uhcRed smallText">Curabitur a risus tristique lectus pellentesque ultrices quis sed diam. In ullamcorper nibh mi, sit amet ultricies neque laoreet quis..</p>
+							</div> <!-- .formFieldNarrow -->
+						</div>	<!-- .schoolCardArea -->
+						<div class="schoolCardNavLinks">
+							<div>								
+								<md-button class="invisible schoolBottomLinks uhcFontBold uhcLightBlue" ng-click="schoolPage('schoolPage10')">BACK</md-button>
+								<md-button class="schoolBottomLinks uhcFontBold uhcLightBlue rightThis" ng-click="schoolPage('schoolPage10')">NEXT</md-button>
+							</div>
+						</div>	<!-- .schoolCardArea -->
+					</div>	<!-- .schoolBigCard -->
+				</div>	<!-- flex column -->
+			</div>	<!-- #schoolPage10 DEV ONLY ALL FORM ELEMENTS -->
+
+			</div>
+			<!-- END OF SCHOOL PAGES -->
+				</div>	<!-- sitePageWidth -->
+
+				<div id="schoolClaimsWrapper"  class="hideInitially" >
+					<img id="schoolClaimImg" src="img/iconAmbulance.png">
+					<div id="schoolClaims">Want to view a Claim Staus?</div>
+					<div id="schoolClaimsTagline" class="uhcLight uhcMediumGray"><a href="login.html" class="uhcGrayLink">Login</a> to get an update on it.</div>
+	
+				</div>
+
+			</section>
+		</form>
+  </md-content>
+</div> <!-- end schoolPageCtrl -->
+
+					</div> <!-- #schoolWrapper -->
+
+			</div>
+		</div>
+	</main>
+	<footer ng-include src="'include/footer.html'"  ></footer>
+
+<!-- Javascript Libraries at bottom after DOM is loaded -->
+<script type="text/javascript" src="js/angular.min.js"></script>
+<script type="text/javascript" src="js/angular-animate.min.js"></script>
+<script type="text/javascript" src="js/angular-aria.min.js"></script>
+<script type="text/javascript" src="js/angular-material.min.js"></script>
+<script type="text/javascript" src="js/angular-messages.min.js"></script>
+<script type="text/javascript" src="js/jquery-2.0.3.min.js"></script>
+<script type="text/javascript" src="js/angular-pageslide-directive-modified.js"></script>
+
+
+<!-- Application Specific Javascript files at very bottom after DOM and libraries are loaded -->
+<script type="text/javascript" src="js/uhc_sr.js"></script>
+
+
+<!-- \\ INPUT FIELD FORMATTING -->
+<!--  \\\\\\\\\\\\\\\\\\\\\\\\ -->
+	<script>
+	!function(a){"function"==typeof define&&define.amd?define(["jquery"],a):a("object"==typeof exports?require("jquery"):jQuery)}(function(a){var b,c=navigator.userAgent,d=/iphone/i.test(c),e=/chrome/i.test(c),f=/android/i.test(c);a.mask={definitions:{9:"[0-9]",a:"[A-Za-z]","*":"[A-Za-z0-9]"},autoclear:!0,dataName:"rawMaskFn",placeholder:"_"},a.fn.extend({caret:function(a,b){var c;if(0!==this.length&&!this.is(":hidden"))return"number"==typeof a?(b="number"==typeof b?b:a,this.each(function(){this.setSelectionRange?this.setSelectionRange(a,b):this.createTextRange&&(c=this.createTextRange(),c.collapse(!0),c.moveEnd("character",b),c.moveStart("character",a),c.select())})):(this[0].setSelectionRange?(a=this[0].selectionStart,b=this[0].selectionEnd):document.selection&&document.selection.createRange&&(c=document.selection.createRange(),a=0-c.duplicate().moveStart("character",-1e5),b=a+c.text.length),{begin:a,end:b})},unmask:function(){return this.trigger("unmask")},mask:function(c,g){var h,i,j,k,l,m,n,o;if(!c&&this.length>0){h=a(this[0]);var p=h.data(a.mask.dataName);return p?p():void 0}return g=a.extend({autoclear:a.mask.autoclear,placeholder:a.mask.placeholder,completed:null},g),i=a.mask.definitions,j=[],k=n=c.length,l=null,a.each(c.split(""),function(a,b){"?"==b?(n--,k=a):i[b]?(j.push(new RegExp(i[b])),null===l&&(l=j.length-1),k>a&&(m=j.length-1)):j.push(null)}),this.trigger("unmask").each(function(){function h(){if(g.completed){for(var a=l;m>=a;a++)if(j[a]&&C[a]===p(a))return;g.completed.call(B)}}function p(a){return g.placeholder.charAt(a<g.placeholder.length?a:0)}function q(a){for(;++a<n&&!j[a];);return a}function r(a){for(;--a>=0&&!j[a];);return a}function s(a,b){var c,d;if(!(0>a)){for(c=a,d=q(b);n>c;c++)if(j[c]){if(!(n>d&&j[c].test(C[d])))break;C[c]=C[d],C[d]=p(d),d=q(d)}z(),B.caret(Math.max(l,a))}}function t(a){var b,c,d,e;for(b=a,c=p(a);n>b;b++)if(j[b]){if(d=q(b),e=C[b],C[b]=c,!(n>d&&j[d].test(e)))break;c=e}}function u(){var a=B.val(),b=B.caret();if(o&&o.length&&o.length>a.length){for(A(!0);b.begin>0&&!j[b.begin-1];)b.begin--;if(0===b.begin)for(;b.begin<l&&!j[b.begin];)b.begin++;B.caret(b.begin,b.begin)}else{for(A(!0);b.begin<n&&!j[b.begin];)b.begin++;B.caret(b.begin,b.begin)}h()}function v(){A(),B.val()!=E&&B.change()}function w(a){if(!B.prop("readonly")){var b,c,e,f=a.which||a.keyCode;o=B.val(),8===f||46===f||d&&127===f?(b=B.caret(),c=b.begin,e=b.end,e-c===0&&(c=46!==f?r(c):e=q(c-1),e=46===f?q(e):e),y(c,e),s(c,e-1),a.preventDefault()):13===f?v.call(this,a):27===f&&(B.val(E),B.caret(0,A()),a.preventDefault())}}function x(b){if(!B.prop("readonly")){var c,d,e,g=b.which||b.keyCode,i=B.caret();if(!(b.ctrlKey||b.altKey||b.metaKey||32>g)&&g&&13!==g){if(i.end-i.begin!==0&&(y(i.begin,i.end),s(i.begin,i.end-1)),c=q(i.begin-1),n>c&&(d=String.fromCharCode(g),j[c].test(d))){if(t(c),C[c]=d,z(),e=q(c),f){var k=function(){a.proxy(a.fn.caret,B,e)()};setTimeout(k,0)}else B.caret(e);i.begin<=m&&h()}b.preventDefault()}}}function y(a,b){var c;for(c=a;b>c&&n>c;c++)j[c]&&(C[c]=p(c))}function z(){B.val(C.join(""))}function A(a){var b,c,d,e=B.val(),f=-1;for(b=0,d=0;n>b;b++)if(j[b]){for(C[b]=p(b);d++<e.length;)if(c=e.charAt(d-1),j[b].test(c)){C[b]=c,f=b;break}if(d>e.length){y(b+1,n);break}}else C[b]===e.charAt(d)&&d++,k>b&&(f=b);return a?z():k>f+1?g.autoclear||C.join("")===D?(B.val()&&B.val(""),y(0,n)):z():(z(),B.val(B.val().substring(0,f+1))),k?b:l}var B=a(this),C=a.map(c.split(""),function(a,b){return"?"!=a?i[a]?p(b):a:void 0}),D=C.join(""),E=B.val();B.data(a.mask.dataName,function(){return a.map(C,function(a,b){return j[b]&&a!=p(b)?a:null}).join("")}),B.one("unmask",function(){B.off(".mask").removeData(a.mask.dataName)}).on("focus.mask",function(){if(!B.prop("readonly")){clearTimeout(b);var a;E=B.val(),a=A(),b=setTimeout(function(){B.get(0)===document.activeElement&&(z(),a==c.replace("?","").length?B.caret(0,a):B.caret(a))},10)}}).on("blur.mask",v).on("keydown.mask",w).on("keypress.mask",x).on("input.mask paste.mask",function(){B.prop("readonly")||setTimeout(function(){var a=A(!0);B.caret(a),h()},0)}),e&&f&&B.off("input.mask").on("input.mask",u),A()})}})});	
+	</script>
+<!-- ///////////////////////// -->
+<!-- // INPUT FIELD FORMATTING -->
+
+
+<script>
+	
+	$('document').ready(function () {
+										
+			$.mask.definitions['4'] = "[A-Fa-f0-9]";
+			$('#selfGovID').mask("999-99-9999");
+
+		});
+</script>
+
+</body>
+</html>

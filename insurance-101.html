@@ -1,0 +1,177 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Insurance 101</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+		<meta name="apple-mobile-web-app-capable" content="yes">
+
+	<!-- CSS files -->
+	<link rel="stylesheet" type="text/css" href="css/angular-material.min.css">
+	<link rel="shortcut icon" href='favicon.ico' type='image/x-icon'>
+	
+	<!-- Application Specific CSS -->
+	<link rel="stylesheet" type="text/css" href="css/uhc_sr.css">
+
+<!-- HELP CENTER OVERRIDES - DON'T DELETE!! -->
+<!-- \\\\\\\\\\\\\\\\\\\\\\\\ -->
+<style>
+    nav#headerNav {border-bottom:none !important;}
+    div.navBarWrapper.locked {border-bottom: 1px solid #CDD5D7; box-shadow:0px 5px 5px 0px #FAFAFA;}
+    html {background:#FAFAFA !important;}
+    div.contentAll, div.innerContentWrapper {background:#FAFAFA !important;}
+    main section {background:#FAFAFA !important;}
+    section#contentWithSideBar {margin: 200px auto 1em !important;}
+
+    @media only screen and (max-width: 568px) {
+
+            section#contentWithSideBar {margin-top:100px !important;}
+    }
+</style>
+<!-- //////////////////////// -->
+
+</head>
+
+<!-- fade-in when page finishes loading -->
+<body ng-app= "srApp" onload="document.body.style.opacity='1'">
+	<header ng-include src="'include/header.html'"  ></header>
+
+	<!-- Page Content -->
+	<main>
+		<div id="contentAll">
+			<div class="innerContentWrapper" ng-controller="navCtrl">
+
+					<!-- Scroll and lock nav bar  -->
+				<!-- \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\ -->
+				<div class="navBarWrapper locked">
+                    <div id="helpMainNavWrapper">
+                        <a  href="faq.html" class="uhcBlackLink"><div id="helpMainNavBox1" class="helpMainNavBox">
+                            <img src="img/faq.svg">
+                            <p class="uhcGray">FAQ</p>
+                        </div></a>
+                        <a  href="glossary.html" class="uhcBlackLink"><div id="helpMainNavBox2" class="helpMainNavBox">
+                            <img src="img/glossary.svg">
+                            <p class="uhcGray">Glossary</p>
+                        </div></a>
+                        <a  href="insurance-101.html" class="uhcBlackLink active"><div id="helpMainNavBox3" class="helpMainNavBox">
+                            <img src="img/insurance.svg">
+                            <p class=" uhcGray displayFullOnly">Health Insurance 101</p>
+                            <p class=" uhcGray displayMobileOnly">Health 101</p>
+                        </div></a>
+                        <a  href="video.html" class="uhcBlackLink"><div id="helpMainNavBox4" class="helpMainNavBox">
+                            <img src="img/video.svg">
+                            <p class="uhcGray">Video</p>
+                        </div></a>
+                    </div>
+				</div>
+				<!-- ///////////////////////////////////// -->
+
+				<!-- MOBILE NAVIGATION -->
+
+				<section id="contentWithSideBar" class="sitePageWidth sectionInsurance101">
+					<div id="marginUnderNavBar" class="hideInitially"></div>
+
+					<div id="navBar-single-column" class="insurance101">
+						<div id="content1">
+<h2>Health Insurance 101</h2>
+<p>No one expects you to become a health insurance expert! (That&rsquo;s our job.) But, health insurance is something you&rsquo;re going to have to deal with for a lot of years. And, if your parents have been handling your doctor appointments (and the insurance policy that helps pay for them), this may be the first time that you have to step up. </p>
+<p>Like any other topic, knowledge is power, right? Start here and get a handle on your health insurance pronto.</p>
+
+<h3>What is health insurance? </h3>
+<p>Totally basic, we know. But, if you&rsquo;re from a country with a socialized healthcare system, it&rsquo;s a legit place to start. </p>
+<p>The term refers to a variety of insurance policies, ranging from those that cover the costs of doctors and hospitals to those that meet a specific need&mdash;like vision or dental coverage. When most of us talk about health insurance, however, we refer to the kind of plan that covers doctor bills, surgery and hospital costs.</p>
+<p>Just like car or home insurance, you pick a health insurance plan and agree to pay a specific rate, or premium, for that policy. In return, the insurance company agrees to pay a specific percentage of your medical expenses for a specific list of medical services (covered services). </p>
+<p>(Not all medical services are covered by health insurance plans; the ones that aren&rsquo;t are called exclusions and limitations and they are listed in the policy brochure.)</p>
+
+<h3>How does health insurance work?</h3>
+<p>When you&rsquo;ve picked and paid for a health insurance policy, you become a member of that health plan. You&rsquo;re actually part of a group that insurance companies call a risk pool. In that pool are other people who could be considered high risk due to an ongoing illness. Typically high risk members need more medical services than people that are considered low risk. Low risk folks in your pool are healthy and don&rsquo;t seek medical services as often as higher risk members.</p>
+<p>Insurance companies look at everyone in a risk pool and come up with the amount of money needed to pay for everyone&rsquo;s medical expenses. All the members pay a premium and those monies are used to defray the pool&rsquo;s medical expenses. </p>
+<p>In return for your premium, the insurance company agrees to share the cost of covered medical services with you. Those services are listed in your policy along with your out-of-pocket cost for each service&mdash;co-pay, a deductible or coinsurance. </p>
+<p>The insurance company keeps track of the risk pool and if medical costs are exceptionally high for an extended period of time, the insurance company may have to adjust premium rates. </p>
+
+<h3>Types of health insurance</h3>
+<p>Health insurance is an umbrella term; there are different kinds of health insurance products to cover different kinds of healthcare needs. <strong>Medical</strong> health insurance benefits may include preventive care (that annual physical doesn&rsquo;t stop when you graduate high school) and benefits for illnesses and accidents, either in or out of the hospital. </p>
+<p>For other healthcare needs, you may need other types of insurance like:
+</p>
+<ul><li>Dental insurance: covers your oral health and usually includes regular cleanings and things like bite wing x-rays.</li>
+<li>Vision insurance: covers your eyes&rsquo; health and can include coverage for glasses or contacts.
+</li></ul>
+
+<h3>Who&rsquo;s in and who&rsquo;s out</h3>
+<p>Most insurance companies (UnitedHealthcare included) have negotiated discounts with doctors and facilities.  Payments by your insurance company are usually based on these discounted rates and those doctors and facilities are called in network. </p>
+<p>Because it saves the insurance company (and you, the insured!) money, you are rewarded for seeking care in network with a lower out of pocket cost and lower overall cost of care.</p>
+<p>On the flip side, if you choose to use an out of network doctor or facility, you&rsquo;re still covered, but the co-pay, co-insurance, deductible and other benefits may be different than when staying in network. Be sure to read that policy carefully so you know what to expect!
+</p>
+<h3>Health insurance is for old or sick people. </h3>
+<p>We hear it all the time: &ldquo;I&rsquo;m young and healthy and I just don&rsquo;t worry about doctors unless I&rsquo;m sick&hellip;&rdquo;</p>
+<p>Consider this though:</p>
+<ul>
+<li>The Affordable Care Act (ACA): Love it or hate it, it has made having health insurance mandatory for most. You must have a plan that qualifies as minimum essential coverage or pay a fee on your next federal tax return.</li>
+<li>Choose to go without in 2016 and you&rsquo;ll pay 2.5% of your household income or $695 per adult (half that amount for children) as a penalty at tax time.</li>
+<li>Aside from that penalty, healthcare services are pretty costly! Having a reliable health insurance policy can help pay for care when you need it, just like auto insurance can help you with your next fender bender.</li>
+<li>If you&rsquo;re watching your budget and you don&rsquo;t have health insurance, you may be making decisions about your healthcare that are based on the money in your account versus what&rsquo;s best for your health. 
+</ul>
+<h3>Where health insurance is sold</h3>
+<p>Health insurance is highly regulated and you can only purchase it from specific sources. Here are the most common places to buy health insurance:</p>
+<ul>
+<li>Employer plans: Offered to employees, employer plans are very common. You sign up at work, usually during the open enrollment period.</li>
+<li>Directly from an insurance company: Either online or through a licensed insurance agent, this is called individual health insurance. You can apply for an individual policy anytime throughout the year.</li>
+<li>From the government: Either from the Federal Marketplace (healthcare.gov) or your State&rsquo;s Marketplace, these online marketplaces were created as part of the ACA. Sign up is also once a year, during an open enrollment period.</li>
+<li>Medicare, Medicaid and CHIP are health insurance plans available from the government for people that meet very specific income and or health criteria.</li>
+<li>From your school: Many college and universities offer a student health insurance plan specifically selected for its students. Search for your school now to see if UnitedHealthcare provides your school&rsquo;s student insurance. </li>
+</ul>
+<h3>We think student health insurance is different&hellip;.in a good way!</h3>
+<p>But first, here&rsquo;s some ways in which student health insurance is no different than employer or government sponsored insurance: </p>
+                            <ul>
+<li>The majority of our college and university sponsored student insurance plans meet the ACA standard of essential minimum coverage.  So, no tax penalties come mid-April next year! </li>
+<li>The UnitedHealthcare nationwide network of doctors and facilities is available to you whether or not you are on campus or home for spring break.</li>
+</ul>
+<p>Now, here&rsquo;s why student health insurance is different (in a good way!) than other health insurance plans:</p>
+<ul>
+<li>That risk pool stuff we mentioned before? Since most college students are young and healthy, the risk to the insurance company is lower. This is often reflected in the lower premiums for student insurance versus an individual health insurance plan.</li>
+<li>Why pay twice for the same services? Since you may already be paying for some healthcare services at your Student Health Center through your tuition, we exclude them from our policies and pass those savings along in the premium. </li>
+<li>Every student health insurance plan we sell has ancillary benefits designed specifically for college students: Student Assistance Program, TeleHealth, Global Emergency Services, and more. </li>
+<li>Your school may actually require you to have health insurance in order to attend class. Most schools let you pick which policy to have (either theirs or another comparable plan) but you&rsquo;ll have to go through a waiver process if you want to pick your own plan.</li>
+</ul>
+<h3>Affordable Care Act (ACA)</h3>
+<p>The Patient Protection and Affordable Care Act (ACA) became effective in 2010, but some are still not sure what ACA means to them. There are hundreds of pages in this legislation, but here are the highlights:</p>
+<ul>
+<li>ACA requires most people to have health insurance. If you do not have a health insurance plan you may be charged a penalty at tax time (unless you qualify for an exemption).  </li>
+<li>ACA requires health insurance plans to cover a specific list of 10 core healthcare services. These are called the minimum essential health benefits and they include preventive healthcare services at no cost to members. </li>
+<li>ACA ensures that no one can be denied health insurance because of a previous condition (either an illness or an injury). ACA also phased out the maximum lifetime limits that insurance companies used to set for their benefits. </li>
+<li>ACA required each state to make an online marketplace available for consumers to shop for health insurance. States could also use the Federal Health Insurance Marketplace (www.healthcare.gov) if they could not or would not develop their own marketplace.</li>
+<li>To make it easier to compare plans, ACA established four basic plans for the Federal Health Insurance Marketplace: Platinum, Gold, Silver and Bronze. In general, platinum health plans have the highest premium, but the out-of-pocket costs may be lower.  As you would expect, the inverse is also true: the bronze plans have a lower premium point, but higher out-of-pocket costs (such as deductibles and copays).  </li>
+<li>ACA provides for tax credits or subsidies for eligible people that purchase healthcare from their state or the Federal Health Insurance Marketplace. </li>
+</ul>
+
+<p>Keep the following in mind when deciding where to purchase your health insurance plan: </p>
+<ul>
+<li>If you are eligible for an employer health plan (either through your parents&rsquo; plan or through your employer), and you choose to purchase healthcare on the state or Federal Health Insurance Marketplace, you are not eligible for tax credits or subsidies. </li>
+<li>If you are being claimed as a tax dependent on someone else&rsquo;s tax return, you can purchase healthcare on the state or Federal Health Insurance Marketplace, but you are not eligible for tax credits or subsidies. </li>
+<li>The Federal government views these subsidies as income; you will be expected to pay tax on the subsidies you receive.</li>
+</ul>
+
+						</div>
+					</div>
+				</section>
+
+		</div>
+		</div>
+	</main>
+	<footer ng-include src="'include/footer.html'"  ></footer>
+
+<!-- Javascript Libraries at bottom after DOM is loaded -->
+<script type="text/javascript" src="js/angular.min.js"></script>
+<script type="text/javascript" src="js/angular-animate.min.js"></script>
+<script type="text/javascript" src="js/angular-aria.min.js"></script>
+<script type="text/javascript" src="js/angular-material.min.js"></script>
+<script type="text/javascript" src="js/angular-messages.min.js"></script>
+<script type="text/javascript" src="js/jquery-2.0.3.min.js"></script>
+<script type="text/javascript" src="js/angular-pageslide-directive-modified.js"></script>
+
+
+<!-- Application Specific Javascript files at very bottom after DOM and libraries are loaded -->
+<script type="text/javascript" src="js/uhc_sr.js"></script>
+
+</body>
+</html>
